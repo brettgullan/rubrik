@@ -28,7 +28,7 @@ const colors = {
 
   // nested objects work as well
   brand: {
-    primary: '#FF9700',
+    primary: '#00C8C0',
   },
 
   nd: [
@@ -185,6 +185,11 @@ const text = {
     fontWeight: 'light',
     fontSize: ['24px', '36px'],
     lineHeight: ['28px', '40px'],
+  },
+  paragon: {
+    fontFamily: 'title',
+    fontSize: ['22px', '28px'],
+    lineHeight: ['26px', '32px'],
   },
   doublePica: {
     fontFamily: 'text',
