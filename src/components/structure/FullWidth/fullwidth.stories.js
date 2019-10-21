@@ -20,7 +20,7 @@ export default {
   parameters: {
     component: FullWidth,
     componentSubtitle:
-      'A component that defaults to the full width of the viewport',
+      'Forces a Component to occupy the full width of the viewport',
   },
 }
 
