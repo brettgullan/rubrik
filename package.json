@@ -23,6 +23,7 @@
     "gatsby-source-filesystem": "^2.1.22",
     "gatsby-transformer-json": "^2.2.8",
     "gatsby-transformer-sharp": "^2.2.14",
+    "lazysizes": "^5.1.2",
     "polished": "^3.4.1",
     "prop-types": "^15.7.2",
     "ramda": "^0.26.1",
