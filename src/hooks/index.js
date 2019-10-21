@@ -1,1 +1,1 @@
-export { useDOM } from './use-dom'
+export { useHasDOM } from './use-has-dom'
