@@ -1,16 +1,15 @@
-import React, { Fragment } from 'react'
-import {
-  withKnobs,
-  optionsKnob as options,
-  text,
-  boolean,
-  number,
-  select,
-} from '@storybook/addon-knobs'
+import React from 'react'
+import { withKnobs, optionsKnob as options } from '@storybook/addon-knobs'
 
 // ----------------------------------------------------------------------------
 
-import theme from '../../theme'
+import {
+  fontWeights,
+  fontFamily,
+  textTransforms,
+  colors,
+  defaultColor,
+} from '../../theme/storybook'
 
 // ----------------------------------------------------------------------------
 
@@ -31,37 +30,6 @@ import {
   Royal,
   Foolscap,
 } from '../typography'
-
-// ----------------------------------------------------------------------------
-
-const fontWeights = {
-  Thin: 'thin',
-  Light: 'light',
-  Regular: 'regular',
-  SemiBold: 'semiBold',
-  Bold: 'bold',
-  ExtraBold: 'extraBold',
-  Black: 'black',
-}
-const fontFamily = {
-  Text: 'text',
-  Title: 'title',
-}
-const textTransforms = {
-  None: 'none',
-  Uppercase: 'uppercase',
-  Lowercase: 'lowercase',
-  Capitalize: 'capitalize',
-}
-
-const colors = {
-  White: '#FFF',
-  Drive: '#00C8C0',
-  Black: '#141414',
-  'Real Black': '#000',
-}
-
-const defaultColor = colors.Black
 
 // ----------------------------------------------------------------------------
 
