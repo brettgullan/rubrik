@@ -36,7 +36,8 @@ Picture.defaultProps = {
 Picture.propTypes = {
   sources: PropTypes.arrayOf(
     PropTypes.shape({
-      srcSet: PropTypes.string.isRequired,
+      'data-srcset': PropTypes.string,
+      srcSet: PropTypes.string,
       media: PropTypes.string,
       type: PropTypes.string,
     })
