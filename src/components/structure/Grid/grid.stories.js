@@ -124,3 +124,30 @@ export const FourColumn = () => {
     </Grid>
   )
 }
+
+// ----------------------------------------------------------------------------
+
+export const Broken = () => {
+  const bg = options('Background Color', colors, colors.Grey, {
+    display: 'select',
+  })
+  return (
+    <Grid columns="3" gutter="20px">
+      <Text color="white.0" variant="paragon" p={3} bg={bg}>
+        1
+      </Text>
+      <Text color="white.0" variant="paragon" p={3} bg={bg}>
+        2
+      </Text>
+      <Text color="white.0" variant="paragon" p={3} bg={bg} span={4}>
+        3
+      </Text>
+      <Text color="white.0" variant="paragon" p={3} bg={bg}>
+        4
+      </Text>
+      <Text color="white.0" variant="paragon" p={3} bg={bg}>
+        5
+      </Text>
+    </Grid>
+  )
+}
