@@ -48,3 +48,9 @@ export const Responsive = () => {
 
   return <Image srcset={srcset} />
 }
+
+// ----------------------------------------------------------------------------
+
+export const Avatar = () => (
+  <Image src="https://picsum.photos/id/1015/180/180" variant="avatar" />
+)
