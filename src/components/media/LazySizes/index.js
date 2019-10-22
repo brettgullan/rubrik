@@ -32,6 +32,13 @@ const remapProps = compose(
 
 // ----------------------------------------------------------------------------
 
+/**
+ *  Wrapper component that clones its child element, while remapping
+ *  the wrapped element's props to support lazy-loading.
+ *
+ *  Longer term, this is intended to be an abstraction, allowing different
+ *  lazy-loading strategies to be implemented, or toggled on/off.
+ */
 const LazySizes = ({ children: Component }) => {
   const { className, ...rest } = Component.props
 
