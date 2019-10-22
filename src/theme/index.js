@@ -235,6 +235,14 @@ const text = {
 
 // ----------------------------------------------------------------------------
 
+const variants = {
+  avatar: {
+    borderRadius: '50%',
+  },
+}
+
+// ----------------------------------------------------------------------------
+
 export default {
   breakpoints,
   sizes,
@@ -250,4 +258,5 @@ export default {
   text,
 
   shadows,
+  variants,
 }
