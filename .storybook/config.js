@@ -1,6 +1,8 @@
 import React from 'react'
 import { addDecorator, addParameters, configure } from '@storybook/react'
 import { INITIAL_VIEWPORTS } from '@storybook/addon-viewport'
+import '@storybook/addon-console'
+
 import { ThemeProvider } from 'emotion-theming'
 
 // ----------------------------------------------------------------------------
