@@ -5,13 +5,11 @@ import { Flex } from 'rebass'
 
 // ----------------------------------------------------------------------------
 
-export const Split = ({ children, ...props }) => {
-  return (
-    <Flex {...props} justifyContent="space-between">
-      {children}
-    </Flex>
-  )
-}
+export const Split = ({ children, ...props }) => (
+  <Flex {...props} justifyContent="space-between">
+    {children}
+  </Flex>
+)
 
 Split.propTypes = {}
 
