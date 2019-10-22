@@ -73,6 +73,18 @@ export const VariableColumns = () => {
       <Text span={2} color="white.0" variant="paragon" p={3} bg={bg}>
         5
       </Text>
+      <Text color="white.0" variant="paragon" p={3} bg={bg}>
+        6
+      </Text>
+      <Text color="white.0" variant="paragon" p={3} bg={bg}>
+        7
+      </Text>
+      <Text color="white.0" variant="paragon" p={3} bg={bg}>
+        8
+      </Text>
+      <Text color="white.0" variant="paragon" p={3} bg={bg}>
+        9
+      </Text>
     </Grid>
   )
 }
@@ -84,29 +96,29 @@ export const FourColumn = () => {
     display: 'select',
   })
   return (
-    <Grid columns="4" gutter="30px">
-      <Text color="white.0" variant="paragon" p={3} bg={bg}>
+    <Grid columns="4" gutter="16px">
+      <Text color="white.0" variant="paragon" p={3} bg={bg} mb={3}>
         1
       </Text>
-      <Text color="white.0" variant="paragon" p={3} bg={bg}>
+      <Text color="white.0" variant="paragon" p={3} bg={bg} mb={3}>
         2
       </Text>
-      <Text color="white.0" variant="paragon" p={3} bg={bg}>
+      <Text color="white.0" variant="paragon" p={3} bg={bg} mb={3}>
         3
       </Text>
-      <Text color="white.0" variant="paragon" p={3} bg={bg}>
+      <Text color="white.0" variant="paragon" p={3} bg={bg} mb={3}>
         4
       </Text>
-      <Text color="white.0" variant="paragon" p={3} bg={bg}>
+      <Text color="white.0" variant="paragon" p={3} bg={bg} mb={3}>
         5
       </Text>
-      <Text color="white.0" variant="paragon" p={3} bg={bg}>
+      <Text color="white.0" variant="paragon" p={3} bg={bg} mb={3}>
         6
       </Text>
-      <Text color="white.0" variant="paragon" p={3} bg={bg}>
+      <Text color="white.0" variant="paragon" p={3} bg={bg} mb={3}>
         7
       </Text>
-      <Text color="white.0" variant="paragon" p={3} bg={bg}>
+      <Text color="white.0" variant="paragon" p={3} bg={bg} mb={3}>
         8
       </Text>
     </Grid>
