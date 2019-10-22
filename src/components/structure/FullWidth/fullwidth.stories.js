@@ -38,7 +38,7 @@ export const Default = () => (
       mx="auto"
       maxWidth="50%"
     >
-      This text box has a full-bleed background.
+      This element has been forced to the full width of the viewport.
     </Text>
   </FullWidth>
 )
