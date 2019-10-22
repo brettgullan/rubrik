@@ -77,3 +77,33 @@ export const Responsive = () => {
 
   return <CloudinaryImage {...props} />
 }
+
+// ----------------------------------------------------------------------------
+
+export const Avatar = () => {
+  const props = {
+    options: {
+      srcset: {
+        widths: [120, 180, 240],
+        resolutions: [1, 2],
+        aspect_ratio: 1,
+        crop: 'fill',
+        quality: 80,
+      },
+    },
+    image: {
+      id: 'fvpbuzcay9nzbqq8wiax',
+      type: 'private',
+    },
+  }
+
+  return (
+    <CloudinaryImage
+      variant="avatar"
+      display="block"
+      mx="auto"
+      width="30%"
+      {...props}
+    />
+  )
+}
