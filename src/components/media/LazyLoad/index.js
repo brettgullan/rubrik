@@ -39,7 +39,7 @@ const remapProps = compose(
  *  Longer term, this is intended to be an abstraction, allowing different
  *  lazy-loading strategies to be implemented, or toggled on/off.
  */
-const LazySizes = ({ children: Component }) => {
+const LazyLoad = ({ children: Component }) => {
   const { className, ...rest } = Component.props
 
   const props = {
@@ -50,4 +50,4 @@ const LazySizes = ({ children: Component }) => {
   return cloneElement(Component, props)
 }
 
-export default LazySizes
+export default LazyLoad

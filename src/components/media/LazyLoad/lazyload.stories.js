@@ -9,8 +9,8 @@ import CloudinaryPicture from '../CloudinaryPicture'
 
 // ----------------------------------------------------------------------------
 
-import LazySizesProvider from '../../../providers/LazySizes'
-import LazySizes from '.'
+import LazyLoadProvider from '../../../providers/LazySizes'
+import LazyLoad from '.'
 
 // ----------------------------------------------------------------------------
 
@@ -27,19 +27,19 @@ const withCloudinary = (storyFn) => (
   </Cloudinary>
 )
 
-const withLazySizes = (storyFn) => (
-  <LazySizesProvider>{storyFn()}</LazySizesProvider>
+const withLazyLoad = (storyFn) => (
+  <LazyLoadProvider>{storyFn()}</LazyLoadProvider>
 )
 
 // ----------------------------------------------------------------------------
 
 export default {
-  title: 'Design System|Elements/Media/LazySizes',
-  component: LazySizes,
-  decorators: [withKnobs, withCloudinary, withLazySizes],
+  title: 'Design System|Elements/Media/LazyLoad',
+  component: LazyLoad,
+  decorators: [withKnobs, withCloudinary, withLazyLoad],
 
   parameters: {
-    component: LazySizes,
+    component: LazyLoad,
     componentSubtitle: 'Adds lazy loading support to Image/Picture components.',
   },
 }
@@ -63,9 +63,9 @@ export const Primary = () => {
   }
 
   return (
-    <LazySizes>
+    <LazyLoad>
       <CloudinaryImage {...props} />
-    </LazySizes>
+    </LazyLoad>
   )
 }
 
@@ -94,9 +94,9 @@ export const Placeholder = () => {
   }
 
   return (
-    <LazySizes>
+    <LazyLoad>
       <CloudinaryImage display="block" mx="auto" width="100%" {...props} />
-    </LazySizes>
+    </LazyLoad>
   )
 }
 
@@ -143,8 +143,8 @@ export const Picture = () => {
   }
 
   return (
-    <LazySizes>
+    <LazyLoad>
       <CloudinaryPicture {...props} />
-    </LazySizes>
+    </LazyLoad>
   )
 }
