@@ -1,5 +1,5 @@
 import React, { cloneElement } from 'react'
-import { compose, length, nth, pluck, sum, unnest } from 'ramda'
+import { compose, curry, length, nth, pluck, sum, unnest } from 'ramda'
 import { Flex } from 'rebass'
 
 // ----------------------------------------------------------------------------
@@ -29,6 +29,13 @@ const getRemainderMargin = (span, columns, gutter) =>
 
 // ----------------------------------------------------------------------------
 
+const gridItemBuilderFactory = (columns, gutter) => (
+  { span = 1, mb },
+  index
+) => {}
+
+// ----------------------------------------------------------------------------
+
 const buildLayoutMatrix = (children, columns) => {
   const cols = parseInt(columns)
   const layoutMatrix = []
@@ -36,20 +43,20 @@ const buildLayoutMatrix = (children, columns) => {
   let row = new Array()
   let itemSpan = 0
 
-  children.forEach((child, index) => {
-    const { span = 1 } = child.props
+  children.forEach(({ props }, index) => {
+    const { span = 1 } = props
     if (itemSpan + span > cols) {
       layoutMatrix.push(row)
       row = new Array()
       row.push({
         span,
-        props: child.props,
+        props,
       })
       itemSpan = span
     } else if (itemSpan + span === cols) {
       row.push({
         span,
-        props: child.props,
+        props,
       })
       layoutMatrix.push(row)
       row = new Array()
@@ -57,7 +64,7 @@ const buildLayoutMatrix = (children, columns) => {
     } else {
       row.push({
         span,
-        props: child.props,
+        props,
       })
       itemSpan = itemSpan + span
 
@@ -85,6 +92,140 @@ const getRowCount = compose(
 const getLayoutAsArray = unnest
 
 const isLast = (index, array) => array.length === index + 1
+
+// -----------------------------------------------------------------
+
+const mapTransducer = (f) => (step) => (a, c) => step(a, f(c))
+
+const filterTransducer = (predicate) => (step) => (a, c) =>
+  predicate(c) ? step(a, c) : a
+
+const doubleGateTransducer = (p, f) => (step) => (a, c) =>
+  p(c) ? step(a, f(c)) : a
+
+const dropTransducer = (f) => (step) => (a, c) => {
+  const result = f(c)
+  return result ? step(a, result) : a
+}
+
+// -----------------------------------------------------------------
+
+const matrixLayoutTransformer = (cols, totalItems) => {
+  let count = 0
+  let colSpan = 0
+  let row = new Array()
+
+  return (item) => {
+    const { span } = item
+    ++count
+
+    if (colSpan + span > cols) {
+      const result = row
+      row = [item]
+      colSpan = span
+      return row
+    }
+    if (colSpan + span === cols) {
+      row.push(item)
+      const result = row
+      row = new Array()
+      colSpan = 0
+      return result
+    }
+
+    row.push(item)
+    colSpan = colSpan + span
+
+    // Edge-case -- return row if last item.
+    if (count === totalItems) return row
+
+    return undefined
+  }
+}
+
+// -----------------------------------------------------------------
+
+const calculatePercentage = (span, cols) => `${(span / cols) * 100}%`
+
+const calculateGutter = (cols, gutter) =>
+  cols === 1 ? `0px` : `(${cols - 1} * ${gutter} / ${cols})`
+
+const calculateItemGutter = (span, cols, gutter) =>
+  span === 1 ? `0px` : `(${span - 1} * ${gutter} / ${cols})`
+
+const calculateItemWidth = (span, columns, gutter) =>
+  `calc(${calculatePercentage(span, columns)} - ${calculateGutter(
+    columns,
+    gutter
+  )} + ${calculateItemGutter(span, columns, gutter)})`
+
+const calculateRemainderMargin = (columns, gutter, span) =>
+  `calc(${calculatePercentage(span, columns)} - ${calculateGutter(
+    columns,
+    gutter
+  )} + (${span} * ${gutter}))`
+
+// -----------------------------------------------------------------
+
+/**
+ * Calculate matrix item width, margin props.
+ */
+const matrixItemTransformer = (cols, gutter) => (item) => {
+  const { span = 1, mb } = item
+  const width = calculateItemWidth(span, cols, gutter)
+  return merge(item, { span, width, mb: mb || gutter })
+}
+
+// -----------------------------------------------------------------
+
+/**
+ * Determine whether a matrix `row` has empty columns and, if so,
+ * calculate margin and assign to last item in row.
+ * But only if there is more than one item in the row!
+ */
+const matrixRowBalanceTransformer = (cols, gutter) => (item) => {
+  const remaining =
+    cols -
+    compose(
+      sum,
+      pluck('span')
+    )(item)
+  if (remaining && item.length > 1) {
+    const marginRight = calculateRemainderMargin(cols, gutter, remaining)
+    item[item.length - 1].marginRight = marginRight
+  }
+  return item
+}
+
+// -----------------------------------------------------------------
+
+const matrixRowMarginTransformer = (cols, gutter) => {
+  return (item) => {}
+}
+
+// -----------------------------------------------------------------
+
+const matrixItemIterator = mapTransducer(matrixItemTransformer(3, '20px'))
+const matrixLayoutIterator = gateTransducer(
+  matrixLayoutTransformer(3, children.length)
+)
+const matrixRowBalanceIterator = mapTransducer(
+  matrixRowBalanceTransformer(3, '20px')
+)
+
+const transducer = compose(
+  matrixItemIterator,
+  matrixLayoutIterator,
+  matrixRowBalanceIterator
+)
+const iterator = flip(append)
+
+// compose(
+//   map(dissoc('span')),
+//   unnest,
+//   adjust(-1, map(dissoc('mb'))),
+//   reduce(transducer(iterator), [])
+// )(children)
 
 // ----------------------------------------------------------------------------
 

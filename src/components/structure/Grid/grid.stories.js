@@ -79,7 +79,7 @@ export const VariableColumns = () => {
       <Text color="white.0" variant="paragon" p={3} bg={bg}>
         7
       </Text>
-      <Text color="white.0" variant="paragon" p={3} bg={bg}>
+      <Text color="white.0" variant="paragon" p={3} bg={bg} my="-5px">
         8
       </Text>
       <Text color="white.0" variant="paragon" p={3} bg={bg}>
