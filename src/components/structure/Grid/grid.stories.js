@@ -46,6 +46,39 @@ export const Default = () => {
       <Text color="white.0" variant="paragon" p={3} bg={bg}>
         5
       </Text>
+      <Text color="white.0" variant="paragon" p={3} bg={bg}>
+        6
+      </Text>
+    </Grid>
+  )
+}
+
+// ----------------------------------------------------------------------------
+
+export const UnbalancedColumns = () => {
+  const bg = options('Background Color', colors, colors.Grey, {
+    display: 'select',
+  })
+  return (
+    <Grid columns="4" gutter="16px">
+      <Text color="white.0" variant="paragon" p={3} bg={bg} mb={3}>
+        1
+      </Text>
+      <Text color="white.0" variant="paragon" p={3} bg={bg} mb={3}>
+        2
+      </Text>
+      <Text color="white.0" variant="paragon" p={3} bg={bg} mb={3}>
+        3
+      </Text>
+      <Text color="white.0" variant="paragon" p={3} bg={bg} mb={3}>
+        4
+      </Text>
+      <Text color="white.0" variant="paragon" p={3} bg={bg} mb={3}>
+        5
+      </Text>
+      <Text color="white.0" variant="paragon" p={3} bg={bg} mb={3}>
+        6
+      </Text>
     </Grid>
   )
 }
@@ -91,42 +124,6 @@ export const VariableColumns = () => {
 
 // ----------------------------------------------------------------------------
 
-export const FourColumn = () => {
-  const bg = options('Background Color', colors, colors.Grey, {
-    display: 'select',
-  })
-  return (
-    <Grid columns="4" gutter="16px">
-      <Text color="white.0" variant="paragon" p={3} bg={bg} mb={3}>
-        1
-      </Text>
-      <Text color="white.0" variant="paragon" p={3} bg={bg} mb={3}>
-        2
-      </Text>
-      <Text color="white.0" variant="paragon" p={3} bg={bg} mb={3}>
-        3
-      </Text>
-      <Text color="white.0" variant="paragon" p={3} bg={bg} mb={3}>
-        4
-      </Text>
-      <Text color="white.0" variant="paragon" p={3} bg={bg} mb={3}>
-        5
-      </Text>
-      <Text color="white.0" variant="paragon" p={3} bg={bg} mb={3}>
-        6
-      </Text>
-      <Text color="white.0" variant="paragon" p={3} bg={bg} mb={3}>
-        7
-      </Text>
-      <Text color="white.0" variant="paragon" p={3} bg={bg} mb={3}>
-        8
-      </Text>
-    </Grid>
-  )
-}
-
-// ----------------------------------------------------------------------------
-
 export const Broken = () => {
   const bg = options('Background Color', colors, colors.Grey, {
     display: 'select',
@@ -140,6 +137,33 @@ export const Broken = () => {
         2
       </Text>
       <Text color="white.0" variant="paragon" p={3} bg={bg} span={4}>
+        3
+      </Text>
+      <Text color="white.0" variant="paragon" p={3} bg={bg}>
+        4
+      </Text>
+      <Text color="white.0" variant="paragon" p={3} bg={bg}>
+        5
+      </Text>
+    </Grid>
+  )
+}
+
+// ----------------------------------------------------------------------------
+
+export const Single = () => {
+  const bg = options('Background Color', colors, colors.Grey, {
+    display: 'select',
+  })
+  return (
+    <Grid columns="1" gutter="20px">
+      <Text color="white.0" variant="paragon" p={3} bg={bg}>
+        1
+      </Text>
+      <Text color="white.0" variant="paragon" p={3} bg={bg}>
+        2
+      </Text>
+      <Text color="white.0" variant="paragon" p={3} bg={bg}>
         3
       </Text>
       <Text color="white.0" variant="paragon" p={3} bg={bg}>

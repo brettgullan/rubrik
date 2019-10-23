@@ -9,12 +9,12 @@ import {
   juxt,
   last,
   map,
-  merge,
   omit,
   pluck,
   reduce,
   slice,
   sum,
+  tap,
   unnest,
 } from 'ramda'
 import { Flex } from 'rebass'
@@ -51,7 +51,9 @@ const matrixLayoutTransformer = (cols, totalItems) => {
       colSpan = span
       return result
     }
-    if (colSpan + span === cols) {
+
+    // deliberate use of `==` below, as cols may be string value "1".
+    if (colSpan + span == cols) {
       row.push(item)
       const result = row
       row = new Array()
@@ -104,7 +106,7 @@ const calculateRemainderMargin = (columns, gutter, span) =>
 const matrixItemTransformer = (cols, gutter) => ({ props }) => {
   const { span = 1, mb } = props
   const width = calculateItemWidth(span, cols, gutter)
-  return merge(props, { span, width, mb: mb || gutter })
+  return { ...props, span, width, mb: mb || gutter }
 }
 
 // -----------------------------------------------------------------
