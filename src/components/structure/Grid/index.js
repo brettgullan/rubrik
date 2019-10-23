@@ -113,6 +113,9 @@ const matrixItemTransformer = (cols, gutter) => ({ props }) => {
  * Determine whether a matrix `row` has empty columns and, if so,
  * calculate margin and assign to last item in row.
  * But only if there is more than one item in the row!
+ *
+ * This works. And can be used together with margin-less grid items
+ * and justifyContent=space-between.
  */
 const matrixRowBalanceTransformer = (cols, gutter) => (item) => {
   const remaining =
@@ -130,6 +133,11 @@ const matrixRowBalanceTransformer = (cols, gutter) => (item) => {
 
 // -----------------------------------------------------------------
 
+/**
+ * Apply left, right or horizontal margins to each item in each row
+ * as required -- i.e: first and last items get right or left margin only,
+ * all others in row get both.
+ */
 const matrixRowMarginTransformer = (gutter) => {
   const margin = calculateMargin(gutter)
   return (item) =>
