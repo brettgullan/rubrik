@@ -57,7 +57,7 @@ export const VariableColumns = () => {
     display: 'select',
   })
   return (
-    <Grid columns="3" gutter="20px">
+    <Grid justifyContent="center" columns="3" gutter="20px">
       <Text color="white.0" variant="paragon" p={3} bg={bg}>
         1
       </Text>

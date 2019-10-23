@@ -1,99 +1,25 @@
 import React, { cloneElement } from 'react'
-import { compose, curry, length, nth, pluck, sum, unnest } from 'ramda'
+import {
+  adjust,
+  append,
+  assoc,
+  compose,
+  flip,
+  head,
+  juxt,
+  last,
+  map,
+  merge,
+  omit,
+  pluck,
+  reduce,
+  slice,
+  sum,
+  unnest,
+} from 'ramda'
 import { Flex } from 'rebass'
 
 // ----------------------------------------------------------------------------
-
-const getPercentage = (span, cols) => `${(span / cols) * 100}%`
-
-const getGutter = (cols, gutter) =>
-  cols === 1 ? `0px` : `(${cols - 1} * ${gutter} / ${cols})`
-
-const getItemGutter = (span, cols, gutter) =>
-  span === 1 ? `0px` : `(${span - 1} * ${gutter} / ${cols})`
-
-const calculateItemWidths = (span, columns, gutter) =>
-  `calc(${getPercentage(span, columns)} - ${getGutter(
-    columns,
-    gutter
-  )} + ${getItemGutter(span, columns, gutter)})`
-
-// Example right margin:
-// calc((span / columns) - (columns - 1 * gutter / columns) + (span * gutter))
-// calc(33.3333% - (2 * 20px / 3) + (1 * 20px))
-const getRemainderMargin = (span, columns, gutter) =>
-  `calc(${getPercentage(span, columns)} - ${getGutter(
-    columns,
-    gutter
-  )} + (${span} * ${gutter}))`
-
-// ----------------------------------------------------------------------------
-
-const gridItemBuilderFactory = (columns, gutter) => (
-  { span = 1, mb },
-  index
-) => {}
-
-// ----------------------------------------------------------------------------
-
-const buildLayoutMatrix = (children, columns) => {
-  const cols = parseInt(columns)
-  const layoutMatrix = []
-
-  let row = new Array()
-  let itemSpan = 0
-
-  children.forEach(({ props }, index) => {
-    const { span = 1 } = props
-    if (itemSpan + span > cols) {
-      layoutMatrix.push(row)
-      row = new Array()
-      row.push({
-        span,
-        props,
-      })
-      itemSpan = span
-    } else if (itemSpan + span === cols) {
-      row.push({
-        span,
-        props,
-      })
-      layoutMatrix.push(row)
-      row = new Array()
-      itemSpan = 0
-    } else {
-      row.push({
-        span,
-        props,
-      })
-      itemSpan = itemSpan + span
-
-      // Edge-case -- push row to layoutMatrix on last item.
-      if (isLast(index, children)) {
-        layoutMatrix.push(row)
-      }
-    }
-  })
-
-  return layoutMatrix
-}
-
-const getRowSpan = compose(
-  sum,
-  pluck('span'),
-  nth
-)
-
-const getRowCount = compose(
-  length,
-  nth
-)
-
-const getLayoutAsArray = unnest
-
-const isLast = (index, array) => array.length === index + 1
-
-// -----------------------------------------------------------------
 
 const mapTransducer = (f) => (step) => (a, c) => step(a, f(c))
 
@@ -123,7 +49,7 @@ const matrixLayoutTransformer = (cols, totalItems) => {
       const result = row
       row = [item]
       colSpan = span
-      return row
+      return result
     }
     if (colSpan + span === cols) {
       row.push(item)
@@ -150,6 +76,11 @@ const calculatePercentage = (span, cols) => `${(span / cols) * 100}%`
 const calculateGutter = (cols, gutter) =>
   cols === 1 ? `0px` : `(${cols - 1} * ${gutter} / ${cols})`
 
+const calculateMargin = (gutter) => {
+  const matches = gutter.match(/(\-*)(\d*)(.*)/)
+  return matches ? `${matches[1]}${matches[2] / 2}${matches[3]}` : gutter
+}
+
 const calculateItemGutter = (span, cols, gutter) =>
   span === 1 ? `0px` : `(${span - 1} * ${gutter} / ${cols})`
 
@@ -170,10 +101,10 @@ const calculateRemainderMargin = (columns, gutter, span) =>
 /**
  * Calculate matrix item width, margin props.
  */
-const matrixItemTransformer = (cols, gutter) => (item) => {
-  const { span = 1, mb } = item
+const matrixItemTransformer = (cols, gutter) => ({ props }) => {
+  const { span = 1, mb } = props
   const width = calculateItemWidth(span, cols, gutter)
-  return merge(item, { span, width, mb: mb || gutter })
+  return merge(props, { span, width, mb: mb || gutter })
 }
 
 // -----------------------------------------------------------------
@@ -199,72 +130,70 @@ const matrixRowBalanceTransformer = (cols, gutter) => (item) => {
 
 // -----------------------------------------------------------------
 
-const matrixRowMarginTransformer = (cols, gutter) => {
-  return (item) => {}
+const matrixRowMarginTransformer = (gutter) => {
+  const margin = calculateMargin(gutter)
+  return (item) =>
+    item.length === 1
+      ? item
+      : compose(
+          unnest,
+          juxt([
+            compose(
+              assoc('mr', margin),
+              head
+            ),
+            compose(
+              map(assoc('mx', margin)),
+              slice(1, -1)
+            ),
+            compose(
+              assoc('ml', margin),
+              last
+            ),
+          ])
+        )(item)
 }
 
 // -----------------------------------------------------------------
 
-const matrixItemIterator = mapTransducer(matrixItemTransformer(3, '20px'))
-const matrixLayoutIterator = gateTransducer(
-  matrixLayoutTransformer(3, children.length)
-)
-const matrixRowBalanceIterator = mapTransducer(
-  matrixRowBalanceTransformer(3, '20px')
-)
-
-const transducer = compose(
-  matrixItemIterator,
-  matrixLayoutIterator,
-  matrixRowBalanceIterator
-)
-const iterator = flip(append)
-
-// compose(
-//   map(dissoc('span')),
-//   unnest,
-//   adjust(-1, map(dissoc('mb'))),
-//   reduce(transducer(iterator), [])
-// )(children)
+const matrixClean = map(omit(['span']))
+const matrixRemoveLastRowMargin = adjust(-1, map(omit(['mb', 'marginBottom'])))
 
 // ----------------------------------------------------------------------------
 
 const Grid = ({ columns, gutter, children, ...rest }) => {
-  const matrix = buildLayoutMatrix(children, columns)
+  const matrixItemIterator = mapTransducer(
+    matrixItemTransformer(columns, gutter)
+  )
+  const matrixLayoutIterator = dropTransducer(
+    matrixLayoutTransformer(columns, children.length)
+  )
+  const matrixRowBalanceIterator = mapTransducer(
+    matrixRowBalanceTransformer(columns, gutter)
+  )
+  const matrixRowMarginIterator = mapTransducer(
+    matrixRowMarginTransformer(gutter)
+  )
 
-  const lastRowSpan = getRowSpan(-1, matrix)
-  const lastRowCount = getRowCount(-1, matrix)
+  const transducer = compose(
+    matrixItemIterator,
+    matrixLayoutIterator,
+    matrixRowMarginIterator
+  )
+  const iterator = flip(append)
+
+  const matrix = compose(
+    matrixClean,
+    unnest,
+    matrixRemoveLastRowMargin,
+    reduce(transducer(iterator), [])
+  )(children)
 
   return (
-    <Flex
-      flexWrap="wrap"
-      justifyContent="space-between"
-      sx={{
-        [`& > *:nth-last-child(-n + ${lastRowCount})`]: {
-          mb: 0,
-        },
-      }}
-    >
-      {children.map((child, index) => {
-        const { span = 1, mb } = child.props
-        const props = {
-          width: calculateItemWidths(span, columns, gutter),
-          mb: mb || gutter,
-          key: `gridItem-${index}`,
-        }
-
-        if (isLast(index, children)) {
-          if (lastRowCount > 1 && lastRowSpan < columns) {
-            props.mr = getRemainderMargin(
-              columns - lastRowSpan,
-              columns,
-              gutter
-            )
-          }
-        }
-
-        return cloneElement(child, props)
-      })}
+    <Flex flexWrap="wrap" {...rest}>
+      {children.map((child, index) =>
+        cloneElement(child, { key: `matrixItem-${index}`, ...matrix[index] })
+      )}
     </Flex>
   )
 }
