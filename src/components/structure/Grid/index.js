@@ -106,7 +106,7 @@ const calculateRemainderMargin = (columns, gutter, span) =>
 const matrixItemTransformer = (cols, gutter) => ({ props }) => {
   const { span = 1, mb } = props
   const width = calculateItemWidth(span, cols, gutter)
-  return { ...props, span, width, mb: mb || gutter }
+  return { span, width, mb: mb || gutter }
 }
 
 // -----------------------------------------------------------------
