@@ -22,6 +22,8 @@ import {
   zip,
 } from 'ramda'
 import { Flex } from 'rebass'
+import { useTheme } from 'emotion-theming'
+import { get } from '@styled-system/css'
 
 // ----------------------------------------------------------------------------
 
@@ -192,6 +194,10 @@ const makeResponsiveProps = map(
 // ----------------------------------------------------------------------------
 
 const Grid = ({ columns, gutter, children, ...rest }) => {
+  const theme = useTheme()
+
+  console.log(theme)
+
   const matrixItemIterator = mapTransducer(
     matrixItemTransformer(columns, gutter)
   )
