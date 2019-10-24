@@ -2,9 +2,11 @@ import React, { cloneElement } from 'react'
 import {
   __,
   adjust,
+  apply,
   applySpec,
   assoc,
   compose,
+  concat,
   converge,
   head,
   identity,
@@ -138,7 +140,8 @@ const matrixRowMarginTransformer = (gutters) => {
               head
             ),
             compose(
-              map(assoc('mx', margin)),
+              map(assoc('ml', margin)),
+              map(assoc('mr', margin)),
               slice(1, -1)
             ),
             compose(
@@ -155,13 +158,16 @@ const matrixClean = map(omit(['span']))
 const matrixRemoveLastRowMargin = adjust(-1, map(omit(['mb', 'marginBottom'])))
 
 // ----------------------------------------------------------------------------
-
+const buildResponsiveSizeProp = (prop, dflt = '0px') =>
+  compose(
+    map((x) => (!!x ? x : dflt)),
+    pluck(prop)
+  )
 const makeResponsiveProps = map(
   applySpec({
-    mr: pluck('mr'),
-    ml: pluck('ml'),
-    mx: pluck('mx'),
-    mb: pluck('mb'),
+    mr: buildResponsiveSizeProp('mr'),
+    ml: buildResponsiveSizeProp('ml'),
+    mb: buildResponsiveSizeProp('mb'),
     width: pluck('width'),
   })
 )
@@ -210,7 +216,13 @@ const normalizeResponsiveArguments = (columns, gutters, children) => {
 const Grid = ({ columns, gutters, children, ...rest }) => {
   const theme = useTheme()
 
-  const matrix = generateLayout(columns, gutters, children)
+  const matrix = compose(
+    tap(console.log),
+    makeResponsiveProps,
+    zipObjAll,
+    map(apply(generateLayout)),
+    normalizeResponsiveArguments
+  )(columns, gutters, children)
 
   return (
     <Flex flexWrap="wrap" {...rest}>

@@ -175,3 +175,30 @@ export const Single = () => {
     </Grid>
   )
 }
+
+// ----------------------------------------------------------------------------
+
+export const Responsive = () => {
+  const bg = options('Background Color', colors, colors.Grey, {
+    display: 'select',
+  })
+  return (
+    <Grid columns={[1, 3]} gutters={['16px', '30px']}>
+      <Text color="white.0" variant="paragon" p={3} bg={bg}>
+        1
+      </Text>
+      <Text color="white.0" variant="paragon" p={3} bg={bg}>
+        2
+      </Text>
+      <Text color="white.0" variant="paragon" p={3} bg={bg}>
+        3
+      </Text>
+      <Text color="white.0" variant="paragon" p={3} bg={bg}>
+        4
+      </Text>
+      <Text color="white.0" variant="paragon" p={3} bg={bg}>
+        5
+      </Text>
+    </Grid>
+  )
+}
