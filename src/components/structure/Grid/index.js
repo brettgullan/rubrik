@@ -7,9 +7,11 @@ import {
   applySpec,
   assoc,
   compose,
+  concat,
   converge,
   evolve,
   flatten,
+  forEach,
   head,
   is,
   juxt,
@@ -25,7 +27,9 @@ import {
   sum,
   tail,
   tap,
+  toString,
   unnest,
+  when,
   zip,
 } from 'ramda'
 import { Flex } from 'rebass'
@@ -299,12 +303,36 @@ const convertResponsiveChildProps = (children, index) =>
 
 // ----------------------------------------------------------------------------
 
+const convertGutter = (theme, gutter) => {
+  let converted = get(theme, `space.${gutter}`, gutter)
+  return when(
+    is(Number),
+    compose(
+      concat(__, `px`),
+      toString
+    )
+  )(converted)
+}
+
+const convertGutters = (theme, gutters) =>
+  map((gutter) => convertGutter(theme, gutter))(gutters)
+
+// ----------------------------------------------------------------------------
+
 const Grid = ({ columns, gutters, children, ...rest }) => {
   const theme = useTheme()
 
+  const convertedGutters = is(String, gutters)
+    ? convertGutter(theme, gutters)
+    : convertGutters(theme, gutters)
+
   const matrix = is(String, columns)
-    ? generateLayout(columns, gutters, extractProps(children))
-    : generateResponsiveLayout(columns, gutters, extractProps(children))
+    ? generateLayout(columns, convertedGutters, extractProps(children))
+    : generateResponsiveLayout(
+        columns,
+        convertedGutters,
+        extractProps(children)
+      )
 
   // console.log(matrix)
 

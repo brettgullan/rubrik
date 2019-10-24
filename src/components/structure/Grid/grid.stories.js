@@ -55,6 +55,36 @@ export const Default = () => {
 
 // ----------------------------------------------------------------------------
 
+export const UsingGutterScaleValue = () => {
+  const bg = options('Background Color', colors, colors.Grey, {
+    display: 'select',
+  })
+  return (
+    <Grid columns="3" gutters="2">
+      <Text color="white.0" variant="paragon" p={3} bg={bg}>
+        1
+      </Text>
+      <Text color="white.0" variant="paragon" p={3} bg={bg}>
+        2
+      </Text>
+      <Text color="white.0" variant="paragon" p={3} bg={bg}>
+        3
+      </Text>
+      <Text color="white.0" variant="paragon" p={3} bg={bg}>
+        4
+      </Text>
+      <Text color="white.0" variant="paragon" p={3} bg={bg}>
+        5
+      </Text>
+      <Text color="white.0" variant="paragon" p={3} bg={bg}>
+        6
+      </Text>
+    </Grid>
+  )
+}
+
+// ----------------------------------------------------------------------------
+
 export const UnbalancedColumns = () => {
   const bg = options('Background Color', colors, colors.Grey, {
     display: 'select',
@@ -183,7 +213,7 @@ export const Responsive = () => {
     display: 'select',
   })
   return (
-    <Grid columns={[1, 3]} gutters={['16px', '30px']}>
+    <Grid columns={[1, 3]} gutters={[4, 5]}>
       <Text color="white.0" variant="paragon" p={3} bg={bg}>
         1
       </Text>
