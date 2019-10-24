@@ -1,14 +1,17 @@
 import React, { cloneElement } from 'react'
 import {
+  __,
   adjust,
   applySpec,
   assoc,
   compose,
   converge,
   head,
+  identity,
   juxt,
   last,
   map,
+  of,
   omit,
   pluck,
   reduce,
@@ -17,6 +20,7 @@ import {
   tail,
   tap,
   unnest,
+  useWith,
   zip,
 } from 'ramda'
 import { Flex } from 'rebass'
@@ -28,6 +32,12 @@ import {
   dropTransducer,
   iterator,
 } from '../../../utils/transducers'
+
+import {
+  calculateMargin,
+  calculateItemWidth,
+  calculateRemainderMargin,
+} from './calculators'
 
 // ----------------------------------------------------------------------------
 
@@ -72,33 +82,6 @@ const matrixLayoutTransformer = (cols, totalItems) => {
     return undefined
   }
 }
-
-// -----------------------------------------------------------------
-
-const calculatePercentage = (span, cols) => `${(span / cols) * 100}%`
-
-const calculategutters = (cols, gutters) =>
-  cols === 1 ? `0px` : `(${cols - 1} * ${gutters} / ${cols})`
-
-const calculateMargin = (gutters) => {
-  const matches = gutters.match(/(\-*)(\d*)(.*)/)
-  return matches ? `${matches[1]}${matches[2] / 2}${matches[3]}` : gutters
-}
-
-const calculateItemgutters = (span, cols, gutters) =>
-  span === 1 ? `0px` : `(${span - 1} * ${gutters} / ${cols})`
-
-const calculateItemWidth = (span, columns, gutters) =>
-  `calc(${calculatePercentage(span, columns)} - ${calculategutters(
-    columns,
-    gutters
-  )} + ${calculateItemgutters(span, columns, gutters)})`
-
-const calculateRemainderMargin = (columns, gutters, span) =>
-  `calc(${calculatePercentage(span, columns)} - ${calculategutters(
-    columns,
-    gutters
-  )} + (${span} * ${gutters}))`
 
 // -----------------------------------------------------------------
 
@@ -175,6 +158,9 @@ const matrixRemoveLastRowMargin = adjust(-1, map(omit(['mb', 'marginBottom'])))
 
 const makeResponsiveProps = map(
   applySpec({
+    mr: pluck('mr'),
+    ml: pluck('ml'),
+    mx: pluck('mx'),
     mb: pluck('mb'),
     width: pluck('width'),
   })
@@ -211,6 +197,13 @@ const generateLayout = (columns, gutters, items) => {
 }
 
 // ----------------------------------------------------------------------------
+
+const normalizeResponsiveArguments = (columns, gutters, children) => {
+  return compose(
+    map(concat(__, of(children))),
+    useWith(zip, [identity, identity])
+  )(columns, gutters)
+}
 
 // ----------------------------------------------------------------------------
 
