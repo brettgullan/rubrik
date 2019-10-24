@@ -1,28 +1,30 @@
 import React, { cloneElement } from 'react'
 import {
   __,
+  addIndex,
   adjust,
   apply,
   applySpec,
   assoc,
   compose,
-  concat,
   converge,
+  evolve,
   head,
-  identity,
+  is,
   juxt,
   last,
   map,
+  nth,
   of,
   omit,
   pluck,
   reduce,
+  repeat,
   slice,
   sum,
   tail,
   tap,
   unnest,
-  useWith,
   zip,
 } from 'ramda'
 import { Flex } from 'rebass'
@@ -43,6 +45,8 @@ import {
 
 // ----------------------------------------------------------------------------
 
+const mapIndexed = addIndex(map)
+
 const zipObjAll = compose(
   map(unnest),
   converge(reduce(zip), [head, tail])
@@ -61,8 +65,15 @@ const matrixLayoutTransformer = (cols, totalItems) => {
 
     if (colSpan + span > cols) {
       const result = row
-      row = [item]
+      row = new Array()
+      row.push(item)
       colSpan = span
+
+      // Edge-case -- return both rows if this is the last item.
+      // Will occur when the last item 'breaks over' and begins
+      // a new row.
+      if (count === totalItems) return [result, row]
+
       return result
     }
 
@@ -90,8 +101,7 @@ const matrixLayoutTransformer = (cols, totalItems) => {
 /**
  * Calculate matrix item width, margin props.
  */
-const matrixItemTransformer = (cols, gutters) => ({ props }) => {
-  const { span = 1, mb } = props
+const matrixItemTransformer = (cols, gutters) => ({ span = 1, mb }) => {
   const width = calculateItemWidth(span, cols, gutters)
   return { span, width, mb: mb || gutters }
 }
@@ -106,18 +116,18 @@ const matrixItemTransformer = (cols, gutters) => ({ props }) => {
  * This works. And can be used together with margin-less grid items
  * and justifyContent=space-between.
  */
-const matrixRowBalanceTransformer = (cols, gutters) => (item) => {
+const matrixRowBalanceTransformer = (cols, gutters) => (row) => {
   const remaining =
     cols -
     compose(
       sum,
       pluck('span')
-    )(item)
-  if (remaining && item.length > 1) {
+    )(row)
+  if (remaining && row.length > 1) {
     const marginRight = calculateRemainderMargin(cols, gutters, remaining)
-    item[item.length - 1].marginRight = marginRight
+    row[row.length - 1].marginRight = marginRight
   }
-  return item
+  return row
 }
 
 // -----------------------------------------------------------------
@@ -158,11 +168,13 @@ const matrixClean = map(omit(['span']))
 const matrixRemoveLastRowMargin = adjust(-1, map(omit(['mb', 'marginBottom'])))
 
 // ----------------------------------------------------------------------------
+
 const buildResponsiveSizeProp = (prop, dflt = '0px') =>
   compose(
     map((x) => (!!x ? x : dflt)),
     pluck(prop)
   )
+
 const makeResponsiveProps = map(
   applySpec({
     mr: buildResponsiveSizeProp('mr'),
@@ -174,12 +186,12 @@ const makeResponsiveProps = map(
 
 // ----------------------------------------------------------------------------
 
-const generateLayout = (columns, gutters, items) => {
+const generateLayout = (columns, gutters, children) => {
   const matrixItemIterator = mapTransducer(
     matrixItemTransformer(columns, gutters)
   )
   const matrixLayoutIterator = dropTransducer(
-    matrixLayoutTransformer(columns, items.length)
+    matrixLayoutTransformer(columns, children.length)
   )
   const matrixRowBalanceIterator = mapTransducer(
     matrixRowBalanceTransformer(columns, gutters)
@@ -197,32 +209,55 @@ const generateLayout = (columns, gutters, items) => {
   return compose(
     matrixClean,
     unnest,
+    tap(console.log),
     matrixRemoveLastRowMargin,
     reduce(transducer(iterator), [])
-  )(items)
+  )(children)
 }
+
+const generateResponsiveLayout = (columns, gutters, children) =>
+  compose(
+    makeResponsiveProps,
+    zipObjAll,
+    map(apply(generateLayout)),
+    normalizeResponsiveArguments
+  )(columns, gutters, children)
 
 // ----------------------------------------------------------------------------
 
-const normalizeResponsiveArguments = (columns, gutters, children) => {
-  return compose(
-    map(concat(__, of(children))),
-    useWith(zip, [identity, identity])
-  )(columns, gutters)
-}
+const fixResponsiveChildProps = (props, index) =>
+  map(
+    evolve({
+      span: nth(index),
+    })
+  )(props)
+
+const buildResponsiveChildren = (length, children) =>
+  compose(
+    map(of),
+    mapIndexed(fixResponsiveChildProps),
+    repeat(__, length)
+  )(children)
+
+const normalizeResponsiveArguments = (columns, gutters, children) =>
+  zipObjAll([
+    columns,
+    gutters,
+    buildResponsiveChildren(columns.length, children),
+  ])
+
+const extractProps = pluck('props')
 
 // ----------------------------------------------------------------------------
 
 const Grid = ({ columns, gutters, children, ...rest }) => {
   const theme = useTheme()
 
-  const matrix = compose(
-    tap(console.log),
-    makeResponsiveProps,
-    zipObjAll,
-    map(apply(generateLayout)),
-    normalizeResponsiveArguments
-  )(columns, gutters, children)
+  const matrix = is(String, columns)
+    ? generateLayout(columns, gutters, extractProps(children))
+    : generateResponsiveLayout(columns, gutters, extractProps(children))
+
+  console.log(matrix)
 
   return (
     <Flex flexWrap="wrap" {...rest}>
