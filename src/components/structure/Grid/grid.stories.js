@@ -30,7 +30,7 @@ export const Default = () => {
     display: 'select',
   })
   return (
-    <Grid columns="3" gutter="20px">
+    <Grid columns="3" gutters="20px">
       <Text color="white.0" variant="paragon" p={3} bg={bg}>
         1
       </Text>
@@ -60,7 +60,7 @@ export const UnbalancedColumns = () => {
     display: 'select',
   })
   return (
-    <Grid columns="4" gutter="16px">
+    <Grid columns="4" gutters="16px">
       <Text color="white.0" variant="paragon" p={3} bg={bg} mb={3}>
         1
       </Text>
@@ -90,7 +90,7 @@ export const VariableColumns = () => {
     display: 'select',
   })
   return (
-    <Grid justifyContent="center" columns="3" gutter="20px">
+    <Grid justifyContent="center" columns="3" gutters="20px">
       <Text color="white.0" variant="paragon" p={3} bg={bg}>
         1
       </Text>
@@ -129,7 +129,7 @@ export const Broken = () => {
     display: 'select',
   })
   return (
-    <Grid columns="3" gutter="20px">
+    <Grid columns="3" gutters="20px">
       <Text color="white.0" variant="paragon" p={3} bg={bg}>
         1
       </Text>
@@ -156,7 +156,7 @@ export const Single = () => {
     display: 'select',
   })
   return (
-    <Grid columns="1" gutter="20px">
+    <Grid columns="1" gutters="20px">
       <Text color="white.0" variant="paragon" p={3} bg={bg}>
         1
       </Text>

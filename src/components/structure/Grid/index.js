@@ -40,6 +40,8 @@ const dropTransducer = (f) => (step) => (a, c) => {
   return result ? step(a, result) : a
 }
 
+const iterator = flip(append)
+
 // -----------------------------------------------------------------
 
 const zipObjAll = compose(
@@ -88,38 +90,38 @@ const matrixLayoutTransformer = (cols, totalItems) => {
 
 const calculatePercentage = (span, cols) => `${(span / cols) * 100}%`
 
-const calculateGutter = (cols, gutter) =>
-  cols === 1 ? `0px` : `(${cols - 1} * ${gutter} / ${cols})`
+const calculategutters = (cols, gutters) =>
+  cols === 1 ? `0px` : `(${cols - 1} * ${gutters} / ${cols})`
 
-const calculateMargin = (gutter) => {
-  const matches = gutter.match(/(\-*)(\d*)(.*)/)
-  return matches ? `${matches[1]}${matches[2] / 2}${matches[3]}` : gutter
+const calculateMargin = (gutters) => {
+  const matches = gutters.match(/(\-*)(\d*)(.*)/)
+  return matches ? `${matches[1]}${matches[2] / 2}${matches[3]}` : gutters
 }
 
-const calculateItemGutter = (span, cols, gutter) =>
-  span === 1 ? `0px` : `(${span - 1} * ${gutter} / ${cols})`
+const calculateItemgutters = (span, cols, gutters) =>
+  span === 1 ? `0px` : `(${span - 1} * ${gutters} / ${cols})`
 
-const calculateItemWidth = (span, columns, gutter) =>
-  `calc(${calculatePercentage(span, columns)} - ${calculateGutter(
+const calculateItemWidth = (span, columns, gutters) =>
+  `calc(${calculatePercentage(span, columns)} - ${calculategutters(
     columns,
-    gutter
-  )} + ${calculateItemGutter(span, columns, gutter)})`
+    gutters
+  )} + ${calculateItemgutters(span, columns, gutters)})`
 
-const calculateRemainderMargin = (columns, gutter, span) =>
-  `calc(${calculatePercentage(span, columns)} - ${calculateGutter(
+const calculateRemainderMargin = (columns, gutters, span) =>
+  `calc(${calculatePercentage(span, columns)} - ${calculategutters(
     columns,
-    gutter
-  )} + (${span} * ${gutter}))`
+    gutters
+  )} + (${span} * ${gutters}))`
 
 // -----------------------------------------------------------------
 
 /**
  * Calculate matrix item width, margin props.
  */
-const matrixItemTransformer = (cols, gutter) => ({ props }) => {
+const matrixItemTransformer = (cols, gutters) => ({ props }) => {
   const { span = 1, mb } = props
-  const width = calculateItemWidth(span, cols, gutter)
-  return { span, width, mb: mb || gutter }
+  const width = calculateItemWidth(span, cols, gutters)
+  return { span, width, mb: mb || gutters }
 }
 
 // -----------------------------------------------------------------
@@ -132,7 +134,7 @@ const matrixItemTransformer = (cols, gutter) => ({ props }) => {
  * This works. And can be used together with margin-less grid items
  * and justifyContent=space-between.
  */
-const matrixRowBalanceTransformer = (cols, gutter) => (item) => {
+const matrixRowBalanceTransformer = (cols, gutters) => (item) => {
   const remaining =
     cols -
     compose(
@@ -140,7 +142,7 @@ const matrixRowBalanceTransformer = (cols, gutter) => (item) => {
       pluck('span')
     )(item)
   if (remaining && item.length > 1) {
-    const marginRight = calculateRemainderMargin(cols, gutter, remaining)
+    const marginRight = calculateRemainderMargin(cols, gutters, remaining)
     item[item.length - 1].marginRight = marginRight
   }
   return item
@@ -153,8 +155,8 @@ const matrixRowBalanceTransformer = (cols, gutter) => (item) => {
  * as required -- i.e: first and last items get right or left margin only,
  * all others in row get both.
  */
-const matrixRowMarginTransformer = (gutter) => {
-  const margin = calculateMargin(gutter)
+const matrixRowMarginTransformer = (gutters) => {
+  const margin = calculateMargin(gutters)
   return (item) =>
     item.length === 1
       ? item
@@ -193,22 +195,18 @@ const makeResponsiveProps = map(
 
 // ----------------------------------------------------------------------------
 
-const Grid = ({ columns, gutter, children, ...rest }) => {
-  const theme = useTheme()
-
-  console.log(theme)
-
+const generateLayout = (columns, gutters, items) => {
   const matrixItemIterator = mapTransducer(
-    matrixItemTransformer(columns, gutter)
+    matrixItemTransformer(columns, gutters)
   )
   const matrixLayoutIterator = dropTransducer(
-    matrixLayoutTransformer(columns, children.length)
+    matrixLayoutTransformer(columns, items.length)
   )
   const matrixRowBalanceIterator = mapTransducer(
-    matrixRowBalanceTransformer(columns, gutter)
+    matrixRowBalanceTransformer(columns, gutters)
   )
   const matrixRowMarginIterator = mapTransducer(
-    matrixRowMarginTransformer(gutter)
+    matrixRowMarginTransformer(gutters)
   )
 
   const transducer = compose(
@@ -216,14 +214,21 @@ const Grid = ({ columns, gutter, children, ...rest }) => {
     matrixLayoutIterator,
     matrixRowMarginIterator
   )
-  const iterator = flip(append)
 
-  const matrix = compose(
+  return compose(
     matrixClean,
     unnest,
     matrixRemoveLastRowMargin,
     reduce(transducer(iterator), [])
-  )(children)
+  )(items)
+}
+
+// ----------------------------------------------------------------------------
+
+const Grid = ({ columns, gutters, children, ...rest }) => {
+  const theme = useTheme()
+
+  const matrix = generateLayout(columns, gutters, children)
 
   return (
     <Flex flexWrap="wrap" {...rest}>
