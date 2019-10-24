@@ -33,7 +33,7 @@ import { get } from '@styled-system/css'
 
 import {
   mapTransducer,
-  chunkingTransducer,
+  stepTransducer,
   iterator,
 } from '../../../utils/transducers'
 
@@ -190,7 +190,7 @@ const generateLayout = (columns, gutters, children) => {
   const matrixItemIterator = mapTransducer(
     matrixItemTransformer(columns, gutters)
   )
-  const matrixLayoutIterator = chunkingTransducer(
+  const matrixLayoutIterator = stepTransducer(
     matrixLayoutTransformer(columns, children.length)
   )
   const matrixRowBalanceIterator = mapTransducer(

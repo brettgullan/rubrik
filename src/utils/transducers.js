@@ -1,4 +1,4 @@
-import { append, flip } from 'ramda'
+import { append, flip, isNil, reduce } from 'ramda'
 
 // ----------------------------------------------------------------------------
 
@@ -15,11 +15,22 @@ export const dropTransducer = (f) => (step) => (a, c) => {
   return result ? step(a, result) : a
 }
 
-export const chunkingTransducer = (f) => (step) => (a, c) => {
-  const d = f(c)
-  console.log(d)
-  // return d ? d.forEach((e) => step(a, e)) : a
-  return d ? step(a, d[0]) : a
+/**
+ * Allow a transformer function (f) to return zero or more results
+ * to be subsequently reduced. The transformer function returns
+ * an array or undefined
+ */
+export const stepTransducer = (f) => (step) => (a, c) => {
+  let acc = a
+  const chunks = f(c)
+
+  if (isNil(chunks)) return a
+
+  chunks.forEach((chunk) => {
+    acc = step(acc, chunk)
+  })
+
+  return acc
 }
 
 export const iterator = flip(append)
