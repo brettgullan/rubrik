@@ -25,24 +25,13 @@ import { Flex } from 'rebass'
 import { useTheme } from 'emotion-theming'
 import { get } from '@styled-system/css'
 
+import {
+  mapTransducer,
+  dropTransducer,
+  iterator,
+} from '../../../utils/transducers'
+
 // ----------------------------------------------------------------------------
-
-const mapTransducer = (f) => (step) => (a, c) => step(a, f(c))
-
-const filterTransducer = (predicate) => (step) => (a, c) =>
-  predicate(c) ? step(a, c) : a
-
-const doubleGateTransducer = (p, f) => (step) => (a, c) =>
-  p(c) ? step(a, f(c)) : a
-
-const dropTransducer = (f) => (step) => (a, c) => {
-  const result = f(c)
-  return result ? step(a, result) : a
-}
-
-const iterator = flip(append)
-
-// -----------------------------------------------------------------
 
 const zipObjAll = compose(
   map(unnest),
@@ -222,6 +211,8 @@ const generateLayout = (columns, gutters, items) => {
     reduce(transducer(iterator), [])
   )(items)
 }
+
+// ----------------------------------------------------------------------------
 
 // ----------------------------------------------------------------------------
 
