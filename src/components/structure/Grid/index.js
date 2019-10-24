@@ -9,6 +9,7 @@ import {
   compose,
   converge,
   evolve,
+  flatten,
   head,
   is,
   juxt,
@@ -47,6 +48,9 @@ import {
 
 const mapIndexed = addIndex(map)
 
+// This isn't quite right.
+// Works for the particular case of columns, gutters and children,
+// but doesn't handle more generic two-dimensional arrays.
 const zipObjAll = compose(
   map(unnest),
   converge(reduce(zip), [head, tail])
@@ -54,6 +58,13 @@ const zipObjAll = compose(
 
 // -----------------------------------------------------------------
 
+/**
+ * Transformer function
+ * Converts 1-dimensional array of children (props) into a 2-dimensional
+ * representation of the matrix layout for a given breakpoint.
+ * Each completed `row` is forwarded through the reducer for
+ * additional processing -- i.e. calculating gutter spacing.
+ */
 const matrixLayoutTransformer = (cols, totalItems) => {
   let count = 0
   let colSpan = 0
@@ -164,6 +175,10 @@ const matrixRowMarginTransformer = (gutters) => {
 
 // -----------------------------------------------------------------
 
+/**
+ * Remove unused props from final list of children.
+ * i.e. `span` is only used to calculate the `width` property and should be removed.
+ */
 const matrixClean = map(omit(['span']))
 const matrixRemoveLastRowMargin = adjust(-1, map(omit(['mb', 'marginBottom'])))
 
@@ -186,18 +201,24 @@ const makeResponsiveProps = map(
 
 // ----------------------------------------------------------------------------
 
-const generateLayout = (columns, gutters, children) => {
+/**
+ * Calculate layout properties -- widths, margins -- for each child, for a single breakpoint,
+ * using specified column count and gutter spacing.
+ *
+ * @return {Array} array of child props to use with React.cloneElement
+ */
+const generateLayout = (column, gutter, children) => {
   const matrixItemIterator = mapTransducer(
-    matrixItemTransformer(columns, gutters)
+    matrixItemTransformer(column, gutter)
   )
   const matrixLayoutIterator = stepTransducer(
-    matrixLayoutTransformer(columns, children.length)
+    matrixLayoutTransformer(column, children.length)
   )
   const matrixRowBalanceIterator = mapTransducer(
-    matrixRowBalanceTransformer(columns, gutters)
+    matrixRowBalanceTransformer(column, gutter)
   )
   const matrixRowMarginIterator = mapTransducer(
-    matrixRowMarginTransformer(gutters)
+    matrixRowMarginTransformer(gutter)
   )
 
   const transducer = compose(
@@ -209,44 +230,72 @@ const generateLayout = (columns, gutters, children) => {
   return compose(
     matrixClean,
     unnest,
-    tap(console.log),
     matrixRemoveLastRowMargin,
     reduce(transducer(iterator), [])
   )(children)
 }
 
+/**
+ * Calculate layout properties -- widths, margins -- for each child, across multiple breakpoints
+ * using specified column counts and gutter spacings.
+ * Responsive properties -- width, mr, ml, mb -- are returned in array format
+ * compatible with styled-system's responsive style props.
+ *
+ * @return {Array} array of child props to use with React.cloneElement
+ */
 const generateResponsiveLayout = (columns, gutters, children) =>
   compose(
     makeResponsiveProps,
-    zipObjAll,
+    // zipObjAll,
+    // This correctly handles multiple arrays (of equal length arrays)...
+    compose(
+      map(flatten),
+      converge(reduce(zip), [head, tail])
+    ),
     map(apply(generateLayout)),
-    normalizeResponsiveArguments
+    constructResponsiveArguments
   )(columns, gutters, children)
 
 // ----------------------------------------------------------------------------
 
-const fixResponsiveChildProps = (props, index) =>
-  map(
-    evolve({
-      span: nth(index),
-    })
-  )(props)
+/**
+ * Just grab the `props` object from each React child,
+ * (so we have an array of child props, not an array of children).
+ */
+const extractProps = pluck('props')
 
-const buildResponsiveChildren = (length, children) =>
-  compose(
-    map(of),
-    mapIndexed(fixResponsiveChildProps),
-    repeat(__, length)
-  )(children)
+/**
+ * Construct n arrays of arguments (column, gutter, children), one per breakpoint.
+ */
 
-const normalizeResponsiveArguments = (columns, gutters, children) =>
+const constructResponsiveArguments = (columns, gutters, children) =>
   zipObjAll([
     columns,
     gutters,
     buildResponsiveChildren(columns.length, children),
   ])
 
-const extractProps = pluck('props')
+/**
+ * Construct n arrays of child props, one per breakpoint,
+ * modifying individual child props as required --
+ * i.e.: convert responsive array props to invidual values.
+ */
+const buildResponsiveChildren = (length, children) =>
+  compose(
+    map(of),
+    mapIndexed(convertResponsiveChildProps),
+    repeat(__, length)
+  )(children)
+
+/**
+ * Convert props for each child at specified breakpoint index.
+ */
+const convertResponsiveChildProps = (children, index) =>
+  map(
+    evolve({
+      span: nth(index),
+    })
+  )(children)
 
 // ----------------------------------------------------------------------------
 
@@ -256,6 +305,8 @@ const Grid = ({ columns, gutters, children, ...rest }) => {
   const matrix = is(String, columns)
     ? generateLayout(columns, gutters, extractProps(children))
     : generateResponsiveLayout(columns, gutters, extractProps(children))
+
+  // console.log(matrix)
 
   return (
     <Flex flexWrap="wrap" {...rest}>

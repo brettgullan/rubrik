@@ -239,22 +239,22 @@ export const ReallyComplex = () => {
   return (
     <Grid
       justifyContent="center"
-      columns={[1, 2, 3]}
-      gutters={['12px', '16px', '24px']}
+      columns={[1, 2, 2, 3]}
+      gutters={['12px', '16px', '24px', '32px']}
     >
       <Text color="white.0" variant="paragon" p={3} bg={bg}>
         1
       </Text>
-      <Text span={[1, 1, 2]} color="white.0" variant="paragon" p={3} bg={bg}>
+      <Text span={[1, 1, 1, 2]} color="white.0" variant="paragon" p={3} bg={bg}>
         2
       </Text>
-      <Text span={[1, 2, 3]} color="white.0" variant="paragon" p={3} bg={bg}>
+      <Text span={[1, 2, 2, 3]} color="white.0" variant="paragon" p={3} bg={bg}>
         3
       </Text>
-      <Text span={[1, 2, 2]} color="white.0" variant="paragon" p={3} bg={bg}>
+      <Text span={[1, 2, 2, 2]} color="white.0" variant="paragon" p={3} bg={bg}>
         4
       </Text>
-      <Text span={[1, 1, 2]} color="white.0" variant="paragon" p={3} bg={bg}>
+      <Text span={[1, 1, 2, 2]} color="white.0" variant="paragon" p={3} bg={bg}>
         5
       </Text>
       <Text color="white.0" variant="paragon" p={3} bg={bg}>
