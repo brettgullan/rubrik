@@ -33,7 +33,7 @@ import { get } from '@styled-system/css'
 
 import {
   mapTransducer,
-  dropTransducer,
+  chunkingTransducer,
   iterator,
 } from '../../../utils/transducers'
 
@@ -74,7 +74,7 @@ const matrixLayoutTransformer = (cols, totalItems) => {
       // a new row.
       if (count === totalItems) return [result, row]
 
-      return result
+      return [result]
     }
 
     // deliberate use of `==` below, as cols may be string value "1".
@@ -83,14 +83,14 @@ const matrixLayoutTransformer = (cols, totalItems) => {
       const result = row
       row = new Array()
       colSpan = 0
-      return result
+      return [result]
     }
 
     row.push(item)
     colSpan = colSpan + span
 
     // Edge-case -- return row if last item.
-    if (count === totalItems) return row
+    if (count === totalItems) return [row]
 
     return undefined
   }
@@ -190,7 +190,7 @@ const generateLayout = (columns, gutters, children) => {
   const matrixItemIterator = mapTransducer(
     matrixItemTransformer(columns, gutters)
   )
-  const matrixLayoutIterator = dropTransducer(
+  const matrixLayoutIterator = chunkingTransducer(
     matrixLayoutTransformer(columns, children.length)
   )
   const matrixRowBalanceIterator = mapTransducer(
