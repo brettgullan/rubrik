@@ -1,12 +1,10 @@
 import React, { cloneElement } from 'react'
 import {
   adjust,
-  append,
   applySpec,
   assoc,
   compose,
   converge,
-  flip,
   head,
   juxt,
   last,
