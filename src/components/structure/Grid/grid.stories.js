@@ -229,3 +229,46 @@ export const Complex = () => {
     </Grid>
   )
 }
+
+// ----------------------------------------------------------------------------
+
+export const ReallyComplex = () => {
+  const bg = options('Background Color', colors, colors.Grey, {
+    display: 'select',
+  })
+  return (
+    <Grid
+      justifyContent="center"
+      columns={[1, 2, 3]}
+      gutters={['12px', '16px', '24px']}
+    >
+      <Text color="white.0" variant="paragon" p={3} bg={bg}>
+        1
+      </Text>
+      <Text span={[1, 1, 2]} color="white.0" variant="paragon" p={3} bg={bg}>
+        2
+      </Text>
+      <Text span={[1, 2, 3]} color="white.0" variant="paragon" p={3} bg={bg}>
+        3
+      </Text>
+      <Text span={[1, 2, 2]} color="white.0" variant="paragon" p={3} bg={bg}>
+        4
+      </Text>
+      <Text span={[1, 1, 2]} color="white.0" variant="paragon" p={3} bg={bg}>
+        5
+      </Text>
+      <Text color="white.0" variant="paragon" p={3} bg={bg}>
+        6
+      </Text>
+      <Text color="white.0" variant="paragon" p={3} bg={bg}>
+        7
+      </Text>
+      <Text color="white.0" variant="paragon" p={3} bg={bg}>
+        8
+      </Text>
+      <Text color="white.0" variant="paragon" p={3} bg={bg}>
+        9
+      </Text>
+    </Grid>
+  )
+}
