@@ -15,22 +15,6 @@ export const dropTransducer = (f) => (step) => (a, c) => {
   return result ? step(a, result) : a
 }
 
-/**
- * Allow a transformer function (f) to return zero or more results
- * to be subsequently reduced. The transformer function returns
- * an array or undefined
- */
-export const stepTransducer = (f) => (step) => (a, c) => {
-  let acc = a
-  const chunks = f(c)
-
-  if (isNil(chunks)) return a
-
-  chunks.forEach((chunk) => {
-    acc = step(acc, chunk)
-  })
-
-  return acc
-}
+export const stepTransducer = (f) => (step) => (a, c) => reduce(step, a, f(c))
 
 export const iterator = flip(append)

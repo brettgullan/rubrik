@@ -92,7 +92,7 @@ const matrixLayoutTransformer = (cols, totalItems) => {
     // Edge-case -- return row if last item.
     if (count === totalItems) return [row]
 
-    return undefined
+    return []
   }
 }
 
@@ -256,8 +256,6 @@ const Grid = ({ columns, gutters, children, ...rest }) => {
   const matrix = is(String, columns)
     ? generateLayout(columns, gutters, extractProps(children))
     : generateResponsiveLayout(columns, gutters, extractProps(children))
-
-  console.log(matrix)
 
   return (
     <Flex flexWrap="wrap" {...rest}>
