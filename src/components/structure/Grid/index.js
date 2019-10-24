@@ -2,8 +2,10 @@ import React, { cloneElement } from 'react'
 import {
   adjust,
   append,
+  applySpec,
   assoc,
   compose,
+  converge,
   flip,
   head,
   juxt,
@@ -14,8 +16,10 @@ import {
   reduce,
   slice,
   sum,
+  tail,
   tap,
   unnest,
+  zip,
 } from 'ramda'
 import { Flex } from 'rebass'
 
@@ -33,6 +37,13 @@ const dropTransducer = (f) => (step) => (a, c) => {
   const result = f(c)
   return result ? step(a, result) : a
 }
+
+// -----------------------------------------------------------------
+
+const zipObjAll = compose(
+  map(unnest),
+  converge(reduce(zip), [head, tail])
+)
 
 // -----------------------------------------------------------------
 
@@ -168,6 +179,15 @@ const matrixRowMarginTransformer = (gutter) => {
 
 const matrixClean = map(omit(['span']))
 const matrixRemoveLastRowMargin = adjust(-1, map(omit(['mb', 'marginBottom'])))
+
+// ----------------------------------------------------------------------------
+
+const makeResponsiveProps = map(
+  applySpec({
+    mb: pluck('mb'),
+    width: pluck('width'),
+  })
+)
 
 // ----------------------------------------------------------------------------
 
