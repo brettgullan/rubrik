@@ -76,3 +76,29 @@ export const Default = () => {
     </Card>
   )
 }
+
+export const Scrim = () => {
+  const image = {
+    id: 'xebemoumy9losdljfk1x',
+    type: 'private',
+  }
+  return (
+    <Card>
+      <Tile
+        base={<Image scrim="default" image={image} />}
+        p={4}
+        justifyContent="flex-end"
+      >
+        <Text variant="trafalgar" fontWeight="regular" color="white.0">
+          2020 Volkswagen Golf GTI Review
+        </Text>
+      </Tile>
+      <Box>
+        <Text variant="pica" p={4}>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        </Text>
+      </Box>
+    </Card>
+  )
+}
