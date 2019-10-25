@@ -154,12 +154,22 @@ export const VariableColumns = () => {
 
 // ----------------------------------------------------------------------------
 
-export const Broken = () => {
+export const ContainerStyling = () => {
   const bg = options('Background Color', colors, colors.Grey, {
     display: 'select',
   })
   return (
-    <Grid columns="3" gutters="20px">
+    <Grid
+      columns="3"
+      gutters="20px"
+      sx={{
+        border: '1px solid',
+        borderColor: 'gray.1',
+        borderRadius: '8px',
+        padding: '30px',
+        bg: 'white.0',
+      }}
+    >
       <Text color="white.0" variant="paragon" p={3} bg={bg}>
         1
       </Text>

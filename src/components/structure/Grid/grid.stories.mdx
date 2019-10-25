@@ -1,0 +1,23 @@
+import { Meta, Story, Preview } from '@storybook/addon-docs/blocks'
+import { withKnobs, select, boolean } from '@storybook/addon-knobs'
+
+import Grid from '.'
+
+<Meta title="Design System|Elements/Structure/Grid/Overview" component={Grid} />
+
+# Grid
+
+## A responsive Grid component, enabling complex responsive grids using simple style props.  
+
+This Grid component is intended to solve a number of issues that are not easily handled by conventional Flexbox approaches:
+
+* Provide fluid, responsive grid layouts with fixed gutters;
+* Support variable grid item spans;
+* Use a declarative, props-based configuration;
+* Declare widths and margins directly on Grid items — i.e. no wrappers.
+* Don't use negative margins, all margins and sizing remain strictly within the layout container element.
+
+
+<Preview>
+  <Story id="design-system-elements-structure-grid--really-complex" />
+</Preview>
