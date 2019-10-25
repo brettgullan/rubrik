@@ -1,3 +1,5 @@
+import { relative } from 'path'
+
 // breakpoint values
 // any array length works with styled-system
 const breakpoints = ['640px', '768px', '1024px', '1280px']
@@ -241,6 +243,7 @@ const text = {
 
 const variants = {
   card: {
+    position: 'relative',
     bg: 'white.0',
     boxShadow: 'card',
     borderRadius: 2,
