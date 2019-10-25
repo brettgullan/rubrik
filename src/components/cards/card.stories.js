@@ -8,6 +8,7 @@ import Cloudinary from '../../providers/Cloudinary'
 // ----------------------------------------------------------------------------
 
 import Card from './card'
+import Price from './price'
 import { Standard as Image } from './images'
 
 // ----------------------------------------------------------------------------
@@ -67,11 +68,12 @@ export const Default = () => {
           2020 Volkswagen Golf GTI Review
         </Text>
       </Tile>
-      <Box>
-        <Text variant="pica" p={4}>
+      <Box p={4}>
+        <Text variant="pica" mb={4}>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
           eiusmod tempor incididunt ut labore et dolore magna aliqua.
         </Text>
+        <Price price="$30,490" />
       </Box>
     </Card>
   )
@@ -93,11 +95,12 @@ export const Scrim = () => {
           2020 Volkswagen Golf GTI Review
         </Text>
       </Tile>
-      <Box>
-        <Text variant="pica" p={4}>
+      <Box p={4}>
+        <Text variant="pica" mb={4}>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
           eiusmod tempor incididunt ut labore et dolore magna aliqua.
         </Text>
+        <Price rangeStart="$30,490" rangeEnd="$42,990" type="MSRP" />
       </Box>
     </Card>
   )
