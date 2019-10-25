@@ -1,5 +1,5 @@
 import React, { cloneElement } from 'react'
-import { Box, Flex, Text } from 'rebass'
+import { Box, Flex, Link, Text } from 'rebass'
 
 // ----------------------------------------------------------------------------
 
@@ -9,6 +9,7 @@ import Cloudinary from '../../providers/Cloudinary'
 
 import Card from './card'
 import Price from './price'
+import { FauxBlockLink } from '../structure'
 import { Standard as Image } from './images'
 
 // ----------------------------------------------------------------------------
@@ -76,6 +77,34 @@ export const Default = () => {
         <Price price="$30,490" />
       </Box>
     </Card>
+  )
+}
+
+export const BlockLink = () => {
+  const image = {
+    id: 'xebemoumy9losdljfk1x',
+    type: 'private',
+  }
+  return (
+    <FauxBlockLink link="/this/is/a/link">
+      <Card>
+        <Tile base={<Image image={image} />} p={4} justifyContent="flex-end">
+          <Text variant="trafalgar" fontWeight="regular" color="white.0">
+            2020 Volkswagen Golf GTI Review
+          </Text>
+        </Tile>
+        <Box p={4}>
+          <Text variant="pica" mb={4}>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          </Text>
+          <Link display="block" href="/this/is/clickable" variant="pica" mb={4}>
+            This should be a clickable link, separate to the rest of this card.
+          </Link>
+          <Price price="$30,490" />
+        </Box>
+      </Card>
+    </FauxBlockLink>
   )
 }
 
