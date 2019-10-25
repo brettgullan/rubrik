@@ -1,4 +1,5 @@
 import React from 'react'
+import { isNil } from 'ramda'
 
 // ----------------------------------------------------------------------------
 
@@ -15,15 +16,19 @@ const Label = (props) => (
 
 const Price = ({ price, type, rangeStart, rangeEnd, label, ...rest }) => {
   // sanity ... require price or rangeStart
-  if (!!price && !!rangeStart) return null
+  if (isNil(price) && isNil(rangeStart)) return null
 
-  const labelText = label || `Price${rangeStart ? ' Range' : ''}`
+  const labelText =
+    label ||
+    `${rangeStart && isNil(rangeEnd) ? 'Starting ' : ''}Price${
+      rangeStart && rangeEnd ? ' Range' : ''
+    }`
 
   return (
     <Box>
       <Label>{labelText}</Label>
       <Paragon fontFamily="title" fontWeight="semibold" display="inline-block">
-        {price || `${rangeStart} - ${rangeEnd}`}
+        {price || `${rangeStart}${rangeEnd ? ` - ${rangeEnd}` : ''}`}
       </Paragon>
       {type && (
         <Label
