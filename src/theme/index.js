@@ -17,6 +17,16 @@ const space = [0, 2, 4, 8, 16, 32, 64]
 
 // ----------------------------------------------------------------------------
 
+const nd = [
+  'rgba(0, 0, 0, 0.125)',
+  'rgba(0, 0, 0, 0.25)',
+  'rgba(0, 0, 0, 0.33)',
+  'rgba(0, 0, 0, 0.5)',
+  'rgba(0, 0, 0, 0.66)',
+  'rgba(0, 0, 0, 0.75)',
+  'rgba(0, 0, 0, 0.875)',
+]
+
 const colors = {
   transparent: 'transparent',
   inherit: 'inherit',
@@ -33,15 +43,7 @@ const colors = {
     primary: '#00C8C0',
   },
 
-  nd: [
-    'rgba(0, 0, 0, 0.125)',
-    'rgba(0, 0, 0, 0.25)',
-    'rgba(0, 0, 0, 0.33)',
-    'rgba(0, 0, 0, 0.5)',
-    'rgba(0, 0, 0, 0.66)',
-    'rgba(0, 0, 0, 0.75)',
-    'rgba(0, 0, 0, 0.875)',
-  ],
+  nd,
 
   social: {
     twitter: '#1da1f2',
@@ -251,6 +253,22 @@ const variants = {
   },
   avatar: {
     borderRadius: '50%',
+  },
+  scrims: {
+    default: {
+      position: 'relative',
+      '&:after': {
+        content: '""',
+        position: 'absolute',
+        top: 0,
+        left: 0,
+        bottom: 0,
+        right: 0,
+        width: '100%',
+        height: '100%',
+        backgroundImage: `linear-gradient(to top, ${nd[3]}, transparent 40%)`,
+      },
+    },
   },
 }
 
