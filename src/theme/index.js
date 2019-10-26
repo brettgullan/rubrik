@@ -1,4 +1,4 @@
-import { relative } from 'path'
+import { map, merge } from 'ramda'
 
 // breakpoint values
 // any array length works with styled-system
@@ -155,7 +155,11 @@ const shadows = {
 
 // ----------------------------------------------------------------------------
 
-const text = {
+const baseText = {
+  textDecoration: 'none',
+}
+
+const text = map(merge(baseText), {
   atlas: {
     fontFamily: 'text',
     fontSize: ['96px', '192px'],
@@ -239,7 +243,7 @@ const text = {
     lineHeight: '16px',
     textTransform: 'uppercase',
   },
-}
+})
 
 // ----------------------------------------------------------------------------
 
@@ -270,6 +274,7 @@ const variants = {
       },
     },
   },
+  ...text,
 }
 
 // ----------------------------------------------------------------------------
