@@ -1,32 +1,46 @@
-import React from 'react'
+import React, { cloneElement, Fragment } from 'react'
+import PropTypes from 'prop-types'
 
 // ----------------------------------------------------------------------------
 
-import { Block, BlockLink, blockStyles, linkStyles } from './styled'
+import { BlockLink, blockStyles, linkStyles } from './styled'
 
 // ----------------------------------------------------------------------------
 
 export const FauxBlockLink = ({
-  children,
+  children: child,
   link,
   linkText,
-  blockElement: Block,
   linkElement: Link,
   sx,
   ...props
-}) => (
-  <Block {...props} sx={{...blockStyles, ...sx}}>
-    {children}
-    <Link to={link} sx={linkStyles}>
-      {linkText}
-    </Link>
-  </Block>
-)
+}) => {
+  const children = (
+    <Fragment>
+      {child.props.children}
+      <Link href={link} sx={linkStyles}>
+        {linkText}
+      </Link>
+    </Fragment>
+  )
+
+  return cloneElement(
+    child,
+    { sx: { ...child.props.sx, ...blockStyles } },
+    children
+  )
+}
+
+// ----------------------------------------------------------------------------
 
 FauxBlockLink.defaultProps = {
   linkText: 'Read ...',
-  blockElement: Block,
   linkElement: BlockLink,
+}
+
+FauxBlockLink.propTypes = {
+  link: PropTypes.string.isRequired,
+  linkText: PropTypes.string,
 }
 
 export default FauxBlockLink

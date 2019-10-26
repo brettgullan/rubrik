@@ -2,10 +2,17 @@ import React from 'react'
 
 // ----------------------------------------------------------------------------
 
-import { Flex, Link } from 'rebass'
+import { Link } from 'rebass'
 import { hideText, position, size } from 'polished'
 
 // ----------------------------------------------------------------------------
+
+export const linkStyles = {
+  ...position('absolute', 0),
+  ...size('100%'),
+  ...hideText(),
+  zIndex: 'auto',
+}
 
 export const blockStyles = {
   position: 'relative',
@@ -13,22 +20,9 @@ export const blockStyles = {
     position: 'relative',
     zIndex: 10,
   },
-  '& > a:last-child': {
-    ...position('absolute', 0),
-    ...size('100%'),
-    ...hideText(),
-    zIndex: 'auto',
-  },
-}
-
-export const linkStyles = {
-  ...position('absolute', 0),
-  ...size('100%'),
-  ...hideText(),
+  '& > a:last-child': linkStyles,
 }
 
 // ----------------------------------------------------------------------------
 
-export const Block = (props) => <Flex {...props} />
-
-export const BlockLink = ({ to, ...rest }) => <Link href={to} {...rest} />
+export const BlockLink = Link
