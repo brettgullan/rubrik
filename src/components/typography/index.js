@@ -3,7 +3,7 @@ import { Heading as RBHeading, Text as RBText } from 'rebass'
 
 // ----------------------------------------------------------------------------
 
-import styled from 'styled-components'
+import styled from '@emotion/styled'
 import { system } from 'styled-system'
 
 // ----------------------------------------------------------------------------
