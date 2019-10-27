@@ -8,3 +8,5 @@ export { default as Stack } from './Stack'
 export { default as Stretch } from './Stretch'
 
 export { default as FauxBlockLink } from './FauxBlockLink'
+
+export { Tile, TileLayer } from './Tile'
