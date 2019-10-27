@@ -2,12 +2,11 @@ import React, { Fragment } from 'react'
 
 // ----------------------------------------------------------------------------
 
-import { Box } from 'rebass'
 import { CloudinaryImage } from '../media'
 
 // ----------------------------------------------------------------------------
 
-export const Standard = ({ image, scrim, ...rest }) => {
+export const Standard = ({ image, ...rest }) => {
   const imageOptions = {
     srcset: {
       widths: [375, 480, 640, 728],
@@ -17,18 +16,12 @@ export const Standard = ({ image, scrim, ...rest }) => {
     },
   }
 
-  const img = (
+  return (
     <CloudinaryImage
       sx={{ display: 'block', width: '100%' }}
       image={image}
       options={imageOptions}
       {...rest}
     />
-  )
-
-  return scrim ? (
-    <Box variant={`scrims.${scrim}`} children={img} />
-  ) : (
-    <Fragment>{img}</Fragment>
   )
 }

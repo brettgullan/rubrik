@@ -11,6 +11,7 @@ import Card from './card'
 import Price from './price'
 import { FauxBlockLink } from '../structure'
 import { Standard as Image } from './images'
+import { Tile, TileLayer, Scrim } from '../structure'
 
 // ----------------------------------------------------------------------------
 
@@ -36,27 +37,6 @@ export default {
 
 // ----------------------------------------------------------------------------
 
-const Tile = ({ base, children, sx, ...rest }) => {
-  return (
-    <Flex sx={{ position: 'relative' }}>
-      {base}
-      <Flex
-        sx={{
-          position: 'absolute',
-          top: 0,
-          width: '100%',
-          height: '100%',
-          flexDirection: 'column',
-          ...sx,
-        }}
-        {...rest}
-      >
-        {children}
-      </Flex>
-    </Flex>
-  )
-}
-
 export const Default = () => {
   const image = {
     id: 'xebemoumy9losdljfk1x',
@@ -64,10 +44,13 @@ export const Default = () => {
   }
   return (
     <Card>
-      <Tile base={<Image image={image} />} p={4} justifyContent="flex-end">
-        <Text variant="trafalgar" fontWeight="regular" color="white.0">
-          2020 Volkswagen Golf GTI Review
-        </Text>
+      <Tile>
+        <Image image={image} />
+        <TileLayer p={4} justifyContent="flex-end">
+          <Text variant="trafalgar" fontWeight="regular" color="white.0">
+            2020 Volkswagen Golf GTI Review
+          </Text>
+        </TileLayer>
       </Tile>
       <Box p={4}>
         <Text variant="pica" mb={4}>
@@ -88,10 +71,13 @@ export const BlockLink = () => {
   return (
     <FauxBlockLink link="/this/is/a/link">
       <Card>
-        <Tile base={<Image image={image} />} p={4} justifyContent="flex-end">
-          <Text variant="trafalgar" fontWeight="regular" color="white.0">
-            2020 Volkswagen Golf GTI Review
-          </Text>
+        <Tile>
+          <Image image={image} />
+          <TileLayer p={4} justifyContent="flex-end">
+            <Text variant="trafalgar" fontWeight="regular" color="white.0">
+              2020 Volkswagen Golf GTI Review
+            </Text>
+          </TileLayer>
         </Tile>
         <Box p={4}>
           <Text variant="pica" mb={4}>
@@ -108,21 +94,22 @@ export const BlockLink = () => {
   )
 }
 
-export const Scrim = () => {
+export const WithScrim = () => {
   const image = {
     id: 'xebemoumy9losdljfk1x',
     type: 'private',
   }
   return (
     <Card>
-      <Tile
-        base={<Image scrim="default" image={image} />}
-        p={4}
-        justifyContent="flex-end"
-      >
-        <Text variant="trafalgar" fontWeight="regular" color="white.0">
-          2020 Volkswagen Golf GTI Review
-        </Text>
+      <Tile>
+        <Scrim>
+          <Image image={image} />
+        </Scrim>
+        <TileLayer p={4} justifyContent="flex-end">
+          <Text variant="trafalgar" fontWeight="regular" color="white.0">
+            2020 Volkswagen Golf GTI Review
+          </Text>
+        </TileLayer>
       </Tile>
       <Box p={4}>
         <Text variant="pica" mb={4}>
