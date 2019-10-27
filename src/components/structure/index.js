@@ -10,3 +10,4 @@ export { default as Stretch } from './Stretch'
 export { default as FauxBlockLink } from './FauxBlockLink'
 
 export { Tile, TileLayer } from './Tile'
+export { default as Scrim } from './Scrim'
