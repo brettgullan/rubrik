@@ -37,13 +37,22 @@ export const AlphaButton = () => {
   const color = options('Color', colors, 'primary', {
     display: 'select',
   })
+  const reverse = options('Reverse', { True: true, False: false }, false, {
+    display: 'select',
+  })
 
   return (
     <Flex flexDirection="column">
       {sizes.map((size, i) => {
         return (
           <Box p={3}>
-            <Alpha key={i} size={size} color={color} href="/link/to/something">
+            <Alpha
+              key={i}
+              size={size}
+              color={color}
+              reverse={reverse}
+              href="/link/to/something"
+            >
               This is a link
             </Alpha>
           </Box>
