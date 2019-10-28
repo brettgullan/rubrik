@@ -257,38 +257,43 @@ const text = map(merge(baseText), {
 const buttonDefaults = {
   fontFamily: 'text',
   fontWeight: 'bold',
-  transition: 'background-color 0.2s ease',
+  transition: 'background-color 0.2s ease, border-color 0.2s ease',
   borderRadius: '128px',
 }
 
 const baseButtons = map(merge(__, buttonDefaults), {
   xl: {
+    borderStyle: 'solid',
     borderWidth: '3px',
-    px: ['64px', '72px'],
-    py: ['20px', '21px'],
+    px: ['58px', '66px'],
+    py: ['14px', '15px'],
     ...text.doublePica,
   },
   lg: {
+    borderStyle: 'solid',
     borderWidth: '3px',
-    px: ['48px', '56px'],
-    py: ['13px', '16px'],
+    px: ['42px', '50px'],
+    py: ['7px', '10px'],
     ...text.greatPrimer,
   },
   md: {
+    borderStyle: 'solid',
     borderWidth: '2px',
-    px: ['36px', '40px'],
-    py: ['7px', '8px'],
+    px: ['32px', '36px'],
+    py: ['3px', '4px'],
     ...text.bodyCopy,
   },
   sm: {
+    borderStyle: 'solid',
     borderWidth: '2px',
-    px: ['28px', '32px'],
-    py: ['5px', '6px'],
+    px: ['24px', '28px'],
+    py: ['1px', '2px'],
     ...text.longPrimer,
   },
   xs: {
+    borderStyle: 'solid',
     borderWidth: '1px',
-    px: ['21px', '24px'],
+    px: ['19px', '22px'],
     ...text.minion,
     textTransform: 'normal',
   },
@@ -297,6 +302,7 @@ const baseButtons = map(merge(__, buttonDefaults), {
 const buttons = {
   alpha: baseButtons,
   beta: baseButtons,
+  gamma: baseButtons,
 }
 
 // ----------------------------------------------------------------------------
