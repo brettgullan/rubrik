@@ -1,4 +1,5 @@
 import { map, merge } from 'ramda'
+import { darken, lighten } from 'polished'
 
 // breakpoint values
 // any array length works with styled-system
@@ -247,6 +248,26 @@ const text = map(merge(baseText), {
 
 // ----------------------------------------------------------------------------
 
+const buttons = {
+  alpha: {
+    default: {
+      borderRadius: '64px',
+      color: 'white.0',
+      bg: 'brand.primary',
+      px: '72px',
+      py: '23px',
+      ...text.paragon,
+      fontFamily: 'title',
+      transition: 'background-color 0.2s ease',
+      '&:hover': {
+        backgroundColor: darken(0.1, colors.brand.primary),
+      },
+    },
+  },
+}
+
+// ----------------------------------------------------------------------------
+
 const variants = {
   card: {
     position: 'relative',
@@ -295,5 +316,6 @@ export default {
   text,
 
   shadows,
+  buttons,
   variants,
 }
