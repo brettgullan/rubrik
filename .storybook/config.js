@@ -29,7 +29,7 @@ addParameters({
   backgrounds: [
     { name: 'white', value: '#FFF' },
     { name: 'base', value: '#F5F5F5', default: true },
-    { name: 'drive', value: '#00C8C0' },
+    { name: 'drive', value: '#00C2D3' },
     { name: 'grey', value: '#666' },
     { name: 'black', value: '#000' },
   ],
