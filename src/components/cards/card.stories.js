@@ -31,7 +31,7 @@ const withCloudinary = (storyFn) => (
 // ----------------------------------------------------------------------------
 
 export default {
-  title: 'Design System|Elements/Cards',
+  title: 'Design System|Elements/Cards/Card',
   decorators: [withCloudinary],
 }
 
@@ -39,7 +39,7 @@ export default {
 
 export const Default = () => {
   const image = {
-    id: 'xebemoumy9losdljfk1x',
+    id: 'vfa76t7ycamsw0jheuvq',
     type: 'private',
   }
   return (
@@ -48,7 +48,7 @@ export const Default = () => {
         <Image image={image} />
         <TileLayer p={4} justifyContent="flex-end">
           <Text variant="trafalgar" fontWeight="regular" color="white.0">
-            2020 Volkswagen Golf GTI Review
+            2020 Mercedes Benz GTc Review
           </Text>
         </TileLayer>
       </Tile>
@@ -65,7 +65,7 @@ export const Default = () => {
 
 export const BlockLink = () => {
   const image = {
-    id: 'xebemoumy9losdljfk1x',
+    id: 'tezqdcioyfpngixkdhys',
     type: 'private',
   }
   return (
