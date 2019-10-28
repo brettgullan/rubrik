@@ -261,7 +261,7 @@ const buttonDefaults = {
   borderRadius: '128px',
 }
 
-const baseButtons = map(merge(__, buttonDefaults), {
+const defaultButtons = map(merge(__, buttonDefaults), {
   xl: {
     borderStyle: 'solid',
     borderWidth: '3px',
@@ -300,9 +300,7 @@ const baseButtons = map(merge(__, buttonDefaults), {
 })
 
 const buttons = {
-  alpha: baseButtons,
-  beta: baseButtons,
-  gamma: baseButtons,
+  default: defaultButtons,
 }
 
 // ----------------------------------------------------------------------------

@@ -25,7 +25,7 @@ export const Alpha = ({ size, color, ...rest }) => {
     }),
   }
 
-  return <Button variant={`alpha.${size}`} sx={sx} {...rest} />
+  return <Button variant={`default.${size}`} sx={sx} {...rest} />
 }
 
 Alpha.defaultProps = {
@@ -51,7 +51,7 @@ export const Beta = ({ size, color, ...rest }) => {
     }),
   }
 
-  return <Button variant={`beta.${size}`} sx={sx} {...rest} />
+  return <Button variant={`default.${size}`} sx={sx} {...rest} />
 }
 
 Beta.defaultProps = {
@@ -77,10 +77,36 @@ export const Gamma = ({ size, color, ...rest }) => {
     }),
   }
 
-  return <Button variant={`gamma.${size}`} sx={sx} {...rest} />
+  return <Button variant={`default.${size}`} sx={sx} {...rest} />
 }
 
 Gamma.defaultProps = {
+  as: 'a',
+  size: 'md',
+  color: 'primary',
+}
+
+// ----------------------------------------------------------------------------
+
+export const Delta = ({ size, color, ...rest }) => {
+  const theme = useTheme()
+  const colorValue = get(theme, `colors.button.${color}`)
+
+  const sx = {
+    color: `white.0`,
+    borderColor: `button.${color}`,
+    backgroundColor: 'nd.4',
+    ...(color !== 'subtle' && {
+      '&:hover': {
+        backgroundColor: mix(0.85, get(theme, `colors.nd.4`), colorValue),
+      },
+    }),
+  }
+
+  return <Button variant={`default.${size}`} sx={sx} {...rest} />
+}
+
+Delta.defaultProps = {
   as: 'a',
   size: 'md',
   color: 'primary',

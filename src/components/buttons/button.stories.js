@@ -4,7 +4,7 @@ import { withKnobs, optionsKnob as options } from '@storybook/addon-knobs'
 // ----------------------------------------------------------------------------
 
 import { Box, Flex } from 'rebass'
-import { Alpha, Beta, Gamma } from '.'
+import { Alpha, Beta, Gamma, Delta } from '.'
 
 // ----------------------------------------------------------------------------
 
@@ -107,6 +107,41 @@ export const GammaButton = () => {
 
 GammaButton.story = {
   name: 'Gamma',
+  parameters: {
+    backgrounds: [
+      {
+        name: 'grey',
+        value: '#666',
+        default: true,
+      },
+    ],
+  },
+}
+
+// ----------------------------------------------------------------------------
+
+export const DeltaButton = () => {
+  const color = options('Color', colors, 'primary', {
+    display: 'select',
+  })
+
+  return (
+    <Flex flexDirection="column">
+      {sizes.map((size, i) => {
+        return (
+          <Box p={3}>
+            <Delta key={i} size={size} color={color} href="/link/to/something">
+              This is a link
+            </Delta>
+          </Box>
+        )
+      })}
+    </Flex>
+  )
+}
+
+DeltaButton.story = {
+  name: 'Delta',
   parameters: {
     backgrounds: [
       {
