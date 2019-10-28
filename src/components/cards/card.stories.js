@@ -37,6 +37,38 @@ export default {
 
 // ----------------------------------------------------------------------------
 
+const buildIntrinsicRatioStyles = (ratio) => ({
+  position: 'relative',
+  '&:before': {
+    /* This will setup the aspect ratio of our screen */
+    content: '""',
+    display: 'block',
+    /* content-box makes sure padding adds to declared height */
+    boxSizing: 'content-box',
+    width: '100%',
+    height: 0,
+    /* Vertical padding is based on parent element's width */
+    /* So we want 9/16, converted to % as our vertical padding */
+    paddingBottom: `${(1 / ratio) * 100}%`,
+  },
+})
+
+const scrimStyle = () => ({
+  '&:after': {
+    /* This will setup the aspect ratio of our screen */
+    content: '""',
+    display: 'block',
+    position: 'absolute',
+    /* content-box makes sure padding adds to declared height */
+    boxSizing: 'content-box',
+    width: '100%',
+    height: '100%',
+    /* Vertical padding is based on parent element's width */
+    /* So we want 9/16, converted to % as our vertical padding */
+    backgroundImage: 'linear-gradient(to top, #000, rgba(0,0,0,.4) 40%)',
+  },
+})
+
 export const Default = () => {
   const image = {
     id: 'vfa76t7ycamsw0jheuvq',
@@ -45,7 +77,7 @@ export const Default = () => {
   return (
     <Card>
       <Tile>
-        <Image image={image} />
+        <Image image={image} sx={buildIntrinsicRatioStyles(16 / 9)} />
         <TileLayer p={4} justifyContent="flex-end">
           <Text variant="trafalgar" fontWeight="regular" color="white.0">
             2020 Mercedes-AMG GT Review
