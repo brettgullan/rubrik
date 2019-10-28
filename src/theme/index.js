@@ -257,7 +257,8 @@ const buttons = {
       px: '72px',
       py: '23px',
       ...text.paragon,
-      fontFamily: 'title',
+      fontFamily: 'text',
+      fontWeight: 'bold',
       transition: 'background-color 0.2s ease',
       '&:hover': {
         backgroundColor: darken(0.1, colors.brand.primary),
