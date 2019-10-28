@@ -1,5 +1,5 @@
 import { __, map, merge } from 'ramda'
-import { darken, lighten } from 'polished'
+import { position, size } from 'polished'
 
 // breakpoint values
 // any array length works with styled-system
@@ -319,15 +319,11 @@ const variants = {
   scrims: {
     default: {
       position: 'relative',
+      width: '100%',
       '&:after': {
         content: '""',
-        position: 'absolute',
-        top: 0,
-        left: 0,
-        bottom: 0,
-        right: 0,
-        width: '100%',
-        height: '100%',
+        ...position('absolute', 0),
+        ...size('100%'),
         backgroundImage: `linear-gradient(to top, ${nd[3]}, transparent 40%)`,
       },
     },
