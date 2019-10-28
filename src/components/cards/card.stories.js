@@ -48,7 +48,7 @@ export const Default = () => {
         <Image image={image} />
         <TileLayer p={4} justifyContent="flex-end">
           <Text variant="trafalgar" fontWeight="regular" color="white.0">
-            2020 Mercedes Benz GTc Review
+            2020 Mercedes-AMG GT Review
           </Text>
         </TileLayer>
       </Tile>
