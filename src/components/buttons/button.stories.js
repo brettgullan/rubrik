@@ -73,12 +73,22 @@ export const BetaButton = () => {
     display: 'select',
   })
 
+  const reverse = options('Reverse', { True: true, False: false }, false, {
+    display: 'select',
+  })
+
   return (
     <Flex flexDirection="column">
       {sizes.map((size, i) => {
         return (
           <Box p={3}>
-            <Beta key={i} size={size} color={color} href="/link/to/something">
+            <Beta
+              key={i}
+              size={size}
+              color={color}
+              reverse={reverse}
+              href="/link/to/something"
+            >
               This is a link
             </Beta>
           </Box>
