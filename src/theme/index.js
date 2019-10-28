@@ -1,4 +1,4 @@
-import { map, merge } from 'ramda'
+import { __, map, merge } from 'ramda'
 import { darken, lighten } from 'polished'
 
 // breakpoint values
@@ -39,9 +39,15 @@ const colors = {
 
   text: '#141414',
 
-  // nested objects work as well
   brand: {
     primary: '#00C2D3',
+  },
+  button: {
+    primary: '#00C2D3',
+    accent: '#F5A623',
+    secondary: '#666',
+    tertiary: '#CCC',
+    subtle: '#EEE',
   },
 
   nd,
@@ -248,22 +254,49 @@ const text = map(merge(baseText), {
 
 // ----------------------------------------------------------------------------
 
-const buttons = {
-  alpha: {
-    default: {
-      borderRadius: '64px',
-      color: 'white.0',
-      bg: 'brand.primary',
-      px: '72px',
-      py: '23px',
-      ...text.paragon,
-      fontFamily: 'title',
-      transition: 'background-color 0.2s ease',
-      '&:hover': {
-        backgroundColor: darken(0.1, colors.brand.primary),
-      },
-    },
+const buttonDefaults = {
+  fontFamily: 'text',
+  fontWeight: 'bold',
+  transition: 'background-color 0.2s ease',
+  borderRadius: '128px',
+}
+
+const baseButtons = map(merge(__, buttonDefaults), {
+  xl: {
+    borderWidth: '3px',
+    px: ['64px', '72px'],
+    py: ['20px', '21px'],
+    ...text.doublePica,
   },
+  lg: {
+    borderWidth: '3px',
+    px: ['48px', '56px'],
+    py: ['13px', '16px'],
+    ...text.greatPrimer,
+  },
+  md: {
+    borderWidth: '2px',
+    px: ['36px', '40px'],
+    py: ['7px', '8px'],
+    ...text.bodyCopy,
+  },
+  sm: {
+    borderWidth: '2px',
+    px: ['28px', '32px'],
+    py: ['5px', '6px'],
+    ...text.longPrimer,
+  },
+  xs: {
+    borderWidth: '1px',
+    px: ['21px', '24px'],
+    ...text.minion,
+    textTransform: 'normal',
+  },
+})
+
+const buttons = {
+  alpha: baseButtons,
+  beta: baseButtons,
 }
 
 // ----------------------------------------------------------------------------
