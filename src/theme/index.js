@@ -40,7 +40,7 @@ const colors = {
 
   // nested objects work as well
   brand: {
-    primary: '#00C8C0',
+    primary: '#00C2D3',
   },
 
   nd,
