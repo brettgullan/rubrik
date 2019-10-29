@@ -8,7 +8,7 @@ import LinkList from './link-list'
 // ----------------------------------------------------------------------------
 
 const AffiliateLinks = ({ links, ...rest }) => (
-  <Flex justifyContent="center" flexWrap="wrap" color="white.0" {...rest}>
+  <Flex justifyContent="center" flexWrap="wrap" {...rest}>
     <LinkList links={links} />
   </Flex>
 )

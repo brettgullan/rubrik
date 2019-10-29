@@ -18,7 +18,7 @@ const SeoLinks = ({ links }) => {
               variant="pica"
               fontFamily="text"
               fontWeight="regular"
-              color="#526168"
+              color="#64767F"
               mb={4}
             >
               {label}

@@ -9,7 +9,7 @@ import LinkList from './link-list'
 
 const SiteLinks = ({ links, ...rest }) => (
   <Flex justifyContent="center" flexWrap="wrap" color="white.0" {...rest}>
-    <LinkList links={links} />
+    <LinkList links={links} fontWeight="bold" />
   </Flex>
 )
 
@@ -30,11 +30,11 @@ SiteLinks.defaultProps = {
       link: '/newseletter',
     },
     {
-      label: 'Advertise with us',
+      label: 'Advertise with Us',
       link: '/advertise-with-us',
     },
     {
-      label: 'Privacy policy',
+      label: 'Privacy Policy',
       link: '/privacy-policy',
     },
   ],
