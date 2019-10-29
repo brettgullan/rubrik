@@ -15,6 +15,9 @@ let lazySizes
 
 if (canUseDOM()) {
   lazySizes = require('lazysizes')
+  require('lazysizes/plugins/blur-up/ls.blur-up')
+
+  lazySizes.cfg.blurupMode = 'auto'
 }
 
 // ----------------------------------------------------------------------------
