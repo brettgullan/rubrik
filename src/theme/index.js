@@ -37,7 +37,7 @@ const colors = {
   gray: ['#eee', '#ccc', '#999', '#666', '#4A4A4A', '#333'],
   black: ['#000000', '#121212', '#2A2A2A'],
 
-  text: '#141414',
+  text: '#343C41',
 
   brand: {
     primary: '#00C2D3',
@@ -54,7 +54,10 @@ const colors = {
 
   social: {
     twitter: '#1da1f2',
-    facebook: '#3b5998',
+    facebook: '#1471F6',
+    instagram: '#FCAF45',
+    google: '#DB4437',
+    youtube: '#FF0000',
     email: '#9b9b9b',
   },
 }
@@ -163,6 +166,7 @@ const shadows = {
 // ----------------------------------------------------------------------------
 
 const baseText = {
+  color: 'text',
   textDecoration: 'none',
 }
 

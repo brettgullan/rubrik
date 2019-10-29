@@ -20,6 +20,7 @@ export default createGlobalStyle`
 
   body {
     margin: 0;
+    color: ${theme.colors.text};
     background: ${theme.colors.white[3]};
     min-height: 100vh;
     width: 100%;
