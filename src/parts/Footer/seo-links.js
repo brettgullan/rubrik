@@ -11,9 +11,9 @@ import LinkList from './link-list'
 const SeoLinks = ({ links }) => {
   return (
     <Flex justifyContent="center" mx={[-4, -4, -5]}>
-      {links.map(({ label, links: group }, index) => {
+      {links.map(({ label, links: group, ...rest }, index) => {
         return (
-          <Box key={`link-group-${index}`} px={[4, 4, 5]}>
+          <Box key={`link-group-${index}`} px={[4, 4, 5]} {...rest}>
             <Heading
               variant="pica"
               fontFamily="text"
@@ -78,6 +78,7 @@ SeoLinks.defaultProps = {
     },
     {
       label: 'Research & Advice',
+      display: ['none', 'block'],
       links: [
         {
           label: 'Car Valuation',
@@ -123,6 +124,7 @@ SeoLinks.defaultProps = {
     },
     {
       label: 'Browse by Lifestyle',
+      display: ['none', 'none', 'block'],
       links: [
         {
           label: 'What Car Should I Buy?',
@@ -164,6 +166,7 @@ SeoLinks.defaultProps = {
     },
     {
       label: 'Manufacturers',
+      display: ['none', 'none', 'none', 'block'],
       links: [
         {
           label: 'BMW',
