@@ -57,7 +57,7 @@ const Footer = () => {
         <Text
           variant="minion"
           p={4}
-          color="#526168"
+          color="#64767F"
           sx={{
             textAlign: 'center',
             fontWeight: 'regular',
