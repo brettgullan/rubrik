@@ -10,12 +10,12 @@ import LinkList from './link-list'
 
 const SeoLinks = ({ links }) => {
   return (
-    <Flex justifyContent="center" mx={-4}>
+    <Flex justifyContent="center" mx={[-4, -4, -5]}>
       {links.map(({ label, links: group }, index) => {
         return (
-          <Box key={`link-group-${index}`} px={4}>
+          <Box key={`link-group-${index}`} px={[4, 4, 5]}>
             <Heading
-              variant="greatPrimer"
+              variant="pica"
               fontFamily="text"
               fontWeight="regular"
               color="#526168"
@@ -23,12 +23,7 @@ const SeoLinks = ({ links }) => {
             >
               {label}
             </Heading>
-            <LinkList
-              links={group}
-              justifyContent="start"
-              flexDirection="column"
-              mx={-4}
-            />
+            <LinkList links={group} display="block" px={0} />
           </Box>
         )
       })}

@@ -2,11 +2,16 @@ import React from 'react'
 
 // ----------------------------------------------------------------------------
 
+import { Flex } from 'rebass'
 import LinkList from './link-list'
 
 // ----------------------------------------------------------------------------
 
-const SiteLinks = (props) => <LinkList {...props} />
+const SiteLinks = ({ links, ...rest }) => (
+  <Flex justifyContent="center" flexWrap="wrap" color="white.0" {...rest}>
+    <LinkList links={links} />
+  </Flex>
+)
 
 // ----------------------------------------------------------------------------
 
