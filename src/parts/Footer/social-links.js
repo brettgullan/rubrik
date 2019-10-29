@@ -16,9 +16,10 @@ import { Flex, Link } from 'rebass'
 
 const SocialLinks = ({ links, ...rest }) => (
   <Flex justifyContent="center" {...rest}>
-    {links.map(({ network, link, icon }) => {
+    {links.map(({ network, link, icon }, index) => {
       return (
         <Link
+          key={`social-link-${index}`}
           variant="doublePica"
           color="white.0"
           px={4}
