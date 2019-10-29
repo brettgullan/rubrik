@@ -10,15 +10,24 @@ import LinkList from './link-list'
 
 const SeoLinks = ({ links }) => {
   return (
-    <Flex>
-      {links.map(({ label, links: group }) => {
+    <Flex justifyContent="center" mx={-4}>
+      {links.map(({ label, links: group }, index) => {
         return (
-          <Box>
-            <Heading variant="paragon">{label}</Heading>
+          <Box key={`link-group-${index}`} px={4}>
+            <Heading
+              variant="greatPrimer"
+              fontFamily="text"
+              fontWeight="regular"
+              color="#526168"
+              mb={4}
+            >
+              {label}
+            </Heading>
             <LinkList
               links={group}
               justifyContent="start"
               flexDirection="column"
+              mx={-4}
             />
           </Box>
         )
@@ -155,6 +164,47 @@ SeoLinks.defaultProps = {
         {
           label: 'Eco',
           link: '/what-new-car-should-i-buy/eco',
+        },
+      ],
+    },
+    {
+      label: 'Manufacturers',
+      links: [
+        {
+          label: 'BMW',
+          link: '/new-car-showroom/bmw',
+        },
+        {
+          label: 'Audi',
+          link: '/new-car-showroom/audi',
+        },
+        {
+          label: 'Ford',
+          link: '/new-car-showroom/ford',
+        },
+        {
+          label: 'Hyundai',
+          link: '/new-car-showroom/hyundai',
+        },
+        {
+          label: 'Kia',
+          link: '/new-car-showroom/kia',
+        },
+        {
+          label: 'Toyota',
+          link: '/new-car-showroom/toyota',
+        },
+        {
+          label: 'Volvo',
+          link: '/new-car-showroom/volvo',
+        },
+        {
+          label: 'Volkswagen',
+          link: '/new-car-showroom/volkswagen',
+        },
+        {
+          label: 'See all Manufacturers',
+          link: '/new-car-showroom',
         },
       ],
     },

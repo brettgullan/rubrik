@@ -6,6 +6,7 @@ import { Flex, Text } from 'rebass'
 import SocialLinks from './social-links'
 import SiteLinks from './site-links'
 import AffiliateLinks from './affiliate-links'
+import SeoLinks from './seo-links'
 
 // ----------------------------------------------------------------------------
 
@@ -17,6 +18,7 @@ const Footer = () => {
       justifyContent="center"
       bg="#001722"
     >
+      <SeoLinks p={4} />
       <SocialLinks p={4} />
       <SiteLinks p={4} />
       <AffiliateLinks p={4} />
