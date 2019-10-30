@@ -1,5 +1,6 @@
+import css, { get } from '@styled-system/css'
 import { __, map, merge } from 'ramda'
-import { position, size } from 'polished'
+import { lighten, position, size, tint } from 'polished'
 
 // breakpoint values
 // any array length works with styled-system
@@ -309,6 +310,108 @@ const buttons = {
 
 // ----------------------------------------------------------------------------
 
+const formDefaults = {
+  // Common to all
+  base: {},
+
+  // Per-size
+  sm: {},
+  md: {
+    ...text.greatPrimer,
+    lineHeight: 'snug',
+  },
+  lg: {},
+
+  // State
+  valid: {
+    color: 'button.primary',
+    border: '1px solid',
+
+    '&:focus, &:active': {
+      border: '1px solid inherit',
+      boxShadow: [
+        'rgb(106, 237, 97) 0px 0px 2px 1px',
+        'rgb(177, 247, 160) 0px 0px 0px 3px',
+      ].join(', '),
+      outline: 'none',
+    },
+
+    /* Autocomplete styles in Chrome*/
+    [[
+      '&:-webkit-autofill',
+      '&:-webkit-autofill:hover',
+      '&:-webkit-autofill:focus',
+    ].join(', ')]: {
+      border: '1px solid inherit',
+    },
+  },
+
+  error: {
+    color: 'button.accent',
+    border: '1px solid',
+    outline: 'none',
+
+    /* Autocomplete styles in Chrome*/
+    [[
+      '&:-webkit-autofill',
+      '&:-webkit-autofill:hover',
+      '&:-webkit-autofill:focus',
+    ].join(', ')]: {
+      border: '1px solid inherit',
+    },
+  },
+}
+
+const testing = {
+  input: {
+    default: {
+      color: 'button.accent',
+      border: '5px solid inherit',
+      /*
+      backgroundColor: ({ colors }) => {
+        return tint(0.9, colors.button.accent)
+      },
+      */
+      background: 'red, rgba(255, 255, 255, 0.5)',
+    },
+  },
+}
+
+const forms = {
+  input: {
+    default: {
+      ...formDefaults.base,
+      ...formDefaults.md,
+      borderRadius: '1px',
+      color: '#262C30',
+
+      '&::placeholder': {
+        color: '#BDBFC0',
+      },
+    },
+    valid: {
+      ...formDefaults.base,
+      ...formDefaults.md,
+      ...formDefaults.valid,
+    },
+    error: {
+      ...formDefaults.base,
+      ...formDefaults.md,
+      ...formDefaults.error,
+    },
+  },
+
+  select: {
+    borderRadius: 9999,
+  },
+  textarea: {},
+  label: {},
+  radio: {},
+  checkbox: {},
+}
+
+// ----------------------------------------------------------------------------
+
 const variants = {
   card: {
     position: 'relative',
@@ -354,5 +457,8 @@ export default {
 
   shadows,
   buttons,
+  forms,
   variants,
+
+  testing,
 }
