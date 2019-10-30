@@ -33,8 +33,6 @@ export default {
 const handleSubmit = (values) => {
   console.log(values)
 }
-const onChange = () => {}
-
 const sizes = {
   Small: 'sm',
   Default: 'md',
@@ -59,33 +57,31 @@ export const Working = () => {
   return (
     <Formik
       validationSchema={InputSchema}
+      validateOnBlur={true}
       onSubmit={handleSubmit}
       initialValues={{ name: '' }}
     >
-      {({ errors, touched }) => (
+      {(props) => (
         <Form>
-          <Field name="name">
-            {({ field }) => (
-              <Input
-                size={size}
-                sx={{
-                  borderRadius,
-                  fontFamily,
-                }}
-                onChange={onChange}
-                placeholder="Input something ..."
-                {...field}
-                valid={touched[field.name] && !errors[field.name]}
-                error={touched[field.name] && errors[field.name]}
-              />
-            )}
-          </Field>
+          <Input
+            name="name"
+            size={size}
+            sx={{
+              borderRadius,
+              fontFamily,
+            }}
+            placeholder="Input something ..."
+          />
         </Form>
       )}
     </Formik>
   )
 }
+Working.story = {
+  name: 'Form',
+}
 
+/*
 export const Placeholder = () => {
   return <Input placeholder="This is an empty input field" />
 }
@@ -160,3 +156,4 @@ export const Error = () => {
     />
   )
 }
+*/
