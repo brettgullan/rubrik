@@ -21,24 +21,27 @@ const Input = ({
 }) => {
   const theme = useTheme()
 
-  const sizingStyles = get(theme, `forms.input.${size}`, size)
-
   const state = error ? 'error' : valid ? 'valid' : 'default'
-
-  let currentColor = error ? errorColor : valid ? validColor : color
-  currentColor = get(theme, `colors.${currentColor}`, currentColor)
 
   return (
     <InputField
-      className={cx(className, { [state]: state !== 'default' })}
-      variant={`input.${state}`}
+      variant="input"
+      className={cx(className, size, { [state]: state !== 'default' })}
       sx={{
-        ...sizingStyles,
-        ...(currentColor && {
-          color: currentColor,
-          ...(state !== 'default' && {
-            bg: tint(0.95, currentColor),
-          }),
+        ...(color && {
+          color,
+        }),
+        ...(validColor && {
+          '&.valid': {
+            color: validColor,
+            bg: tint(0.95, get(theme, `colors.${validColor}`, validColor)),
+          },
+        }),
+        ...(errorColor && {
+          '&.error': {
+            color: errorColor,
+            bg: tint(0.95, get(theme, `colors.${errorColor}`, errorColor)),
+          },
         }),
         ...sx,
       }}

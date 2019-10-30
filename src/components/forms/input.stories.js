@@ -97,6 +97,11 @@ export const Error = () => {
       error={true}
       onChange={onChange}
       value="This is an error input field"
+      sx={{
+        '&.error': {
+          textTransform: 'uppercase',
+        },
+      }}
     />
   )
 }

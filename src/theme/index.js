@@ -323,35 +323,31 @@ const buttons = {
 
 const forms = {
   input: {
+    // Defaults
+    fontWeight: 'regular',
+    lineHeight: 'snug',
+    color: 'text',
+    border: '1px solid inherit',
+    backgroundColor: 'white.0',
+
     // Component Sizing
-    sm: {
+    '&.sm': {
       fontSize: fontSizes.brevier,
-      fontWeight: 'regular',
-      lineHeight: 'snug',
       p: 3,
     },
-    md: {
+    '&.md': {
       fontSize: fontSizes.greatPrimer,
-      fontWeight: 'regular',
-      lineHeight: 'snug',
       p: 4,
     },
-    lg: {
+    '&.lg': {
       fontSize: fontSizes.doublePica,
       fontWeight: 'light',
-      lineHeight: 'snug',
       py: 4,
       px: '24px',
     },
 
     // State
-    default: {
-      color: 'button.accent',
-      border: '1px solid inherit',
-      backgroundColor: 'white.0',
-    },
-
-    valid: {
+    '&.valid': {
       color: 'button.primary',
       backgroundColor: ({ colors }) => tint(0.95, colors.button.primary),
       border: '1px solid',
@@ -375,7 +371,7 @@ const forms = {
       },
     },
 
-    error: {
+    '&.error': {
       color: 'button.accent',
       backgroundColor: ({ colors }) => tint(0.95, colors.button.accent),
       border: '1px solid',
