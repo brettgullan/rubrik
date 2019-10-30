@@ -1,4 +1,5 @@
 import React from 'react'
+import cx from 'classnames'
 
 import { Input as InputField } from '@rebass/forms'
 import { useTheme } from 'emotion-theming'
@@ -14,18 +15,22 @@ const Input = ({
   color,
   validColor,
   errorColor,
+  className,
   sx,
   ...rest
 }) => {
   const theme = useTheme()
+
   const sizingStyles = get(theme, `forms.input.${size}`, size)
 
   const state = error ? 'error' : valid ? 'valid' : 'default'
+
   let currentColor = error ? errorColor : valid ? validColor : color
   currentColor = get(theme, `colors.${currentColor}`, currentColor)
 
   return (
     <InputField
+      className={cx(className, { [state]: state !== 'default' })}
       variant={`input.${state}`}
       sx={{
         ...sizingStyles,
