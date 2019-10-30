@@ -109,6 +109,17 @@ fontSizes['4xl'] = fontSizes[13] // 36px
 fontSizes['5xl'] = fontSizes[15] // 44px
 fontSizes['6xl'] = fontSizes[20] // 64px
 
+fontSizes['canon'] = ['32px', '52px']
+fontSizes['trafalgar'] = ['24px', '36px']
+fontSizes['paragon'] = ['22px', '28px']
+fontSizes['doublePica'] = ['20px', '26px']
+fontSizes['greatPrimer'] = ['18px', '21px']
+fontSizes['bodyCopy'] = ['16px', '18px']
+fontSizes['pica'] = ['16px', '18px']
+fontSizes['longPrimer'] = ['15px', '15px']
+fontSizes['brevier'] = ['14px', '14px']
+fontSizes['minion'] = ['12px', '13px']
+
 const fontWeights = {
   thin: 100,
   light: 300,
@@ -310,94 +321,83 @@ const buttons = {
 
 // ----------------------------------------------------------------------------
 
-const formDefaults = {
-  // Common to all
-  base: {},
-
-  // Per-size
-  sm: {},
-  md: {
-    ...text.greatPrimer,
-    lineHeight: 'snug',
-  },
-  lg: {},
-
-  // State
-  valid: {
-    color: 'button.primary',
-    border: '1px solid',
-
-    '&:focus, &:active': {
-      border: '1px solid inherit',
-      boxShadow: [
-        'rgb(106, 237, 97) 0px 0px 2px 1px',
-        'rgb(177, 247, 160) 0px 0px 0px 3px',
-      ].join(', '),
-      outline: 'none',
-    },
-
-    /* Autocomplete styles in Chrome*/
-    [[
-      '&:-webkit-autofill',
-      '&:-webkit-autofill:hover',
-      '&:-webkit-autofill:focus',
-    ].join(', ')]: {
-      border: '1px solid inherit',
-    },
-  },
-
-  error: {
-    color: 'button.accent',
-    border: '1px solid',
-    outline: 'none',
-
-    /* Autocomplete styles in Chrome*/
-    [[
-      '&:-webkit-autofill',
-      '&:-webkit-autofill:hover',
-      '&:-webkit-autofill:focus',
-    ].join(', ')]: {
-      border: '1px solid inherit',
-    },
-  },
-}
-
-const testing = {
-  input: {
-    default: {
-      color: 'button.accent',
-      border: '5px solid inherit',
-      /*
-      backgroundColor: ({ colors }) => {
-        return tint(0.9, colors.button.accent)
-      },
-      */
-      background: 'red, rgba(255, 255, 255, 0.5)',
-    },
-  },
-}
-
 const forms = {
   input: {
-    default: {
-      ...formDefaults.base,
-      ...formDefaults.md,
-      borderRadius: '1px',
-      color: '#262C30',
+    // Component Sizing
+    sm: {
+      fontSize: fontSizes.brevier,
+      fontWeight: 'regular',
+      lineHeight: 'snug',
+      p: 3,
+    },
+    md: {
+      fontSize: fontSizes.greatPrimer,
+      fontWeight: 'regular',
+      lineHeight: 'snug',
+      p: 4,
+    },
+    lg: {
+      fontSize: fontSizes.doublePica,
+      fontWeight: 'light',
+      lineHeight: 'snug',
+      py: 4,
+      px: '24px',
+    },
 
-      '&::placeholder': {
-        color: '#BDBFC0',
+    // State
+    default: {
+      color: 'button.accent',
+      border: '1px solid inherit',
+      backgroundColor: 'white.0',
+    },
+
+    valid: {
+      color: 'button.primary',
+      backgroundColor: ({ colors }) => tint(0.95, colors.button.primary),
+      border: '1px solid',
+
+      '&:focus, &:active': {
+        border: '1px solid inherit',
+        boxShadow: [
+          'rgb(106, 237, 97) 0px 0px 2px 1px',
+          'rgb(177, 247, 160) 0px 0px 0px 3px',
+        ].join(', '),
+        outline: 'none',
+      },
+
+      /* Autocomplete styles in Chrome*/
+      [[
+        '&:-webkit-autofill',
+        '&:-webkit-autofill:hover',
+        '&:-webkit-autofill:focus',
+      ].join(', ')]: {
+        border: '1px solid inherit',
       },
     },
-    valid: {
-      ...formDefaults.base,
-      ...formDefaults.md,
-      ...formDefaults.valid,
-    },
+
     error: {
-      ...formDefaults.base,
-      ...formDefaults.md,
-      ...formDefaults.error,
+      color: 'button.accent',
+      backgroundColor: ({ colors }) => tint(0.95, colors.button.accent),
+      border: '1px solid',
+      outline: 'none',
+
+      '&:focus, &:active': {
+        border: '1px solid inherit',
+        boxShadow: [
+          'rgb(244, 129, 116) 0px 0px 2px 1px',
+          'rgb(251, 178, 174) 0px 0px 0px 3px',
+        ].join(', '),
+        outline: 'none',
+      },
+
+      /* Autocomplete styles in Chrome*/
+      [[
+        '&:-webkit-autofill',
+        '&:-webkit-autofill:hover',
+        '&:-webkit-autofill:focus',
+      ].join(', ')]: {
+        border: '1px solid inherit',
+      },
     },
   },
 
@@ -459,6 +459,4 @@ export default {
   buttons,
   forms,
   variants,
-
-  testing,
 }
