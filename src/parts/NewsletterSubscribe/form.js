@@ -31,7 +31,7 @@ export const Component = ({ handleSubmit }) => {
           <Flex>
             <Input
               name="name"
-              placeholder="Input something ..."
+              placeholder="your.name@email.com"
               sx={{
                 borderTopLeftRadius: '128px',
                 borderBottomLeftRadius: '128px',
@@ -45,6 +45,7 @@ export const Component = ({ handleSubmit }) => {
                     outline: 'none',
                   },
                 },
+                paddingLeft: ['24px', '30px'],
               }}
             />
             <Submit
