@@ -8,11 +8,11 @@ import {
 
 // ----------------------------------------------------------------------------
 
-import { Formik, Form, Field, ErrorMessage } from 'formik'
+import { Formik, Form } from 'formik'
 import * as Yup from 'yup'
 
-import { Flex } from 'rebass'
-import { Input } from '.'
+import { Box, Flex } from 'rebass'
+import { Input, ErrorMessage } from '.'
 
 // ----------------------------------------------------------------------------
 
@@ -63,15 +63,19 @@ export const Working = () => {
     >
       {(props) => (
         <Form>
-          <Input
-            name="name"
-            size={size}
-            sx={{
-              borderRadius,
-              fontFamily,
-            }}
-            placeholder="Input something ..."
-          />
+          <Box py={4}>
+            <Input
+              name="name"
+              size={size}
+              sx={{
+                borderRadius,
+                fontFamily,
+                mb: 3,
+              }}
+              placeholder="Input something ..."
+            />
+            <ErrorMessage name="name" size={size} />
+          </Box>
         </Form>
       )}
     </Formik>
