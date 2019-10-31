@@ -279,6 +279,9 @@ const buttonDefaults = {
   fontWeight: 'bold',
   transition: 'background-color 0.2s ease, border-color 0.2s ease',
   borderRadius: '128px',
+  '&:focus': {
+    outline: 'none',
+  },
 }
 
 const defaultButtons = map(merge(__, buttonDefaults), {
