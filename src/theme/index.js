@@ -322,6 +322,24 @@ const buttons = {
 // ----------------------------------------------------------------------------
 
 const forms = {
+  messages: {
+    '&.sm': {
+      fontSize: fontSizes.minion,
+    },
+    '&.md': {
+      fontSize: fontSizes.brevier,
+    },
+    '&.lg': {
+      fontSize: fontSizes.longPrimer,
+    },
+
+    '&.error': {
+      fontFamily: 'text',
+      fontWeight: 'regular',
+      lineHeight: 'snug',
+      color: '#ce4844',
+    },
+  },
   input: {
     // Defaults
     fontWeight: 'regular',
