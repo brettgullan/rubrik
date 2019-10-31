@@ -40,6 +40,7 @@
     "react-helmet": "^5.2.1",
     "react-responsive": "^8.0.1",
     "react-sizeme": "^2.6.7",
+    "react-transition-group": "^4.3.0",
     "rebass": "^4.0.5",
     "responsive-configuration-builder": "^1.0.3",
     "storybook-addon-emotion-theme": "^2.1.1",
