@@ -322,6 +322,9 @@ const buttons = {
 // ----------------------------------------------------------------------------
 
 const forms = {
+  /*
+   *  FORM MESSAGE STYLES
+   */
   messages: {
     '&.sm': {
       fontSize: fontSizes.minion,
@@ -340,6 +343,10 @@ const forms = {
       color: '#ce4844',
     },
   },
+
+  /*
+   *  FORM INPUT STYLES
+   */
   input: {
     // Defaults
     fontWeight: 'regular',
