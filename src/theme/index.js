@@ -359,6 +359,7 @@ const forms = {
     border: '1px solid inherit',
     backgroundColor: 'white.0',
     borderRadius: 1,
+    transition: 'all 250ms ease',
 
     '&::placeholder': {
       color: ({ colors }) => tint(0.6, colors.text),
