@@ -1,14 +1,15 @@
 import React from 'react'
 
-import { Box } from 'rebass'
+import { Flex } from 'rebass'
+import { Trafalgar } from '../../components/typography'
 
 // ----------------------------------------------------------------------------
 
-const Component = () => {
+const Component = (props) => {
   return (
-    <Box p={5}>
-      <h1>Error!</h1>
-    </Box>
+    <Flex p={5} {...props}>
+      <Trafalgar color="inherit">Error!</Trafalgar>
+    </Flex>
   )
 }
 

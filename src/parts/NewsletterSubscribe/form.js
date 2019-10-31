@@ -27,7 +27,7 @@ export const Component = ({ handleSubmit }) => {
       initialValues={initialState}
     >
       {(props) => (
-        <Form name="newsletter-subscribe" css={{ width: '100%' }}>
+        <Form name="newsletter-subscribe">
           <Flex>
             <Input
               name="name"
@@ -36,6 +36,9 @@ export const Component = ({ handleSubmit }) => {
                 borderTopLeftRadius: '128px',
                 borderBottomLeftRadius: '128px',
                 border: 0,
+                '&:focus': {
+                  outline: 'none',
+                },
                 '&.error, &.valid': {
                   border: 0,
                   '&:focus': {
