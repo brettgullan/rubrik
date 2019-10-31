@@ -9,11 +9,11 @@ import { Button } from 'rebass'
 
 // ----------------------------------------------------------------------------
 
-export const Gamma = ({ size, color, ...rest }) => {
+export const Gamma = ({ size, color, sx, ...rest }) => {
   const theme = useTheme()
   const colorValue = get(theme, `colors.button.${color}`)
 
-  const sx = {
+  const styles = {
     color: `button.${color}`,
     borderColor: `button.${color}`,
     backgroundColor: 'nd.4',
@@ -24,7 +24,9 @@ export const Gamma = ({ size, color, ...rest }) => {
     }),
   }
 
-  return <Button variant={`default.${size}`} sx={sx} {...rest} />
+  return (
+    <Button variant={`default.${size}`} sx={{ ...styles, ...sx }} {...rest} />
+  )
 }
 
 // ----------------------------------------------------------------------------

@@ -10,12 +10,12 @@ import { Button } from 'rebass'
 
 // ----------------------------------------------------------------------------
 
-export const Beta = ({ size, color, reverse, ...rest }) => {
+export const Beta = ({ size, color, reverse, sx, ...rest }) => {
   const theme = useTheme()
   const colorValue = get(theme, `colors.button.${color}`)
   const whiteValue = get(theme, `colors.white.0`)
 
-  let sx = {
+  let styles = {
     color: colorValue,
     borderColor: colorValue,
     backgroundColor: whiteValue,
@@ -28,7 +28,7 @@ export const Beta = ({ size, color, reverse, ...rest }) => {
 
   // Adjust for 'reverse' case ...
   if (reverse) {
-    sx = {
+    styles = {
       color: whiteValue,
       borderColor: whiteValue,
       bg: colorValue,
@@ -40,12 +40,14 @@ export const Beta = ({ size, color, reverse, ...rest }) => {
 
   // Adjust for 'subtle' case ...
   if (color === 'subtle') {
-    sx = merge(sx, {
+    styles = merge(styles, {
       '&:hover': {}, // remove hover styling
     })
   }
 
-  return <Button variant={`default.${size}`} sx={sx} {...rest} />
+  return (
+    <Button variant={`default.${size}`} sx={[...styles, ...sx]} {...rest} />
+  )
 }
 
 // ----------------------------------------------------------------------------

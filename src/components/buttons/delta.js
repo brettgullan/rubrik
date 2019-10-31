@@ -9,11 +9,11 @@ import { Button } from 'rebass'
 
 // ----------------------------------------------------------------------------
 
-export const Delta = ({ size, color, ...rest }) => {
+export const Delta = ({ size, color, sx, ...rest }) => {
   const theme = useTheme()
   const colorValue = get(theme, `colors.button.${color}`)
 
-  const sx = {
+  const styles = {
     color: `white.0`,
     borderColor: `button.${color}`,
     backgroundColor: 'nd.4',
@@ -24,7 +24,9 @@ export const Delta = ({ size, color, ...rest }) => {
     }),
   }
 
-  return <Button variant={`default.${size}`} sx={sx} {...rest} />
+  return (
+    <Button variant={`default.${size}`} sx={{ ...styles, ...sx }} {...rest} />
+  )
 }
 
 // ----------------------------------------------------------------------------
