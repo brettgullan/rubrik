@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, { useState } from 'react'
 
 import { Flex } from 'rebass'
 
@@ -15,20 +15,18 @@ const encode = (data) =>
 
 // ----------------------------------------------------------------------------
 
-class NewsletterSubscribe extends Component {
-  constructor(props) {
-    super(props)
+const NewsletterSubscribe = () => {
+  const [display, setDisplay] = useState('DEFAULT')
+  const [error, setError] = useState()
 
-    this.state = { display: 'FORM' }
-  }
-
-  handleSubmit = (values, actions) => {
+  const handleSubmit = (values, actions) => {
     const handleSuccess = () => {
-      this.setState({ display: 'CONFIRM' })
+      setDisplay('CONFIRM')
     }
 
     const handleError = (error) => {
-      this.setState({ display: 'ERROR', error })
+      setError(error)
+      setDisplay('ERROR')
     }
 
     fetch('/', {
@@ -40,35 +38,32 @@ class NewsletterSubscribe extends Component {
       .catch(handleError)
   }
 
-  render() {
-    const { display } = this.state
-    return (
-      <Flex
-        p={6}
-        bg="#001722"
-        sx={{
-          justifyContent: 'center',
+  return (
+    <Flex
+      p={6}
+      bg="#001722"
+      sx={{
+        justifyContent: 'center',
+        width: '100%',
+        '& form': {
           width: '100%',
-          '& form': {
-            width: '100%',
-            maxWidth: 'article',
-          },
-          color: 'white.0',
-        }}
-      >
-        {(() => {
-          switch (display) {
-            case 'CONFIRM':
-              return <Confirm />
-            case 'ERROR':
-              return <Error />
-            default:
-              return <Form handleSubmit={this.handleSubmit} />
-          }
-        })()}
-      </Flex>
-    )
-  }
+          maxWidth: 'article',
+        },
+        color: 'white.0',
+      }}
+    >
+      {(() => {
+        switch (display) {
+          case 'CONFIRM':
+            return <Confirm />
+          case 'ERROR':
+            return <Error />
+          default:
+            return <Form handleSubmit={handleSubmit} />
+        }
+      })()}
+    </Flex>
+  )
 }
 
 export default NewsletterSubscribe
