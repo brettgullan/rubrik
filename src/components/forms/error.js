@@ -6,22 +6,20 @@ import { Text } from 'rebass'
 
 // ----------------------------------------------------------------------------
 
-const Error = ({ name, size, className, ...rest }) => {
-  return (
-    <ErrorMessage name={name}>
-      {(msg) => (
-        <Text
-          tx="forms"
-          variant="messages"
-          className={cx(className, size, 'error')}
-          {...rest}
-        >
-          {msg}
-        </Text>
-      )}
-    </ErrorMessage>
-  )
-}
+const Error = ({ name, size, className, ...rest }) => (
+  <ErrorMessage name={name}>
+    {(msg) => (
+      <Text
+        tx="forms"
+        variant="messages"
+        className={cx(className, size, 'error')}
+        {...rest}
+      >
+        {msg}
+      </Text>
+    )}
+  </ErrorMessage>
+)
 
 // ----------------------------------------------------------------------------
 
