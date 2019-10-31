@@ -51,6 +51,10 @@ const colors = {
     subtle: '#EEE',
   },
 
+  form: {
+    error: '#CE4844',
+  },
+
   nd,
 
   social: {
@@ -340,7 +344,7 @@ const forms = {
       fontFamily: 'text',
       fontWeight: 'regular',
       lineHeight: 'snug',
-      color: '#ce4844',
+      color: 'form.error',
     },
   },
 
@@ -354,6 +358,11 @@ const forms = {
     color: 'text',
     border: '1px solid inherit',
     backgroundColor: 'white.0',
+    borderRadius: 1,
+
+    '&::placeholder': {
+      color: ({ colors }) => tint(0.6, colors.text),
+    },
 
     // Component Sizing
     '&.sm': {
@@ -397,10 +406,14 @@ const forms = {
     },
 
     '&.error': {
-      color: 'button.accent',
-      backgroundColor: ({ colors }) => tint(0.95, colors.button.accent),
+      color: 'form.error',
+      backgroundColor: ({ colors }) => tint(0.95, colors.form.error),
       border: '1px solid',
       outline: 'none',
+
+      '&::placeholder': {
+        color: ({ colors }) => tint(0.5, colors.form.error),
+      },
 
       '&:focus, &:active': {
         border: '1px solid inherit',
