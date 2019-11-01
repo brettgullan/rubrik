@@ -1,4 +1,6 @@
 import React from 'react'
+import cx from 'classnames'
+
 import { useTheme } from 'emotion-theming'
 import { get } from '@styled-system/css'
 import { merge } from 'ramda'
@@ -10,13 +12,16 @@ import { Button } from 'rebass'
 
 // ----------------------------------------------------------------------------
 
-export const Alpha = ({ size, color, reverse, sx, ...rest }) => {
+export const Alpha = ({ size, color, reverse, className, sx, ...rest }) => {
   const theme = useTheme()
+
   const colorValue = get(theme, `colors.button.${color}`)
   const whiteValue = get(theme, `colors.white.0`)
 
+  const sizeStyles = get(theme, `buttons.${size}`)
+
   // Set styles from props ...
-  let styles = {
+  let colorStyles = {
     color: whiteValue,
     borderColor: colorValue,
     bg: colorValue,
@@ -28,7 +33,7 @@ export const Alpha = ({ size, color, reverse, sx, ...rest }) => {
 
   // Adjust for 'reverse' case ...
   if (reverse) {
-    styles = {
+    colorStyles = {
       color: colorValue,
       borderColor: whiteValue,
       bg: whiteValue,
@@ -41,14 +46,23 @@ export const Alpha = ({ size, color, reverse, sx, ...rest }) => {
 
   // Adjust for 'subtle' case ...
   if (color === 'subtle') {
-    styles = merge(styles, {
+    colorStyles = merge(colorStyles, {
       color: darken(0.3, background),
       '&:hover': {}, // remove hover styling
     })
   }
 
   return (
-    <Button variant={`default.${size}`} sx={{ ...styles, ...sx }} {...rest} />
+    <Button
+      variant={`default`}
+      className={cx(className, size, color)}
+      sx={{
+        ...sizeStyles,
+        ...colorStyles,
+        ...sx,
+      }}
+      {...rest}
+    />
   )
 }
 

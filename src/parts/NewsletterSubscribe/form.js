@@ -56,7 +56,7 @@ export const Component = ({ handleSubmit }) => {
                 flexShrink: 0,
                 borderTopLeftRadius: 0,
                 borderBottomLeftRadius: 0,
-                px: 4,
+                px: 5,
               }}
             >
               <FontAwesomeIcon icon={faPaperPlane} />

@@ -279,6 +279,7 @@ const buttonDefaults = {
   fontWeight: 'bold',
   transition: 'background-color 0.2s ease, border-color 0.2s ease',
   borderRadius: '128px',
+  borderStyle: 'solid',
   '&:focus': {
     outline: 'none',
   },
@@ -286,35 +287,30 @@ const buttonDefaults = {
 
 const defaultButtons = map(merge(__, buttonDefaults), {
   xl: {
-    borderStyle: 'solid',
     borderWidth: '3px',
     px: ['58px', '66px'],
     py: ['14px', '15px'],
     ...text.doublePica,
   },
   lg: {
-    borderStyle: 'solid',
     borderWidth: '3px',
     px: ['42px', '50px'],
     py: ['7px', '10px'],
     ...text.greatPrimer,
   },
   md: {
-    borderStyle: 'solid',
     borderWidth: '2px',
     px: ['32px', '36px'],
     py: ['3px', '4px'],
     ...text.bodyCopy,
   },
   sm: {
-    borderStyle: 'solid',
     borderWidth: '2px',
     px: ['24px', '28px'],
     py: ['1px', '2px'],
     ...text.longPrimer,
   },
   xs: {
-    borderStyle: 'solid',
     borderWidth: '1px',
     px: ['19px', '22px'],
     ...text.minion,
@@ -323,7 +319,46 @@ const defaultButtons = map(merge(__, buttonDefaults), {
 })
 
 const buttons = {
-  default: defaultButtons,
+  default: {
+    fontFamily: 'text',
+    fontWeight: 'bold',
+    transition: 'background-color 0.2s ease, border-color 0.2s ease',
+    borderRadius: '128px',
+    borderStyle: 'solid',
+    '&:focus': {
+      outline: 'none',
+    },
+  },
+  xl: {
+    borderWidth: '3px',
+    px: ['58px', '66px'],
+    py: ['14px', '15px'],
+    ...text.doublePica,
+  },
+  lg: {
+    borderWidth: '3px',
+    px: ['42px', '50px'],
+    py: ['7px', '10px'],
+    ...text.greatPrimer,
+  },
+  md: {
+    borderWidth: '2px',
+    px: ['32px', '36px'],
+    py: ['3px', '4px'],
+    ...text.bodyCopy,
+  },
+  sm: {
+    borderWidth: '2px',
+    px: ['24px', '28px'],
+    py: ['1px', '2px'],
+    ...text.longPrimer,
+  },
+  xs: {
+    borderWidth: '1px',
+    px: ['19px', '22px'],
+    ...text.minion,
+    textTransform: 'normal',
+  },
 }
 
 // ----------------------------------------------------------------------------
