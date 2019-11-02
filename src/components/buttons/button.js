@@ -11,7 +11,7 @@ import { Button as Btn } from 'rebass'
 // ----------------------------------------------------------------------------
 
 export const Button = ({
-  type,
+  _type,
   size,
   color,
   reverse,
@@ -22,7 +22,7 @@ export const Button = ({
   const theme = useTheme()
 
   const sizeStyles = get(theme, `buttons.${size}`)
-  const colorStyles = get(theme, `buttons.${type}.${color}`)
+  const colorStyles = get(theme, `buttons.${_type}.${color}`)
 
   return (
     <Btn
@@ -42,7 +42,7 @@ export const Button = ({
 
 Button.defaultProps = {
   as: 'a',
-  type: 'alpha',
+  _type: 'alpha',
   size: 'md',
   color: 'primary',
   reverse: false,

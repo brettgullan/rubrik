@@ -5,7 +5,7 @@ import Button from './button'
 
 export const Delta = (props) => <Button {...props} />
 Delta.defaultProps = {
-  type: 'delta',
+  _type: 'delta',
 }
 
 // ----------------------------------------------------------------------------

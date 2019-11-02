@@ -5,7 +5,7 @@ import Button from './button'
 
 export const Gamma = (props) => <Button {...props} />
 Gamma.defaultProps = {
-  type: 'gamma',
+  _type: 'gamma',
 }
 
 // ----------------------------------------------------------------------------
