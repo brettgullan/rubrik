@@ -1,4 +1,4 @@
-export { default as Alpha } from './alpha'
-export { default as Beta } from './beta'
-export { default as Gamma } from './gamma'
-export { default as Delta } from './delta'
+export { Alpha } from './alpha'
+export { Beta } from './beta'
+export { Gamma } from './gamma'
+export { Delta } from './delta'

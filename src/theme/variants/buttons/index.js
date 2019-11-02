@@ -1,5 +1,19 @@
+/**
+ * BUTTONS
+ *
+ * Rubrik supports four differnt types/classes of Button:
+ *  - Alpha
+ *  - Beta
+ *  - Gamma
+ *  - Delta
+ * Each is defined as an individual Button component of the same name.
+ *
+ * Each Button then supports an arbitrary number of named sizes and colors,
+ * together with a 'reverse' variation.
+ *
+ */
 import { __, mapObjIndexed } from 'ramda'
-import { darken, tint } from 'polished'
+import { darken, lighten, mix, tint } from 'polished'
 
 // ----------------------------------------------------------------------------
 
@@ -10,7 +24,7 @@ import text from '../text'
 
 const buttons = {
   // BUTTON DEFAULT STYLES
-  // Applied as Button variant.
+  // Applied as a Button variant style to every Button.
   default: {
     transition: 'background-color 0.2s ease, border-color 0.2s ease',
     borderRadius: '128px',
@@ -63,7 +77,7 @@ const buttons = {
     textTransform: 'normal',
   },
 
-  // BUTTON COLOR STYLES
+  // BUTTON TYPE/CLASS STYLES
   // These are mapped into the Button's sx prop,
   // each object definition below, applies for a
   // specific Button 'type' ...
@@ -72,7 +86,7 @@ const buttons = {
       (color, key) => ({
         color: key === 'subtle' ? darken(0.3, color) : colors.white[0],
         borderColor: color,
-        bg: color,
+        backgroundColor: color,
         '&:hover': {
           ...(key !== 'subtle' && {
             borderColor: darken(0.1, color),
@@ -83,13 +97,73 @@ const buttons = {
         '&.reverse': {
           color: color,
           borderColor: key === 'subtle' ? darken(0.3, color) : colors.white[0],
-          bg: key === 'subtle' ? darken(0.3, color) : colors.white[0],
+          backgroundColor:
+            key === 'subtle' ? darken(0.3, color) : colors.white[0],
           '&:hover': {
             ...(key !== 'subtle' && {
               borderColor: tint(0.85, color),
               backgroundColor: tint(0.85, color),
             }),
           },
+        },
+      }),
+      colors.button
+    ),
+  },
+
+  beta: {
+    ...mapObjIndexed(
+      (color, key) => ({
+        color: color,
+        borderColor: color,
+        backgroundColor: colors.white[0],
+        '&:hover': {
+          ...(key !== 'subtle' && {
+            backgroundColor: tint(0.85, color),
+          }),
+        },
+
+        '&.reverse': {
+          color: colors.white[0],
+          borderColor: colors.white[0],
+          backgroundColor: color,
+          '&:hover': {
+            ...(key !== 'subtle' && {
+              backgroundColor: lighten(0.05, color),
+            }),
+          },
+        },
+      }),
+      colors.button
+    ),
+  },
+
+  gamma: {
+    ...mapObjIndexed(
+      (color, key) => ({
+        color: color,
+        borderColor: color,
+        backgroundColor: colors.nd[4],
+        '&:hover': {
+          ...(key !== 'subtle' && {
+            backgroundColor: mix(0.85, colors.nd[4], color),
+          }),
+        },
+      }),
+      colors.button
+    ),
+  },
+
+  delta: {
+    ...mapObjIndexed(
+      (color, key) => ({
+        color: colors.white[0],
+        borderColor: color,
+        backgroundColor: colors.nd[4],
+        '&:hover': {
+          ...(key !== 'subtle' && {
+            backgroundColor: mix(0.85, colors.nd[4], color),
+          }),
         },
       }),
       colors.button
