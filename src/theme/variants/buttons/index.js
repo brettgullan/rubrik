@@ -78,8 +78,8 @@ const buttons = {
   },
 
   // BUTTON TYPE/CLASS STYLES
-  // These are mapped into the Button's sx prop,
-  // each object definition below, applies for a
+  // These are mapped into the Button's sx prop.
+  // Each object definition below applies for a
   // specific Button 'type' ...
   alpha: {
     ...mapObjIndexed(
