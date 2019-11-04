@@ -214,25 +214,6 @@ export const longPrimer = () => (
   </LongPrimer>
 )
 
-export const minion = () => (
-  <Minion
-    fontFamily={options('Font family', fontFamily, 'title', {
-      display: 'select',
-    })}
-    fontWeight={options('Font weight', fontWeights, 'regular', {
-      display: 'select',
-    })}
-    textTransform={options('Text Transform', textTransforms, 'none', {
-      display: 'select',
-    })}
-    color={options('Color', colors, defaultColor, {
-      display: 'select',
-    })}
-  >
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-  </Minion>
-)
-
 export const brevier = () => (
   <Brevier
     fontFamily={options('Font family', fontFamily, 'title', {
@@ -250,6 +231,25 @@ export const brevier = () => (
   >
     Lorem ipsum
   </Brevier>
+)
+
+export const minion = () => (
+  <Minion
+    fontFamily={options('Font family', fontFamily, 'title', {
+      display: 'select',
+    })}
+    fontWeight={options('Font weight', fontWeights, 'regular', {
+      display: 'select',
+    })}
+    textTransform={options('Text Transform', textTransforms, 'none', {
+      display: 'select',
+    })}
+    color={options('Color', colors, defaultColor, {
+      display: 'select',
+    })}
+  >
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+  </Minion>
 )
 
 // ----------------------------------------------------------------------------

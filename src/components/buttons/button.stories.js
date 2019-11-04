@@ -47,7 +47,7 @@ export const AlphaButton = () => {
         return (
           <Box p={3}>
             <Alpha
-              key={i}
+              key={`button-${i}`}
               size={size}
               color={color}
               reverse={reverse}

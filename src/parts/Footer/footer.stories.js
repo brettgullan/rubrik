@@ -26,10 +26,12 @@ export const Social = () => {
   return (
     <Flex
       as="footer"
-      flexDirection="column"
-      justifyContent="center"
-      p={5}
-      bg="#001722"
+      sx={{
+        flexDirection: 'column',
+        justifyContent: 'center',
+        p: 5,
+        bg: '#001722',
+      }}
     >
       <SocialLinks />
     </Flex>
@@ -40,10 +42,12 @@ export const Site = () => {
   return (
     <Flex
       as="footer"
-      flexDirection="column"
-      justifyContent="center"
-      p={5}
-      bg="#001722"
+      sx={{
+        flexDirection: 'column',
+        justifyContent: 'center',
+        p: 5,
+        bg: '#001722',
+      }}
     >
       <SiteLinks />
     </Flex>
@@ -54,10 +58,12 @@ export const Affiliate = () => {
   return (
     <Flex
       as="footer"
-      flexDirection="column"
-      justifyContent="center"
-      p={5}
-      bg="#001722"
+      sx={{
+        flexDirection: 'column',
+        justifyContent: 'center',
+        p: 5,
+        bg: '#001722',
+      }}
     >
       <AffiliateLinks />
     </Flex>
@@ -68,10 +74,12 @@ export const SEO = () => {
   return (
     <Flex
       as="footer"
-      flexDirection="column"
-      justifyContent="center"
-      p={5}
-      bg="#001722"
+      sx={{
+        flexDirection: 'column',
+        justifyContent: 'center',
+        p: 5,
+        bg: '#001722',
+      }}
     >
       <SeoLinks />
     </Flex>
