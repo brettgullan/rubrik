@@ -28,6 +28,11 @@ import content from './variants/content'
 
 // ----------------------------------------------------------------------------
 
+// Responsive Image configurations
+import * as images from './images'
+
+// ----------------------------------------------------------------------------
+
 export default {
   breakpoints,
   sizes,
@@ -47,4 +52,6 @@ export default {
   forms,
   text,
   content,
+
+  images,
 }
