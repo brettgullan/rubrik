@@ -43,3 +43,52 @@ export const NoAttribution = () => {
 }
 
 // ----------------------------------------------------------------------------
+
+/**
+ * Nested SX format
+ * Address individual elements within the component using nested classname selectors.
+ */
+export const WithNestedOverrideStyles = () => {
+  const props = {
+    quote:
+      'It took me years to understand that words are often as important as experience, because words make experience last.',
+    attribution: 'William Morris',
+  }
+  const sx = {
+    bg: 'white.0',
+    '.quote': {
+      color: 'brand.primary',
+    },
+    '.attribution': {
+      fontStyle: 'italic',
+    },
+  }
+  return <PullQuote {...props} sx={sx} />
+}
+
+// ----------------------------------------------------------------------------
+
+/**
+ * Alternate SX format
+ * use sub-object style declarations for each component in the composition.
+ */
+export const WithObjectOverrideStyles = () => {
+  const props = {
+    quote:
+      'It took me years to understand that words are often as important as experience, because words make experience last.',
+    attribution: 'William Morris',
+  }
+  const sx = {
+    bg: 'gray.2', // this should NOT be applied
+    block: {
+      bg: 'white.0',
+    },
+    quote: {
+      color: 'brand.primary',
+    },
+    attribution: {
+      fontStyle: 'italic',
+    },
+  }
+  return <PullQuote {...props} sx={sx} />
+}
