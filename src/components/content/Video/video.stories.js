@@ -8,22 +8,27 @@ import { colors } from '../../../theme/storybook'
 
 // ----------------------------------------------------------------------------
 
-import Tweet from '.'
+import Video from '.'
 
 // ----------------------------------------------------------------------------
 
 export default {
-  title: 'Design System|Elements/Editorial/Twitter',
-  component: Tweet,
+  title: 'Design System|Elements/Content/Video',
+  component: Video,
   decorators: [withKnobs],
 
   parameters: {
-    component: Tweet,
-    componentSubtitle: 'An embedded Tweet',
+    component: Video,
+    componentSubtitle: 'Responsive HTML5 video player',
   },
 }
 
 // ----------------------------------------------------------------------------
 
-export const Primary = () => <Tweet tweetId="933354946111705097" />
-export const WithMedia = () => <Tweet tweetId="1083592734038929408" />
+export const Primary = () => (
+  <Video
+    url="https://www.youtube.com/watch?v=KWrK2xGH6uo"
+    width={16}
+    height={9}
+  />
+)

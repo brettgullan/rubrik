@@ -3,12 +3,12 @@ import { withKnobs, optionsKnob as options } from '@storybook/addon-knobs'
 
 // ----------------------------------------------------------------------------
 
-import PullQuote from '.'
+import PullQuote from '../PullQuote'
 
 // ----------------------------------------------------------------------------
 
 export default {
-  title: 'Design System|Elements/Editorial/PullQuote',
+  title: 'Design System|Elements/Content/PullQuote',
   component: PullQuote,
   decorators: [withKnobs],
 
