@@ -24,6 +24,7 @@ import variants from './variants'
 import buttons from './variants/buttons'
 import text from './variants/text'
 import forms from './variants/forms'
+import content from './variants/content'
 
 // ----------------------------------------------------------------------------
 
@@ -45,4 +46,5 @@ export default {
   buttons,
   forms,
   text,
+  content,
 }
