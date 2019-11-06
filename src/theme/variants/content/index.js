@@ -4,6 +4,9 @@ import text from '../text'
 // ----------------------------------------------------------------------------
 
 const content = {
+  richtext: {
+    ...text.bodyCopy,
+  },
   pullquote: {
     block: {
       p: 4,
