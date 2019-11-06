@@ -61,7 +61,10 @@
     "@storybook/addons": "^5.2.4",
     "@storybook/react": "^5.2.4",
     "babel-loader": "^8.0.6",
-    "prettier": "^1.18.2"
+    "cypress": "^3.6.0",
+    "cypress-react-unit-test": "^2.4.3",
+    "prettier": "^1.18.2",
+    "start-server-and-test": "^1.10.6"
   },
   "keywords": [
     "gatsby"
