@@ -1,0 +1,2792 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots Design System|Elements/Buttons Alpha Button 1`] = `
+<div
+  className="css-l3rx45"
+>
+  <div
+    className="css-h9fdzh"
+  >
+    <a
+      className="xl primary css-g69zwu"
+      href="/link/to/something"
+    >
+      This is a link
+    </a>
+  </div>
+  <div
+    className="css-h9fdzh"
+  >
+    <a
+      className="lg primary css-11dpq96"
+      href="/link/to/something"
+    >
+      This is a link
+    </a>
+  </div>
+  <div
+    className="css-h9fdzh"
+  >
+    <a
+      className="md primary css-113q5vw"
+      href="/link/to/something"
+    >
+      This is a link
+    </a>
+  </div>
+  <div
+    className="css-h9fdzh"
+  >
+    <a
+      className="sm primary css-1qh89du"
+      href="/link/to/something"
+    >
+      This is a link
+    </a>
+  </div>
+  <div
+    className="css-h9fdzh"
+  >
+    <a
+      className="xs primary css-rfge3t"
+      href="/link/to/something"
+    >
+      This is a link
+    </a>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Design System|Elements/Buttons Beta Button 1`] = `
+<div
+  className="css-l3rx45"
+>
+  <div
+    className="css-h9fdzh"
+  >
+    <a
+      className="xl primary css-4pep4m"
+      href="/link/to/something"
+    >
+      This is a link
+    </a>
+  </div>
+  <div
+    className="css-h9fdzh"
+  >
+    <a
+      className="lg primary css-1jrpj20"
+      href="/link/to/something"
+    >
+      This is a link
+    </a>
+  </div>
+  <div
+    className="css-h9fdzh"
+  >
+    <a
+      className="md primary css-15wigxu"
+      href="/link/to/something"
+    >
+      This is a link
+    </a>
+  </div>
+  <div
+    className="css-h9fdzh"
+  >
+    <a
+      className="sm primary css-1rjf27v"
+      href="/link/to/something"
+    >
+      This is a link
+    </a>
+  </div>
+  <div
+    className="css-h9fdzh"
+  >
+    <a
+      className="xs primary css-yv8r3g"
+      href="/link/to/something"
+    >
+      This is a link
+    </a>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Design System|Elements/Buttons Delta Button 1`] = `
+<div
+  className="css-l3rx45"
+>
+  <div
+    className="css-h9fdzh"
+  >
+    <a
+      className="xl primary css-phrzrs"
+      href="/link/to/something"
+    >
+      This is a link
+    </a>
+  </div>
+  <div
+    className="css-h9fdzh"
+  >
+    <a
+      className="lg primary css-1uow3a5"
+      href="/link/to/something"
+    >
+      This is a link
+    </a>
+  </div>
+  <div
+    className="css-h9fdzh"
+  >
+    <a
+      className="md primary css-1b4o0gj"
+      href="/link/to/something"
+    >
+      This is a link
+    </a>
+  </div>
+  <div
+    className="css-h9fdzh"
+  >
+    <a
+      className="sm primary css-70el7b"
+      href="/link/to/something"
+    >
+      This is a link
+    </a>
+  </div>
+  <div
+    className="css-h9fdzh"
+  >
+    <a
+      className="xs primary css-exn3fd"
+      href="/link/to/something"
+    >
+      This is a link
+    </a>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Design System|Elements/Buttons Gamma Button 1`] = `
+<div
+  className="css-l3rx45"
+>
+  <div
+    className="css-h9fdzh"
+  >
+    <a
+      className="xl primary css-9osbcf"
+      href="/link/to/something"
+    >
+      This is a link
+    </a>
+  </div>
+  <div
+    className="css-h9fdzh"
+  >
+    <a
+      className="lg primary css-5y4miq"
+      href="/link/to/something"
+    >
+      This is a link
+    </a>
+  </div>
+  <div
+    className="css-h9fdzh"
+  >
+    <a
+      className="md primary css-n70ira"
+      href="/link/to/something"
+    >
+      This is a link
+    </a>
+  </div>
+  <div
+    className="css-h9fdzh"
+  >
+    <a
+      className="sm primary css-1r1u4p9"
+      href="/link/to/something"
+    >
+      This is a link
+    </a>
+  </div>
+  <div
+    className="css-h9fdzh"
+  >
+    <a
+      className="xs primary css-1k73077"
+      href="/link/to/something"
+    >
+      This is a link
+    </a>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Design System|Elements/Cards/Card Block Link 1`] = `
+<div
+  className="css-1yxjam4"
+>
+  <div
+    className="css-zleykh"
+  >
+    <img
+      className=" css-1hom5i0"
+      srcSet="https://media.caradvice.com.au/image/private/ar_1.7777777777777777,c_fill,q_80,w_375/tezqdcioyfpngixkdhys 375w, https://media.caradvice.com.au/image/private/ar_1.7777777777777777,c_fill,q_80,w_480/tezqdcioyfpngixkdhys 480w, https://media.caradvice.com.au/image/private/ar_1.7777777777777777,c_fill,q_80,w_640/tezqdcioyfpngixkdhys 640w, https://media.caradvice.com.au/image/private/ar_1.7777777777777777,c_fill,q_80,w_728/tezqdcioyfpngixkdhys 728w"
+    />
+    <div
+      className="css-1uqdmtx"
+    >
+      <div
+        className="css-i20hv5"
+      >
+        2020 Volkswagen Golf GTI Review
+      </div>
+    </div>
+  </div>
+  <div
+    className="css-1dpv2l8"
+  >
+    <div
+      className="css-7j04lu"
+    >
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+    </div>
+    <a
+      className="css-1b8yied"
+      href="/this/is/clickable"
+    >
+      This should be a clickable link, separate to the rest of this card.
+    </a>
+    <div
+      className="css-vurnku"
+    >
+      <div
+        className="css-1pl0z8e"
+      >
+        Price
+      </div>
+      <div
+        className="css-1qi9lae"
+      >
+        $30,490
+      </div>
+    </div>
+  </div>
+  <a
+    className="css-ymjpfz"
+    href="/this/is/a/link"
+  >
+    Read ...
+  </a>
+</div>
+`;
+
+exports[`Storyshots Design System|Elements/Cards/Card Default 1`] = `
+<div
+  className="css-1dfynz6"
+>
+  <div
+    className="css-zleykh"
+  >
+    <img
+      className=" css-1iwnvwd"
+      srcSet="https://media.caradvice.com.au/image/private/ar_1.7777777777777777,c_fill,q_80,w_375/vfa76t7ycamsw0jheuvq 375w, https://media.caradvice.com.au/image/private/ar_1.7777777777777777,c_fill,q_80,w_480/vfa76t7ycamsw0jheuvq 480w, https://media.caradvice.com.au/image/private/ar_1.7777777777777777,c_fill,q_80,w_640/vfa76t7ycamsw0jheuvq 640w, https://media.caradvice.com.au/image/private/ar_1.7777777777777777,c_fill,q_80,w_728/vfa76t7ycamsw0jheuvq 728w"
+    />
+    <div
+      className="css-1uqdmtx"
+    >
+      <div
+        className="css-i20hv5"
+      >
+        2020 Mercedes-AMG GT Review
+      </div>
+    </div>
+  </div>
+  <div
+    className="css-1dpv2l8"
+  >
+    <div
+      className="css-7j04lu"
+    >
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+    </div>
+    <div
+      className="css-vurnku"
+    >
+      <div
+        className="css-1pl0z8e"
+      >
+        Price
+      </div>
+      <div
+        className="css-1qi9lae"
+      >
+        $30,490
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Design System|Elements/Cards/Card With Scrim 1`] = `
+<div
+  className="css-1dfynz6"
+>
+  <div
+    className="css-zleykh"
+  >
+    <div
+      className="css-wi5jnv"
+    >
+      <img
+        className=" css-1hom5i0"
+        srcSet="https://media.caradvice.com.au/image/private/ar_1.7777777777777777,c_fill,q_80,w_375/xebemoumy9losdljfk1x 375w, https://media.caradvice.com.au/image/private/ar_1.7777777777777777,c_fill,q_80,w_480/xebemoumy9losdljfk1x 480w, https://media.caradvice.com.au/image/private/ar_1.7777777777777777,c_fill,q_80,w_640/xebemoumy9losdljfk1x 640w, https://media.caradvice.com.au/image/private/ar_1.7777777777777777,c_fill,q_80,w_728/xebemoumy9losdljfk1x 728w"
+      />
+    </div>
+    <div
+      className="css-1uqdmtx"
+    >
+      <div
+        className="css-i20hv5"
+      >
+        2020 Volkswagen Golf GTI Review
+      </div>
+    </div>
+  </div>
+  <div
+    className="css-1dpv2l8"
+  >
+    <div
+      className="css-7j04lu"
+    >
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+    </div>
+    <div
+      className="css-vurnku"
+    >
+      <div
+        className="css-1pl0z8e"
+      >
+        Price Range
+      </div>
+      <div
+        className="css-1qi9lae"
+      >
+        $30,490 - $42,990
+      </div>
+      <div
+        className="css-dnjzhz"
+      >
+        MSRP
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Design System|Elements/Cards/Price Default 1`] = `
+<div
+  className="css-vurnku"
+>
+  <div
+    className="css-1pl0z8e"
+  >
+    Price
+  </div>
+  <div
+    className="css-1qi9lae"
+  >
+    $30,490
+  </div>
+</div>
+`;
+
+exports[`Storyshots Design System|Elements/Cards/Price Price With Type 1`] = `
+<div
+  className="css-vurnku"
+>
+  <div
+    className="css-1pl0z8e"
+  >
+    Price
+  </div>
+  <div
+    className="css-1qi9lae"
+  >
+    $65,490
+  </div>
+  <div
+    className="css-dnjzhz"
+  >
+    MSRP
+  </div>
+</div>
+`;
+
+exports[`Storyshots Design System|Elements/Cards/Price Range 1`] = `
+<div
+  className="css-vurnku"
+>
+  <div
+    className="css-1pl0z8e"
+  >
+    Price Range
+  </div>
+  <div
+    className="css-1qi9lae"
+  >
+    $30,490 - $42,990
+  </div>
+</div>
+`;
+
+exports[`Storyshots Design System|Elements/Cards/Price Range End Only 1`] = `
+Array [
+  <div
+    className="css-1ci4v43"
+  >
+    Expecting to see this message (only).
+  </div>,
+  <div
+    className="css-19s6as0"
+  >
+    If neither 
+    <strong>
+      Price
+    </strong>
+     nor 
+    <strong>
+      Range Start
+    </strong>
+     
+    values are provided, Price component will display nothing (null).
+  </div>,
+  <div
+    className="css-fjrtrl"
+  >
+    Alternate display or validation strategies to be confirmed.
+  </div>,
+]
+`;
+
+exports[`Storyshots Design System|Elements/Cards/Price Range Start 1`] = `
+<div
+  className="css-vurnku"
+>
+  <div
+    className="css-1pl0z8e"
+  >
+    Starting Price
+  </div>
+  <div
+    className="css-1qi9lae"
+  >
+    $30,490
+  </div>
+</div>
+`;
+
+exports[`Storyshots Design System|Elements/Content/PullQuote No Attribution 1`] = `
+<figure
+  className="pullquote css-fm58a7"
+>
+  <blockquote
+    className="quote css-1cjk9a7"
+  >
+    It took me years to understand that words are often as important as experience, because words make experience last.
+  </blockquote>
+</figure>
+`;
+
+exports[`Storyshots Design System|Elements/Content/PullQuote Primary 1`] = `
+<figure
+  className="pullquote css-fm58a7"
+>
+  <blockquote
+    className="quote css-1cjk9a7"
+  >
+    It took me years to understand that words are often as important as experience, because words make experience last.
+  </blockquote>
+  <figcaption
+    className="attribution css-2wg2a"
+  >
+    William Morris
+  </figcaption>
+</figure>
+`;
+
+exports[`Storyshots Design System|Elements/Content/PullQuote With Nested Override Styles 1`] = `
+<figure
+  className="pullquote css-1283csj"
+>
+  <blockquote
+    className="quote css-1cjk9a7"
+  >
+    It took me years to understand that words are often as important as experience, because words make experience last.
+  </blockquote>
+  <figcaption
+    className="attribution css-2wg2a"
+  >
+    William Morris
+  </figcaption>
+</figure>
+`;
+
+exports[`Storyshots Design System|Elements/Content/PullQuote With Object Override Styles 1`] = `
+<figure
+  className="pullquote css-1oqx42l"
+>
+  <blockquote
+    className="quote css-1qybujf"
+  >
+    It took me years to understand that words are often as important as experience, because words make experience last.
+  </blockquote>
+  <figcaption
+    className="attribution css-1wrmkn1"
+  >
+    William Morris
+  </figcaption>
+</figure>
+`;
+
+exports[`Storyshots Design System|Elements/Content/Reveal Primary 1`] = `
+<div
+  onMouseDown={[Function]}
+  onTouchStart={[Function]}
+  style={
+    Object {
+      "overflow": "hidden",
+      "position": "relative",
+      "whiteSpace": "nowrap",
+    }
+  }
+>
+  <div
+    style={
+      Object {
+        "height": "100%",
+        "left": "50%",
+        "position": "absolute",
+        "width": 0,
+        "zIndex": 1,
+      }
+    }
+  />
+  <div
+    style={
+      Object {
+        "display": "inline-block",
+        "left": "-50%",
+        "overflow": "hidden",
+        "position": "relative",
+        "verticalAlign": "middle",
+        "width": "100%",
+      }
+    }
+  >
+    <div
+      style={
+        Object {
+          "position": "relative",
+          "right": "-50%",
+          "textAlign": "center",
+        }
+      }
+    >
+      <img
+        className=" css-9taffg"
+        srcSet="https://media.caradvice.com.au/image/private/ar_1.7777777777777777,c_fill,q_80,w_320/mgob456ukvk29dhmw4zn 320w, https://media.caradvice.com.au/image/private/ar_1.7777777777777777,c_fill,q_80,w_640/mgob456ukvk29dhmw4zn 640w, https://media.caradvice.com.au/image/private/ar_1.7777777777777777,c_fill,q_80,w_375/mgob456ukvk29dhmw4zn 375w, https://media.caradvice.com.au/image/private/ar_1.7777777777777777,c_fill,q_80,w_750/mgob456ukvk29dhmw4zn 750w, https://media.caradvice.com.au/image/private/ar_1.7777777777777777,c_fill,q_80,w_414/mgob456ukvk29dhmw4zn 414w, https://media.caradvice.com.au/image/private/ar_1.7777777777777777,c_fill,q_80,w_828/mgob456ukvk29dhmw4zn 828w, https://media.caradvice.com.au/image/private/ar_1.7777777777777777,c_fill,q_80,w_768/mgob456ukvk29dhmw4zn 768w, https://media.caradvice.com.au/image/private/ar_1.7777777777777777,c_fill,q_80,w_1536/mgob456ukvk29dhmw4zn 1536w, https://media.caradvice.com.au/image/private/ar_1.7777777777777777,c_fill,q_80,w_960/mgob456ukvk29dhmw4zn 960w, https://media.caradvice.com.au/image/private/ar_1.7777777777777777,c_fill,q_80,w_1920/mgob456ukvk29dhmw4zn 1920w, https://media.caradvice.com.au/image/private/ar_1.7777777777777777,c_fill,q_80,w_1024/mgob456ukvk29dhmw4zn 1024w, https://media.caradvice.com.au/image/private/ar_1.7777777777777777,c_fill,q_80,w_2048/mgob456ukvk29dhmw4zn 2048w"
+      />
+    </div>
+  </div>
+  <div
+    style={
+      Object {
+        "display": "inline-block",
+        "left": "-50%",
+        "overflow": "hidden",
+        "position": "relative",
+        "verticalAlign": "middle",
+        "width": "100%",
+      }
+    }
+  >
+    <div
+      style={
+        Object {
+          "position": "relative",
+          "right": "50%",
+          "textAlign": "center",
+        }
+      }
+    >
+      <img
+        className=" css-9taffg"
+        srcSet="https://media.caradvice.com.au/image/private/ar_1.7777777777777777,c_fill,q_80,w_320/jcldohvcuz1wp39qq7is 320w, https://media.caradvice.com.au/image/private/ar_1.7777777777777777,c_fill,q_80,w_640/jcldohvcuz1wp39qq7is 640w, https://media.caradvice.com.au/image/private/ar_1.7777777777777777,c_fill,q_80,w_375/jcldohvcuz1wp39qq7is 375w, https://media.caradvice.com.au/image/private/ar_1.7777777777777777,c_fill,q_80,w_750/jcldohvcuz1wp39qq7is 750w, https://media.caradvice.com.au/image/private/ar_1.7777777777777777,c_fill,q_80,w_414/jcldohvcuz1wp39qq7is 414w, https://media.caradvice.com.au/image/private/ar_1.7777777777777777,c_fill,q_80,w_828/jcldohvcuz1wp39qq7is 828w, https://media.caradvice.com.au/image/private/ar_1.7777777777777777,c_fill,q_80,w_768/jcldohvcuz1wp39qq7is 768w, https://media.caradvice.com.au/image/private/ar_1.7777777777777777,c_fill,q_80,w_1536/jcldohvcuz1wp39qq7is 1536w, https://media.caradvice.com.au/image/private/ar_1.7777777777777777,c_fill,q_80,w_960/jcldohvcuz1wp39qq7is 960w, https://media.caradvice.com.au/image/private/ar_1.7777777777777777,c_fill,q_80,w_1920/jcldohvcuz1wp39qq7is 1920w, https://media.caradvice.com.au/image/private/ar_1.7777777777777777,c_fill,q_80,w_1024/jcldohvcuz1wp39qq7is 1024w, https://media.caradvice.com.au/image/private/ar_1.7777777777777777,c_fill,q_80,w_2048/jcldohvcuz1wp39qq7is 2048w"
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Design System|Elements/Content/RichText Primary 1`] = `
+<div
+  className="richtext css-gueitm"
+  dangerouslySetInnerHTML={
+    Object {
+      "__html": "<h1>HTML Ipsum Presents</h1>
+<p>
+  <strong>Pellentesque habitant morbi tristique</strong> senectus et netus
+  et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat
+  vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet
+  quam egestas semper. <em>Aenean ultricies mi vitae est.</em> Mauris
+  placerat eleifend leo. Quisque sit amet est et sapien ullamcorper
+  pharetra. Vestibulum erat wisi, condimentum sed,
+  <code>commodo vitae</code>, ornare sit amet, wisi. Aenean fermentum, elit
+  eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus
+  enim ac dui. <a href=\\"#\\">Donec non enim</a> in turpis pulvinar facilisis.
+  Ut felis.
+</p>
+<ul>
+  <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
+  <li>Aliquam tincidunt mauris eu risus.</li>
+  <li>Vestibulum auctor dapibus neque.</li>
+</ul>
+<p>
+  Pellentesque habitant morbi tristique senectus et netus et malesuada fames
+  ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget,
+  tempor sit amet, ante. Donec eu libero sit amet quam egestas semper.
+  Aenean ultricies mi vitae est. Mauris placerat eleifend leo.
+</p>",
+    }
+  }
+/>
+`;
+
+exports[`Storyshots Design System|Elements/Content/RichText With Sx Prop 1`] = `
+<div
+  className="richtext css-1df83fl"
+  dangerouslySetInnerHTML={
+    Object {
+      "__html": "<h1>HTML Ipsum Presents</h1>
+<p>
+  <strong>Pellentesque habitant morbi tristique</strong> senectus et netus
+  et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat
+  vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet
+  quam egestas semper. <em>Aenean ultricies mi vitae est.</em> Mauris
+  placerat eleifend leo. Quisque sit amet est et sapien ullamcorper
+  pharetra. Vestibulum erat wisi, condimentum sed,
+  <code>commodo vitae</code>, ornare sit amet, wisi. Aenean fermentum, elit
+  eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus
+  enim ac dui. <a href=\\"#\\">Donec non enim</a> in turpis pulvinar facilisis.
+  Ut felis.
+</p>
+<ul>
+  <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
+  <li>Aliquam tincidunt mauris eu risus.</li>
+  <li>Vestibulum auctor dapibus neque.</li>
+</ul>
+<p>
+  Pellentesque habitant morbi tristique senectus et netus et malesuada fames
+  ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget,
+  tempor sit amet, ante. Donec eu libero sit amet quam egestas semper.
+  Aenean ultricies mi vitae est. Mauris placerat eleifend leo.
+</p>",
+    }
+  }
+/>
+`;
+
+exports[`Storyshots Design System|Elements/Content/RichText With Text Prop 1`] = `
+<div
+  className="richtext css-gueitm"
+  dangerouslySetInnerHTML={
+    Object {
+      "__html": "<h1>HTML Ipsum Presents</h1>
+<p>
+  <strong>Pellentesque habitant morbi tristique</strong> senectus et netus
+  et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat
+  vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet
+  quam egestas semper. <em>Aenean ultricies mi vitae est.</em> Mauris
+  placerat eleifend leo. Quisque sit amet est et sapien ullamcorper
+  pharetra. Vestibulum erat wisi, condimentum sed,
+  <code>commodo vitae</code>, ornare sit amet, wisi. Aenean fermentum, elit
+  eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus
+  enim ac dui. <a href=\\"#\\">Donec non enim</a> in turpis pulvinar facilisis.
+  Ut felis.
+</p>
+<ul>
+  <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
+  <li>Aliquam tincidunt mauris eu risus.</li>
+  <li>Vestibulum auctor dapibus neque.</li>
+</ul>
+<p>
+  Pellentesque habitant morbi tristique senectus et netus et malesuada fames
+  ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget,
+  tempor sit amet, ante. Donec eu libero sit amet quam egestas semper.
+  Aenean ultricies mi vitae est. Mauris placerat eleifend leo.
+</p>",
+    }
+  }
+/>
+`;
+
+exports[`Storyshots Design System|Elements/Content/Twitter Primary 1`] = `<div />`;
+
+exports[`Storyshots Design System|Elements/Content/Twitter With Media 1`] = `<div />`;
+
+exports[`Storyshots Design System|Elements/Content/Video Primary 1`] = `
+<div
+  className="css-15fqdra"
+>
+  <div
+    className="css-1fn8uvs"
+    style={
+      Object {
+        "height": "100%",
+        "width": "100%",
+      }
+    }
+  >
+    <div
+      style={
+        Object {
+          "display": undefined,
+          "height": "100%",
+          "width": "100%",
+        }
+      }
+    >
+      <div />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Design System|Elements/Forms/Input Working 1`] = `
+<form
+  action="#"
+  onReset={[Function]}
+  onSubmit={[Function]}
+>
+  <div
+    className="css-17nji9b"
+  >
+    <input
+      className="md css-l4uuga"
+      name="name"
+      onBlur={[Function]}
+      onChange={[Function]}
+      placeholder="Input something ..."
+      type="text"
+      value=""
+    />
+  </div>
+</form>
+`;
+
+exports[`Storyshots Design System|Elements/Media/CloudinaryImage Avatar 1`] = `
+<img
+  className=" css-vgyu0v"
+  srcSet="https://media.caradvice.com.au/image/private/ar_1,c_fill,q_80,w_120/fvpbuzcay9nzbqq8wiax 120w, https://media.caradvice.com.au/image/private/ar_1,c_fill,q_80,w_240/fvpbuzcay9nzbqq8wiax 240w, https://media.caradvice.com.au/image/private/ar_1,c_fill,q_80,w_180/fvpbuzcay9nzbqq8wiax 180w, https://media.caradvice.com.au/image/private/ar_1,c_fill,q_80,w_360/fvpbuzcay9nzbqq8wiax 360w, https://media.caradvice.com.au/image/private/ar_1,c_fill,q_80,w_240/fvpbuzcay9nzbqq8wiax 240w, https://media.caradvice.com.au/image/private/ar_1,c_fill,q_80,w_480/fvpbuzcay9nzbqq8wiax 480w"
+/>
+`;
+
+exports[`Storyshots Design System|Elements/Media/CloudinaryImage Primary 1`] = `
+<img
+  className=" css-9taffg"
+  srcSet="https://media.caradvice.com.au/image/private/ar_1.5,c_fill,q_80,w_800/qtrhwslrejnkzy3tyxey"
+/>
+`;
+
+exports[`Storyshots Design System|Elements/Media/CloudinaryImage Responsive 1`] = `
+<img
+  className=" css-9taffg"
+  srcSet="https://media.caradvice.com.au/image/private/ar_1.7777777777777777,c_fill,q_80,w_320/fvpbuzcay9nzbqq8wiax 320w, https://media.caradvice.com.au/image/private/ar_1.7777777777777777,c_fill,q_80,w_640/fvpbuzcay9nzbqq8wiax 640w, https://media.caradvice.com.au/image/private/ar_1.7777777777777777,c_fill,q_80,w_375/fvpbuzcay9nzbqq8wiax 375w, https://media.caradvice.com.au/image/private/ar_1.7777777777777777,c_fill,q_80,w_750/fvpbuzcay9nzbqq8wiax 750w, https://media.caradvice.com.au/image/private/ar_1.7777777777777777,c_fill,q_80,w_414/fvpbuzcay9nzbqq8wiax 414w, https://media.caradvice.com.au/image/private/ar_1.7777777777777777,c_fill,q_80,w_828/fvpbuzcay9nzbqq8wiax 828w, https://media.caradvice.com.au/image/private/ar_1.7777777777777777,c_fill,q_80,w_768/fvpbuzcay9nzbqq8wiax 768w, https://media.caradvice.com.au/image/private/ar_1.7777777777777777,c_fill,q_80,w_1536/fvpbuzcay9nzbqq8wiax 1536w, https://media.caradvice.com.au/image/private/ar_1.7777777777777777,c_fill,q_80,w_960/fvpbuzcay9nzbqq8wiax 960w, https://media.caradvice.com.au/image/private/ar_1.7777777777777777,c_fill,q_80,w_1920/fvpbuzcay9nzbqq8wiax 1920w, https://media.caradvice.com.au/image/private/ar_1.7777777777777777,c_fill,q_80,w_1024/fvpbuzcay9nzbqq8wiax 1024w, https://media.caradvice.com.au/image/private/ar_1.7777777777777777,c_fill,q_80,w_2048/fvpbuzcay9nzbqq8wiax 2048w"
+/>
+`;
+
+exports[`Storyshots Design System|Elements/Media/CloudinaryPicture Primary 1`] = `
+<picture
+  className="css-4cffwv"
+>
+  <source
+    media="(min-width: 640px) and (max-width: 1024px)"
+    srcSet="https://media.caradvice.com.au/image/private/ar_1.5,c_fill,q_80,w_640/qtrhwslrejnkzy3tyxey 640w, https://media.caradvice.com.au/image/private/ar_1.5,c_fill,q_80,w_720/qtrhwslrejnkzy3tyxey 720w, https://media.caradvice.com.au/image/private/ar_1.5,c_fill,q_80,w_960/qtrhwslrejnkzy3tyxey 960w"
+  />
+  <source
+    media="(min-width: 1024px)"
+    srcSet="https://media.caradvice.com.au/image/private/ar_1.7777777777777777,c_fill,q_80,w_1024/qtrhwslrejnkzy3tyxey 1024w, https://media.caradvice.com.au/image/private/ar_1.7777777777777777,c_fill,q_80,w_1280/qtrhwslrejnkzy3tyxey 1280w, https://media.caradvice.com.au/image/private/ar_1.7777777777777777,c_fill,q_80,w_1440/qtrhwslrejnkzy3tyxey 1440w, https://media.caradvice.com.au/image/private/ar_1.7777777777777777,c_fill,q_80,w_1600/qtrhwslrejnkzy3tyxey 1600w, https://media.caradvice.com.au/image/private/ar_1.7777777777777777,c_fill,q_80,w_1920/qtrhwslrejnkzy3tyxey 1920w, https://media.caradvice.com.au/image/private/ar_1.7777777777777777,c_fill,q_80,w_2560/qtrhwslrejnkzy3tyxey 2560w"
+  />
+  <img
+    className=" css-1wqn8gm"
+    src="https://media.caradvice.com.au/image/private/ar_0.8333333333333334,c_fill,q_80,w_320/qtrhwslrejnkzy3tyxey"
+  />
+</picture>
+`;
+
+exports[`Storyshots Design System|Elements/Media/Image Avatar 1`] = `
+<img
+  className=" css-160jd8r"
+  src="https://picsum.photos/id/1015/180/180"
+/>
+`;
+
+exports[`Storyshots Design System|Elements/Media/Image Default 1`] = `
+<img
+  className=" css-9taffg"
+  src="https://picsum.photos/id/1015/320/180"
+/>
+`;
+
+exports[`Storyshots Design System|Elements/Media/Image Responsive 1`] = `
+<img
+  className=" css-9taffg"
+  srcSet="https://picsum.photos/id/1018/320/180 320w, https://picsum.photos/id/1018/480/270 480w, https://picsum.photos/id/1018/640/360 640w"
+/>
+`;
+
+exports[`Storyshots Design System|Elements/Media/LazyLoad Picture 1`] = `
+<picture
+  className="css-4cffwv"
+>
+  <source
+    media="(min-width: 640px) and (max-width: 1024px)"
+    srcSet="https://media.caradvice.com.au/image/private/ar_1.5,c_fill,q_80,w_640/qtrhwslrejnkzy3tyxey 640w, https://media.caradvice.com.au/image/private/ar_1.5,c_fill,q_80,w_720/qtrhwslrejnkzy3tyxey 720w, https://media.caradvice.com.au/image/private/ar_1.5,c_fill,q_80,w_960/qtrhwslrejnkzy3tyxey 960w, https://media.caradvice.com.au/image/private/ar_1.5,c_fill,q_80,w_1024/qtrhwslrejnkzy3tyxey 1024w"
+  />
+  <source
+    media="(min-width: 1024px)"
+    srcSet="https://media.caradvice.com.au/image/private/ar_1.7777777777777777,c_fill,q_80,w_1280/qtrhwslrejnkzy3tyxey 1280w, https://media.caradvice.com.au/image/private/ar_1.7777777777777777,c_fill,q_80,w_1440/qtrhwslrejnkzy3tyxey 1440w, https://media.caradvice.com.au/image/private/ar_1.7777777777777777,c_fill,q_80,w_1600/qtrhwslrejnkzy3tyxey 1600w, https://media.caradvice.com.au/image/private/ar_1.7777777777777777,c_fill,q_80,w_1920/qtrhwslrejnkzy3tyxey 1920w, https://media.caradvice.com.au/image/private/ar_1.7777777777777777,c_fill,q_80,w_2560/qtrhwslrejnkzy3tyxey 2560w"
+  />
+  <img
+    className="lazyload css-1wqn8gm"
+    data-src="https://media.caradvice.com.au/image/private/ar_0.8333333333333334,c_fill,q_80,w_640/qtrhwslrejnkzy3tyxey"
+    src="https://media.caradvice.com.au/image/private/ar_1.5,c_fill,q_20,w_60/qtrhwslrejnkzy3tyxey"
+  />
+</picture>
+`;
+
+exports[`Storyshots Design System|Elements/Media/LazyLoad Placeholder 1`] = `
+<img
+  className="lazyload css-10osb3j"
+  data-src="https://media.caradvice.com.au/image/private/ar_1.5,c_fill,q_80,w_1200/qtrhwslrejnkzy3tyxey"
+  src="https://media.caradvice.com.au/image/private/ar_1.5,c_fill,q_20,w_60/qtrhwslrejnkzy3tyxey"
+/>
+`;
+
+exports[`Storyshots Design System|Elements/Media/LazyLoad Primary 1`] = `
+<img
+  className="lazyload css-9taffg"
+  data-src="https://media.caradvice.com.au/image/private/ar_1.5,c_fill,q_80,w_600/qtrhwslrejnkzy3tyxey"
+/>
+`;
+
+exports[`Storyshots Design System|Elements/Media/Picture Primary 1`] = `
+<picture
+  className="css-4cffwv"
+>
+  <source
+    media="(min-width: 640px) and (max-width: 1024px)"
+    srcSet="https://picsum.photos/id/1018/640/427 640w, https://picsum.photos/id/1018/720/480 720w, https://picsum.photos/id/1018/960/640 960w"
+  />
+  <source
+    media="(min-width: 1024px)"
+    srcSet="https://picsum.photos/id/1018/1024/576 1024w, https://picsum.photos/id/1018/1280/720 1280w, https://picsum.photos/id/1018/1440/810 1440w, https://picsum.photos/id/1018/1600/900 1600w, https://picsum.photos/id/1018/1920/1080 1920w, https://picsum.photos/id/1018/2560/1440 2560w"
+  />
+  <img
+    className=" css-1wqn8gm"
+    src="https://picsum.photos/id/1018/320/384"
+  />
+</picture>
+`;
+
+exports[`Storyshots Design System|Elements/Structure/FullBleed Default 1`] = `
+<div
+  className="css-5zung2"
+>
+  This text box has a full-bleed background.
+</div>
+`;
+
+exports[`Storyshots Design System|Elements/Structure/FullWidth Default 1`] = `
+<div
+  className="css-1nmhcer"
+>
+  This element has been forced to the full width of the viewport.
+</div>
+`;
+
+exports[`Storyshots Design System|Elements/Structure/Grid Complex 1`] = `
+<div
+  className="css-z54kij"
+>
+  <div
+    className="css-1ep5inz"
+  >
+    1
+  </div>
+  <div
+    className="css-zec05u"
+    span={
+      Array [
+        1,
+        2,
+      ]
+    }
+  >
+    2
+  </div>
+  <div
+    className="css-1c0q16r"
+  >
+    3
+  </div>
+  <div
+    className="css-flc5gn"
+    span={
+      Array [
+        1,
+        3,
+      ]
+    }
+  >
+    4
+  </div>
+  <div
+    className="css-5b03kj"
+  >
+    5
+  </div>
+</div>
+`;
+
+exports[`Storyshots Design System|Elements/Structure/Grid Container Styling 1`] = `
+<div
+  className="css-jrv01e"
+>
+  <div
+    className="css-he99p0"
+  >
+    1
+  </div>
+  <div
+    className="css-1w8xojk"
+  >
+    2
+  </div>
+  <div
+    className="css-1mxow5s"
+    span={4}
+  >
+    3
+  </div>
+  <div
+    className="css-72hezu"
+  >
+    4
+  </div>
+  <div
+    className="css-wnyerz"
+  >
+    5
+  </div>
+</div>
+`;
+
+exports[`Storyshots Design System|Elements/Structure/Grid Default 1`] = `
+<div
+  className="css-z54kij"
+>
+  <div
+    className="css-he99p0"
+  >
+    1
+  </div>
+  <div
+    className="css-1gbfbuu"
+  >
+    2
+  </div>
+  <div
+    className="css-1w8xojk"
+  >
+    3
+  </div>
+  <div
+    className="css-72hezu"
+  >
+    4
+  </div>
+  <div
+    className="css-19asfkm"
+  >
+    5
+  </div>
+  <div
+    className="css-wnyerz"
+  >
+    6
+  </div>
+</div>
+`;
+
+exports[`Storyshots Design System|Elements/Structure/Grid Really Complex 1`] = `
+<div
+  className="css-1l4c7ao"
+>
+  <div
+    className="css-etjzgd"
+  >
+    1
+  </div>
+  <div
+    className="css-j6tr6p"
+    span={
+      Array [
+        1,
+        1,
+        1,
+        2,
+      ]
+    }
+  >
+    2
+  </div>
+  <div
+    className="css-1u9llnf"
+    span={
+      Array [
+        1,
+        2,
+        2,
+        3,
+      ]
+    }
+  >
+    3
+  </div>
+  <div
+    className="css-f8er2d"
+    span={
+      Array [
+        1,
+        2,
+        2,
+        2,
+      ]
+    }
+  >
+    4
+  </div>
+  <div
+    className="css-4xx1ex"
+    span={
+      Array [
+        1,
+        1,
+        2,
+        2,
+      ]
+    }
+  >
+    5
+  </div>
+  <div
+    className="css-treti3"
+  >
+    6
+  </div>
+  <div
+    className="css-7407hu"
+  >
+    7
+  </div>
+  <div
+    className="css-ydtnzv"
+  >
+    8
+  </div>
+  <div
+    className="css-stdg93"
+  >
+    9
+  </div>
+</div>
+`;
+
+exports[`Storyshots Design System|Elements/Structure/Grid Responsive 1`] = `
+<div
+  className="css-z54kij"
+>
+  <div
+    className="css-1i4hcs9"
+  >
+    1
+  </div>
+  <div
+    className="css-1yoxpju"
+  >
+    2
+  </div>
+  <div
+    className="css-b7091j"
+  >
+    3
+  </div>
+  <div
+    className="css-1tl0xph"
+  >
+    4
+  </div>
+  <div
+    className="css-u8wcqf"
+  >
+    5
+  </div>
+</div>
+`;
+
+exports[`Storyshots Design System|Elements/Structure/Grid Single 1`] = `
+<div
+  className="css-z54kij"
+>
+  <div
+    className="css-e0ugbu"
+  >
+    1
+  </div>
+  <div
+    className="css-e0ugbu"
+  >
+    2
+  </div>
+  <div
+    className="css-e0ugbu"
+  >
+    3
+  </div>
+  <div
+    className="css-e0ugbu"
+  >
+    4
+  </div>
+  <div
+    className="css-b4gd24"
+  >
+    5
+  </div>
+</div>
+`;
+
+exports[`Storyshots Design System|Elements/Structure/Grid Unbalanced Columns 1`] = `
+<div
+  className="css-z54kij"
+>
+  <div
+    className="css-l7183m"
+  >
+    1
+  </div>
+  <div
+    className="css-1457ego"
+  >
+    2
+  </div>
+  <div
+    className="css-1457ego"
+  >
+    3
+  </div>
+  <div
+    className="css-ba8ijm"
+  >
+    4
+  </div>
+  <div
+    className="css-l7183m"
+  >
+    5
+  </div>
+  <div
+    className="css-ba8ijm"
+  >
+    6
+  </div>
+</div>
+`;
+
+exports[`Storyshots Design System|Elements/Structure/Grid Using Gutter Scale Value 1`] = `
+<div
+  className="css-z54kij"
+>
+  <div
+    className="css-v31ick"
+  >
+    1
+  </div>
+  <div
+    className="css-cnbri6"
+  >
+    2
+  </div>
+  <div
+    className="css-1vd7vf8"
+  >
+    3
+  </div>
+  <div
+    className="css-cob6nh"
+  >
+    4
+  </div>
+  <div
+    className="css-la2wej"
+  >
+    5
+  </div>
+  <div
+    className="css-68t7o5"
+  >
+    6
+  </div>
+</div>
+`;
+
+exports[`Storyshots Design System|Elements/Structure/Grid Variable Columns 1`] = `
+<div
+  className="css-1l4c7ao"
+>
+  <div
+    className="css-he99p0"
+  >
+    1
+  </div>
+  <div
+    className="css-1gomyq6"
+    span={2}
+  >
+    2
+  </div>
+  <div
+    className="css-10i7xxt"
+    span={3}
+  >
+    3
+  </div>
+  <div
+    className="css-1klyknl"
+    span={2}
+  >
+    4
+  </div>
+  <div
+    className="css-jh4scg"
+    span={2}
+  >
+    5
+  </div>
+  <div
+    className="css-1w8xojk"
+  >
+    6
+  </div>
+  <div
+    className="css-72hezu"
+  >
+    7
+  </div>
+  <div
+    className="css-19asfkm"
+  >
+    8
+  </div>
+  <div
+    className="css-wnyerz"
+  >
+    9
+  </div>
+</div>
+`;
+
+exports[`Storyshots Design System|Elements/Structure/Split Balanced 1`] = `
+<div
+  className="css-1gq0sgo"
+>
+  <div
+    className="css-wamhj7"
+  >
+    Left
+  </div>
+  <div
+    className="css-wamhj7"
+  >
+    Right
+  </div>
+</div>
+`;
+
+exports[`Storyshots Design System|Elements/Structure/Split Default 1`] = `
+<div
+  className="css-1gq0sgo"
+>
+  <div
+    className="css-y5i1rd"
+  >
+    Left
+  </div>
+  <div
+    className="css-y5i1rd"
+  >
+    Right
+  </div>
+</div>
+`;
+
+exports[`Storyshots Design System|Elements/Structure/Split Reversed 1`] = `
+<div
+  className="css-1m0lc1b"
+>
+  <div
+    className="css-y5i1rd"
+  >
+    Left
+  </div>
+  <div
+    className="css-y5i1rd"
+  >
+    Right
+  </div>
+</div>
+`;
+
+exports[`Storyshots Design System|Elements/Structure/Split Triple 1`] = `
+<div
+  className="css-1gq0sgo"
+>
+  <div
+    className="css-y5i1rd"
+  >
+    Left
+  </div>
+  <div
+    className="css-y5i1rd"
+  >
+    Centre
+  </div>
+  <div
+    className="css-y5i1rd"
+  >
+    Right
+  </div>
+</div>
+`;
+
+exports[`Storyshots Design System|Elements/Structure/Split Vertical 1`] = `
+<div
+  className="css-12ucm6t"
+>
+  <div
+    className="css-wamhj7"
+  >
+    Left
+  </div>
+  <div
+    className="css-wamhj7"
+  >
+    Right
+  </div>
+</div>
+`;
+
+exports[`Storyshots Design System|Elements/Structure/Stretch Default 1`] = `
+<div
+  className="css-44gd7"
+>
+  <div
+    className="css-fbcqx2"
+  >
+    <div
+      className="css-t6l4ch"
+    >
+      Left
+    </div>
+    <div
+      className="css-t6l4ch"
+    >
+      Right
+    </div>
+  </div>
+  <div
+    className="css-shqq4s"
+  >
+    <div
+      className="css-wk7iu9"
+    >
+      This area stretches to fill the available space.
+    </div>
+  </div>
+  <div
+    className="css-t6l4ch"
+  >
+    Bottom
+  </div>
+</div>
+`;
+
+exports[`Storyshots Design System|Elements/Structure/Tile Image Overlay 1`] = `
+<div
+  className="css-zleykh"
+>
+  <img
+    className=" css-9taffg"
+    srcSet="https://media.caradvice.com.au/image/private/ar_1.5,c_fill,q_80,w_800/lmo9pvxq289wvvhs9anp"
+  />
+  <div
+    className="css-1kmgijw"
+  >
+    <h2
+      className="css-1exdugv"
+    >
+      This is “Tiled” text
+    </h2>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Design System|Elements/Structure/Tile Primary 1`] = `
+<div
+  className="css-cbqcq3"
+>
+  <h2
+    className="css-1haja15"
+  >
+    Under
+  </h2>
+  <div
+    className="css-1kmgijw"
+  >
+    <h2
+      className="css-z2wxyp"
+    >
+      Over
+    </h2>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Design System|Elements/Typography Atlas 1`] = `
+<h2
+  className="css-fb8ld8"
+>
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+</h2>
+`;
+
+exports[`Storyshots Design System|Elements/Typography Body Copy 1`] = `
+<div
+  className="css-7j79l7"
+>
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+</div>
+`;
+
+exports[`Storyshots Design System|Elements/Typography Brevier 1`] = `
+<div
+  className="css-1uq8vtc"
+>
+  Lorem ipsum
+</div>
+`;
+
+exports[`Storyshots Design System|Elements/Typography Canon 1`] = `
+<h2
+  className="css-tu69md"
+>
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+</h2>
+`;
+
+exports[`Storyshots Design System|Elements/Typography Double Pica 1`] = `
+<div
+  className="css-1yjlhze"
+>
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+</div>
+`;
+
+exports[`Storyshots Design System|Elements/Typography Elephant 1`] = `
+<h2
+  className="css-v54z0"
+>
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+</h2>
+`;
+
+exports[`Storyshots Design System|Elements/Typography Foolscap 1`] = `
+<h2
+  className="css-1pa44qy"
+>
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+</h2>
+`;
+
+exports[`Storyshots Design System|Elements/Typography Great Primer 1`] = `
+<div
+  className="css-1k0eupy"
+>
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+</div>
+`;
+
+exports[`Storyshots Design System|Elements/Typography Imperial 1`] = `
+<h2
+  className="css-y4qm2y"
+>
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+</h2>
+`;
+
+exports[`Storyshots Design System|Elements/Typography Long Primer 1`] = `
+<div
+  className="css-1hy18pm"
+>
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+</div>
+`;
+
+exports[`Storyshots Design System|Elements/Typography Minion 1`] = `
+<div
+  className="css-1ot94fc"
+>
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+</div>
+`;
+
+exports[`Storyshots Design System|Elements/Typography Paragon 1`] = `
+<div
+  className="css-1jwi28n"
+>
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+</div>
+`;
+
+exports[`Storyshots Design System|Elements/Typography Pica 1`] = `
+<div
+  className="css-qgqodz"
+>
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+</div>
+`;
+
+exports[`Storyshots Design System|Elements/Typography Royal 1`] = `
+<h2
+  className="css-2m3j8s"
+>
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+</h2>
+`;
+
+exports[`Storyshots Design System|Elements/Typography Trafalgar 1`] = `
+<h2
+  className="css-1e57jg6"
+>
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+</h2>
+`;
+
+exports[`Storyshots Design System|Parts/Footer Affiliate 1`] = `
+<footer
+  className="css-1i8kklv"
+>
+  <div
+    className="css-14p8xe8"
+  >
+    <a
+      className="css-1jyvee2"
+      href="http://www.fairfaxmedia.com.au/"
+      rel="nofollow"
+    >
+      Fairfax Media
+    </a>
+    <a
+      className="css-1jyvee2"
+      href="http://www.smh.com.au/"
+      rel="nofollow"
+    >
+      The Sydney Morning Herald
+    </a>
+    <a
+      className="css-1jyvee2"
+      href="http://www.theage.com.au/"
+      rel="nofollow"
+    >
+      The Age
+    </a>
+    <a
+      className="css-1jyvee2"
+      href="https://www.caradvice.com.au/"
+      rel="nofollow"
+    >
+      CarAdvice
+    </a>
+    <a
+      className="css-1jyvee2"
+      href="https://www.adzuna.com.au/"
+      rel="nofollow"
+    >
+      Adzuna
+    </a>
+    <a
+      className="css-1jyvee2"
+      href="http://www.domain.com.au/"
+      rel="nofollow"
+    >
+      Domain
+    </a>
+    <a
+      className="css-1jyvee2"
+      href="http://www.executivestyle.com.au/"
+      rel="nofollow"
+    >
+      Executive Style
+    </a>
+    <a
+      className="css-1jyvee2"
+      href="http://www.rsvp.com.au/"
+      rel="nofollow"
+    >
+      RSVP
+    </a>
+    <a
+      className="css-1jyvee2"
+      href="http://www.essentialbaby.com.au/"
+      rel="nofollow"
+    >
+      Essential Baby
+    </a>
+    <a
+      className="css-1jyvee2"
+      href="http://www.apmpropertydata.com.au/"
+      rel="nofollow"
+    >
+      APM
+    </a>
+    <a
+      className="css-1jyvee2"
+      href="http://www.weatherzone.com.au/"
+      rel="nofollow"
+    >
+      Weatherzone
+    </a>
+    <a
+      className="css-1jyvee2"
+      href="http://www.traveller.com.au/"
+      rel="nofollow"
+    >
+      Traveller
+    </a>
+  </div>
+</footer>
+`;
+
+exports[`Storyshots Design System|Parts/Footer Primary 1`] = `
+<footer
+  className="css-133bm9"
+>
+  <div
+    className="css-14w4qp3"
+  >
+    <div
+      className="css-163qz8b"
+    >
+      <h2
+        className="css-1dwjin7"
+      >
+        News & Reviews
+      </h2>
+      <a
+        className="css-134rwzl"
+        href="/car-news/latest-news"
+      >
+        Latest News
+      </a>
+      <a
+        className="css-134rwzl"
+        href="/car-news/motor-shows"
+      >
+        Motor Shows
+      </a>
+      <a
+        className="css-134rwzl"
+        href="/car-news/motor-feature"
+      >
+        Featured Articles
+      </a>
+      <a
+        className="css-134rwzl"
+        href="/car-news/bike-news"
+      >
+        Bike News
+      </a>
+      <a
+        className="css-134rwzl"
+        href="/new-car-showroom"
+      >
+        Car Showroom
+      </a>
+      <a
+        className="css-134rwzl"
+        href="/car-reviews/new-car-reviews"
+      >
+        New Car Reviews
+      </a>
+      <a
+        className="css-134rwzl"
+        href="/car-reviews/used-car-reviews"
+      >
+        Used Car Reviews
+      </a>
+      <a
+        className="css-134rwzl"
+        href="/car-reviews/owner-reviews"
+      >
+        Owner Reviews
+      </a>
+      <a
+        className="css-134rwzl"
+        href="/drive-car-of-the-year"
+      >
+        Drive Car of the Year
+      </a>
+    </div>
+    <div
+      className="css-ho2myq"
+    >
+      <h2
+        className="css-1dwjin7"
+      >
+        Research & Advice
+      </h2>
+      <a
+        className="css-134rwzl"
+        href="/car-valuations"
+      >
+        Car Valuation
+      </a>
+      <a
+        className="css-134rwzl"
+        href="/research-and-advice/car-insurance"
+      >
+        Car Insurance
+      </a>
+      <a
+        className="css-134rwzl"
+        href="/research-and-advice/car-finance"
+      >
+        Car Finance
+      </a>
+      <a
+        className="css-134rwzl"
+        href="/research-and-advice/road-safety"
+      >
+        Road Safety
+      </a>
+      <a
+        className="css-134rwzl"
+        href="/research-and-advice/green-cars"
+      >
+        Green Cars
+      </a>
+      <a
+        className="css-134rwzl"
+        href="/research-and-advice/tips-and-advice"
+      >
+        Ask the Experts
+      </a>
+      <a
+        className="css-134rwzl"
+        href="/research-and-advice/tips-and-advice/buying-tips"
+      >
+        Buying Tips
+      </a>
+      <a
+        className="css-134rwzl"
+        href="/research-and-advice/tips-and-advice/selling-tips"
+      >
+        Selling Tips
+      </a>
+      <a
+        className="css-134rwzl"
+        href="/research-and-advice/tips-and-advice/owning-tips"
+      >
+        Owning Tips
+      </a>
+      <a
+        className="css-134rwzl"
+        href="/motor-news/drive-glossary-20100331-rd0p"
+      >
+        Drive Glossary
+      </a>
+    </div>
+    <div
+      className="css-t5nssv"
+    >
+      <h2
+        className="css-1dwjin7"
+      >
+        Browse by Lifestyle
+      </h2>
+      <a
+        className="css-134rwzl"
+        href="/research-and-advice/what-car-should-i-buy"
+      >
+        What Car Should I Buy?
+      </a>
+      <a
+        className="css-134rwzl"
+        href="/what-new-car-should-i-buy/first-car"
+      >
+        First Car
+      </a>
+      <a
+        className="css-134rwzl"
+        href="/what-new-car-should-i-buy/small-car"
+      >
+        Small Car
+      </a>
+      <a
+        className="css-134rwzl"
+        href="/what-new-car-should-i-buy/family-car"
+      >
+        Family Car
+      </a>
+      <a
+        className="css-134rwzl"
+        href="/what-new-car-should-i-buy/adventure"
+      >
+        Adventure
+      </a>
+      <a
+        className="css-134rwzl"
+        href="/what-new-car-should-i-buy/prestige"
+      >
+        Prestige
+      </a>
+      <a
+        className="css-134rwzl"
+        href="/what-new-car-should-i-buy/performance"
+      >
+        Performance
+      </a>
+      <a
+        className="css-134rwzl"
+        href="/what-new-car-should-i-buy/trade-and-commercial"
+      >
+        Trade & Commercial
+      </a>
+      <a
+        className="css-134rwzl"
+        href="/what-new-car-should-i-buy/eco"
+      >
+        Eco
+      </a>
+    </div>
+    <div
+      className="css-1wbgw7l"
+    >
+      <h2
+        className="css-1dwjin7"
+      >
+        Manufacturers
+      </h2>
+      <a
+        className="css-134rwzl"
+        href="/new-car-showroom/bmw"
+      >
+        BMW
+      </a>
+      <a
+        className="css-134rwzl"
+        href="/new-car-showroom/audi"
+      >
+        Audi
+      </a>
+      <a
+        className="css-134rwzl"
+        href="/new-car-showroom/ford"
+      >
+        Ford
+      </a>
+      <a
+        className="css-134rwzl"
+        href="/new-car-showroom/hyundai"
+      >
+        Hyundai
+      </a>
+      <a
+        className="css-134rwzl"
+        href="/new-car-showroom/kia"
+      >
+        Kia
+      </a>
+      <a
+        className="css-134rwzl"
+        href="/new-car-showroom/toyota"
+      >
+        Toyota
+      </a>
+      <a
+        className="css-134rwzl"
+        href="/new-car-showroom/volvo"
+      >
+        Volvo
+      </a>
+      <a
+        className="css-134rwzl"
+        href="/new-car-showroom/volkswagen"
+      >
+        Volkswagen
+      </a>
+      <a
+        className="css-134rwzl"
+        href="/new-car-showroom"
+      >
+        See all Manufacturers
+      </a>
+    </div>
+    <div
+      className="css-163qz8b"
+    >
+      <h2
+        className="css-1dwjin7"
+      >
+        Buy & Sell
+      </h2>
+      <a
+        className="css-134rwzl"
+        href="/new-car-showroom/"
+      >
+        Buy New Cars
+      </a>
+      <a
+        className="css-134rwzl"
+        href="/car-sales/buy-used-cars/australia"
+      >
+        Buy Used Cars
+      </a>
+      <a
+        className="css-134rwzl"
+        href="/sell-your-car"
+      >
+        Sell your Car
+      </a>
+      <a
+        className="css-134rwzl"
+        href="/car-valuations"
+      >
+        Car Valuation
+      </a>
+      <a
+        className="css-134rwzl"
+        href="https://members.drivenetwork.com.au/members/register?source=www.drive.com.au&returnURL=/"
+      >
+        Manage your Car Ad
+      </a>
+    </div>
+  </div>
+  <div
+    className="css-bq6ror"
+  >
+    <a
+      className="css-1dntj06"
+      data-network="facebook"
+      href="https://www.facebook.com/Drive.com.au"
+      target="_blank"
+    >
+      <svg
+        aria-hidden="true"
+        className="svg-inline--fa fa-facebook-square fa-w-14 "
+        data-icon="facebook-square"
+        data-prefix="fab"
+        focusable="false"
+        role="img"
+        style={Object {}}
+        viewBox="0 0 448 512"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M400 32H48A48 48 0 0 0 0 80v352a48 48 0 0 0 48 48h137.25V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.27c-30.81 0-40.42 19.12-40.42 38.73V256h68.78l-11 71.69h-57.78V480H400a48 48 0 0 0 48-48V80a48 48 0 0 0-48-48z"
+          fill="currentColor"
+          style={Object {}}
+        />
+      </svg>
+    </a>
+    <a
+      className="css-19nb5rz"
+      data-network="twitter"
+      href="https://twitter.com/Drivecomau"
+      target="_blank"
+    >
+      <svg
+        aria-hidden="true"
+        className="svg-inline--fa fa-twitter fa-w-16 "
+        data-icon="twitter"
+        data-prefix="fab"
+        focusable="false"
+        role="img"
+        style={Object {}}
+        viewBox="0 0 512 512"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"
+          fill="currentColor"
+          style={Object {}}
+        />
+      </svg>
+    </a>
+    <a
+      className="css-nbddv9"
+      data-network="instagram"
+      href="https://instagram.com/drivecomau/"
+      target="_blank"
+    >
+      <svg
+        aria-hidden="true"
+        className="svg-inline--fa fa-instagram fa-w-14 "
+        data-icon="instagram"
+        data-prefix="fab"
+        focusable="false"
+        role="img"
+        style={Object {}}
+        viewBox="0 0 448 512"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"
+          fill="currentColor"
+          style={Object {}}
+        />
+      </svg>
+    </a>
+    <a
+      className="css-lux2yn"
+      data-network="google"
+      href="https://plus.google.com/u/0/+Drivecomau/posts"
+      target="_blank"
+    >
+      <svg
+        aria-hidden="true"
+        className="svg-inline--fa fa-google fa-w-16 "
+        data-icon="google"
+        data-prefix="fab"
+        focusable="false"
+        role="img"
+        style={Object {}}
+        viewBox="0 0 488 512"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M488 261.8C488 403.3 391.1 504 248 504 110.8 504 0 393.2 0 256S110.8 8 248 8c66.8 0 123 24.5 166.3 64.9l-67.5 64.9C258.5 52.6 94.3 116.6 94.3 256c0 86.5 69.1 156.6 153.7 156.6 98.2 0 135-70.4 140.8-106.9H248v-85.3h236.1c2.3 12.7 3.9 24.9 3.9 41.4z"
+          fill="currentColor"
+          style={Object {}}
+        />
+      </svg>
+    </a>
+    <a
+      className="css-y1rc6g"
+      data-network="youtube"
+      href="https://www.youtube.com/channel/UC2UeuqqiHrqStYmNcls9jtw"
+      target="_blank"
+    >
+      <svg
+        aria-hidden="true"
+        className="svg-inline--fa fa-youtube fa-w-18 "
+        data-icon="youtube"
+        data-prefix="fab"
+        focusable="false"
+        role="img"
+        style={Object {}}
+        viewBox="0 0 576 512"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M549.655 124.083c-6.281-23.65-24.787-42.276-48.284-48.597C458.781 64 288 64 288 64S117.22 64 74.629 75.486c-23.497 6.322-42.003 24.947-48.284 48.597-11.412 42.867-11.412 132.305-11.412 132.305s0 89.438 11.412 132.305c6.281 23.65 24.787 41.5 48.284 47.821C117.22 448 288 448 288 448s170.78 0 213.371-11.486c23.497-6.321 42.003-24.171 48.284-47.821 11.412-42.867 11.412-132.305 11.412-132.305s0-89.438-11.412-132.305zm-317.51 213.508V175.185l142.739 81.205-142.739 81.201z"
+          fill="currentColor"
+          style={Object {}}
+        />
+      </svg>
+    </a>
+  </div>
+  <div
+    className="css-6jsprq"
+  >
+    <a
+      className="css-7kii64"
+      href="/about-us"
+    >
+      About Us
+    </a>
+    <a
+      className="css-7kii64"
+      href="/contact-us"
+    >
+      Contact Us
+    </a>
+    <a
+      className="css-7kii64"
+      href="/newseletter"
+    >
+      Newsletter
+    </a>
+    <a
+      className="css-7kii64"
+      href="/advertise-with-us"
+    >
+      Advertise with Us
+    </a>
+    <a
+      className="css-7kii64"
+      href="/privacy-policy"
+    >
+      Privacy Policy
+    </a>
+  </div>
+  <div
+    className="css-d25moa"
+  >
+    <a
+      className="css-1jyvee2"
+      href="http://www.fairfaxmedia.com.au/"
+      rel="nofollow"
+    >
+      Fairfax Media
+    </a>
+    <a
+      className="css-1jyvee2"
+      href="http://www.smh.com.au/"
+      rel="nofollow"
+    >
+      The Sydney Morning Herald
+    </a>
+    <a
+      className="css-1jyvee2"
+      href="http://www.theage.com.au/"
+      rel="nofollow"
+    >
+      The Age
+    </a>
+    <a
+      className="css-1jyvee2"
+      href="https://www.caradvice.com.au/"
+      rel="nofollow"
+    >
+      CarAdvice
+    </a>
+    <a
+      className="css-1jyvee2"
+      href="https://www.adzuna.com.au/"
+      rel="nofollow"
+    >
+      Adzuna
+    </a>
+    <a
+      className="css-1jyvee2"
+      href="http://www.domain.com.au/"
+      rel="nofollow"
+    >
+      Domain
+    </a>
+    <a
+      className="css-1jyvee2"
+      href="http://www.executivestyle.com.au/"
+      rel="nofollow"
+    >
+      Executive Style
+    </a>
+    <a
+      className="css-1jyvee2"
+      href="http://www.rsvp.com.au/"
+      rel="nofollow"
+    >
+      RSVP
+    </a>
+    <a
+      className="css-1jyvee2"
+      href="http://www.essentialbaby.com.au/"
+      rel="nofollow"
+    >
+      Essential Baby
+    </a>
+    <a
+      className="css-1jyvee2"
+      href="http://www.apmpropertydata.com.au/"
+      rel="nofollow"
+    >
+      APM
+    </a>
+    <a
+      className="css-1jyvee2"
+      href="http://www.weatherzone.com.au/"
+      rel="nofollow"
+    >
+      Weatherzone
+    </a>
+    <a
+      className="css-1jyvee2"
+      href="http://www.traveller.com.au/"
+      rel="nofollow"
+    >
+      Traveller
+    </a>
+  </div>
+  <div
+    className="css-14nk9ms"
+  >
+    Copyright ©2019 Drive.com.au
+  </div>
+</footer>
+`;
+
+exports[`Storyshots Design System|Parts/Footer SEO 1`] = `
+<footer
+  className="css-1i8kklv"
+>
+  <div
+    className="css-14w4qp3"
+  >
+    <div
+      className="css-163qz8b"
+    >
+      <h2
+        className="css-1dwjin7"
+      >
+        News & Reviews
+      </h2>
+      <a
+        className="css-134rwzl"
+        href="/car-news/latest-news"
+      >
+        Latest News
+      </a>
+      <a
+        className="css-134rwzl"
+        href="/car-news/motor-shows"
+      >
+        Motor Shows
+      </a>
+      <a
+        className="css-134rwzl"
+        href="/car-news/motor-feature"
+      >
+        Featured Articles
+      </a>
+      <a
+        className="css-134rwzl"
+        href="/car-news/bike-news"
+      >
+        Bike News
+      </a>
+      <a
+        className="css-134rwzl"
+        href="/new-car-showroom"
+      >
+        Car Showroom
+      </a>
+      <a
+        className="css-134rwzl"
+        href="/car-reviews/new-car-reviews"
+      >
+        New Car Reviews
+      </a>
+      <a
+        className="css-134rwzl"
+        href="/car-reviews/used-car-reviews"
+      >
+        Used Car Reviews
+      </a>
+      <a
+        className="css-134rwzl"
+        href="/car-reviews/owner-reviews"
+      >
+        Owner Reviews
+      </a>
+      <a
+        className="css-134rwzl"
+        href="/drive-car-of-the-year"
+      >
+        Drive Car of the Year
+      </a>
+    </div>
+    <div
+      className="css-ho2myq"
+    >
+      <h2
+        className="css-1dwjin7"
+      >
+        Research & Advice
+      </h2>
+      <a
+        className="css-134rwzl"
+        href="/car-valuations"
+      >
+        Car Valuation
+      </a>
+      <a
+        className="css-134rwzl"
+        href="/research-and-advice/car-insurance"
+      >
+        Car Insurance
+      </a>
+      <a
+        className="css-134rwzl"
+        href="/research-and-advice/car-finance"
+      >
+        Car Finance
+      </a>
+      <a
+        className="css-134rwzl"
+        href="/research-and-advice/road-safety"
+      >
+        Road Safety
+      </a>
+      <a
+        className="css-134rwzl"
+        href="/research-and-advice/green-cars"
+      >
+        Green Cars
+      </a>
+      <a
+        className="css-134rwzl"
+        href="/research-and-advice/tips-and-advice"
+      >
+        Ask the Experts
+      </a>
+      <a
+        className="css-134rwzl"
+        href="/research-and-advice/tips-and-advice/buying-tips"
+      >
+        Buying Tips
+      </a>
+      <a
+        className="css-134rwzl"
+        href="/research-and-advice/tips-and-advice/selling-tips"
+      >
+        Selling Tips
+      </a>
+      <a
+        className="css-134rwzl"
+        href="/research-and-advice/tips-and-advice/owning-tips"
+      >
+        Owning Tips
+      </a>
+      <a
+        className="css-134rwzl"
+        href="/motor-news/drive-glossary-20100331-rd0p"
+      >
+        Drive Glossary
+      </a>
+    </div>
+    <div
+      className="css-t5nssv"
+    >
+      <h2
+        className="css-1dwjin7"
+      >
+        Browse by Lifestyle
+      </h2>
+      <a
+        className="css-134rwzl"
+        href="/research-and-advice/what-car-should-i-buy"
+      >
+        What Car Should I Buy?
+      </a>
+      <a
+        className="css-134rwzl"
+        href="/what-new-car-should-i-buy/first-car"
+      >
+        First Car
+      </a>
+      <a
+        className="css-134rwzl"
+        href="/what-new-car-should-i-buy/small-car"
+      >
+        Small Car
+      </a>
+      <a
+        className="css-134rwzl"
+        href="/what-new-car-should-i-buy/family-car"
+      >
+        Family Car
+      </a>
+      <a
+        className="css-134rwzl"
+        href="/what-new-car-should-i-buy/adventure"
+      >
+        Adventure
+      </a>
+      <a
+        className="css-134rwzl"
+        href="/what-new-car-should-i-buy/prestige"
+      >
+        Prestige
+      </a>
+      <a
+        className="css-134rwzl"
+        href="/what-new-car-should-i-buy/performance"
+      >
+        Performance
+      </a>
+      <a
+        className="css-134rwzl"
+        href="/what-new-car-should-i-buy/trade-and-commercial"
+      >
+        Trade & Commercial
+      </a>
+      <a
+        className="css-134rwzl"
+        href="/what-new-car-should-i-buy/eco"
+      >
+        Eco
+      </a>
+    </div>
+    <div
+      className="css-1wbgw7l"
+    >
+      <h2
+        className="css-1dwjin7"
+      >
+        Manufacturers
+      </h2>
+      <a
+        className="css-134rwzl"
+        href="/new-car-showroom/bmw"
+      >
+        BMW
+      </a>
+      <a
+        className="css-134rwzl"
+        href="/new-car-showroom/audi"
+      >
+        Audi
+      </a>
+      <a
+        className="css-134rwzl"
+        href="/new-car-showroom/ford"
+      >
+        Ford
+      </a>
+      <a
+        className="css-134rwzl"
+        href="/new-car-showroom/hyundai"
+      >
+        Hyundai
+      </a>
+      <a
+        className="css-134rwzl"
+        href="/new-car-showroom/kia"
+      >
+        Kia
+      </a>
+      <a
+        className="css-134rwzl"
+        href="/new-car-showroom/toyota"
+      >
+        Toyota
+      </a>
+      <a
+        className="css-134rwzl"
+        href="/new-car-showroom/volvo"
+      >
+        Volvo
+      </a>
+      <a
+        className="css-134rwzl"
+        href="/new-car-showroom/volkswagen"
+      >
+        Volkswagen
+      </a>
+      <a
+        className="css-134rwzl"
+        href="/new-car-showroom"
+      >
+        See all Manufacturers
+      </a>
+    </div>
+    <div
+      className="css-163qz8b"
+    >
+      <h2
+        className="css-1dwjin7"
+      >
+        Buy & Sell
+      </h2>
+      <a
+        className="css-134rwzl"
+        href="/new-car-showroom/"
+      >
+        Buy New Cars
+      </a>
+      <a
+        className="css-134rwzl"
+        href="/car-sales/buy-used-cars/australia"
+      >
+        Buy Used Cars
+      </a>
+      <a
+        className="css-134rwzl"
+        href="/sell-your-car"
+      >
+        Sell your Car
+      </a>
+      <a
+        className="css-134rwzl"
+        href="/car-valuations"
+      >
+        Car Valuation
+      </a>
+      <a
+        className="css-134rwzl"
+        href="https://members.drivenetwork.com.au/members/register?source=www.drive.com.au&returnURL=/"
+      >
+        Manage your Car Ad
+      </a>
+    </div>
+  </div>
+</footer>
+`;
+
+exports[`Storyshots Design System|Parts/Footer Site 1`] = `
+<footer
+  className="css-1i8kklv"
+>
+  <div
+    className="css-10nci1f"
+  >
+    <a
+      className="css-7kii64"
+      href="/about-us"
+    >
+      About Us
+    </a>
+    <a
+      className="css-7kii64"
+      href="/contact-us"
+    >
+      Contact Us
+    </a>
+    <a
+      className="css-7kii64"
+      href="/newseletter"
+    >
+      Newsletter
+    </a>
+    <a
+      className="css-7kii64"
+      href="/advertise-with-us"
+    >
+      Advertise with Us
+    </a>
+    <a
+      className="css-7kii64"
+      href="/privacy-policy"
+    >
+      Privacy Policy
+    </a>
+  </div>
+</footer>
+`;
+
+exports[`Storyshots Design System|Parts/Footer Social 1`] = `
+<footer
+  className="css-1i8kklv"
+>
+  <div
+    className="css-1b2tw1j"
+  >
+    <a
+      className="css-1dntj06"
+      data-network="facebook"
+      href="https://www.facebook.com/Drive.com.au"
+      target="_blank"
+    >
+      <svg
+        aria-hidden="true"
+        className="svg-inline--fa fa-facebook-square fa-w-14 "
+        data-icon="facebook-square"
+        data-prefix="fab"
+        focusable="false"
+        role="img"
+        style={Object {}}
+        viewBox="0 0 448 512"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M400 32H48A48 48 0 0 0 0 80v352a48 48 0 0 0 48 48h137.25V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.27c-30.81 0-40.42 19.12-40.42 38.73V256h68.78l-11 71.69h-57.78V480H400a48 48 0 0 0 48-48V80a48 48 0 0 0-48-48z"
+          fill="currentColor"
+          style={Object {}}
+        />
+      </svg>
+    </a>
+    <a
+      className="css-19nb5rz"
+      data-network="twitter"
+      href="https://twitter.com/Drivecomau"
+      target="_blank"
+    >
+      <svg
+        aria-hidden="true"
+        className="svg-inline--fa fa-twitter fa-w-16 "
+        data-icon="twitter"
+        data-prefix="fab"
+        focusable="false"
+        role="img"
+        style={Object {}}
+        viewBox="0 0 512 512"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"
+          fill="currentColor"
+          style={Object {}}
+        />
+      </svg>
+    </a>
+    <a
+      className="css-nbddv9"
+      data-network="instagram"
+      href="https://instagram.com/drivecomau/"
+      target="_blank"
+    >
+      <svg
+        aria-hidden="true"
+        className="svg-inline--fa fa-instagram fa-w-14 "
+        data-icon="instagram"
+        data-prefix="fab"
+        focusable="false"
+        role="img"
+        style={Object {}}
+        viewBox="0 0 448 512"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"
+          fill="currentColor"
+          style={Object {}}
+        />
+      </svg>
+    </a>
+    <a
+      className="css-lux2yn"
+      data-network="google"
+      href="https://plus.google.com/u/0/+Drivecomau/posts"
+      target="_blank"
+    >
+      <svg
+        aria-hidden="true"
+        className="svg-inline--fa fa-google fa-w-16 "
+        data-icon="google"
+        data-prefix="fab"
+        focusable="false"
+        role="img"
+        style={Object {}}
+        viewBox="0 0 488 512"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M488 261.8C488 403.3 391.1 504 248 504 110.8 504 0 393.2 0 256S110.8 8 248 8c66.8 0 123 24.5 166.3 64.9l-67.5 64.9C258.5 52.6 94.3 116.6 94.3 256c0 86.5 69.1 156.6 153.7 156.6 98.2 0 135-70.4 140.8-106.9H248v-85.3h236.1c2.3 12.7 3.9 24.9 3.9 41.4z"
+          fill="currentColor"
+          style={Object {}}
+        />
+      </svg>
+    </a>
+    <a
+      className="css-y1rc6g"
+      data-network="youtube"
+      href="https://www.youtube.com/channel/UC2UeuqqiHrqStYmNcls9jtw"
+      target="_blank"
+    >
+      <svg
+        aria-hidden="true"
+        className="svg-inline--fa fa-youtube fa-w-18 "
+        data-icon="youtube"
+        data-prefix="fab"
+        focusable="false"
+        role="img"
+        style={Object {}}
+        viewBox="0 0 576 512"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M549.655 124.083c-6.281-23.65-24.787-42.276-48.284-48.597C458.781 64 288 64 288 64S117.22 64 74.629 75.486c-23.497 6.322-42.003 24.947-48.284 48.597-11.412 42.867-11.412 132.305-11.412 132.305s0 89.438 11.412 132.305c6.281 23.65 24.787 41.5 48.284 47.821C117.22 448 288 448 288 448s170.78 0 213.371-11.486c23.497-6.321 42.003-24.171 48.284-47.821 11.412-42.867 11.412-132.305 11.412-132.305s0-89.438-11.412-132.305zm-317.51 213.508V175.185l142.739 81.205-142.739 81.201z"
+          fill="currentColor"
+          style={Object {}}
+        />
+      </svg>
+    </a>
+  </div>
+</footer>
+`;
+
+exports[`Storyshots Design System|Parts/NewsletterSubscribe Primary 1`] = `
+<div
+  className="css-b7x4lf"
+>
+  <div
+    className="css-5qxpla"
+  >
+    <div
+      className="css-j9yt1h"
+    >
+      <form
+        action="#"
+        name="newsletter-subscribe"
+        onReset={[Function]}
+        onSubmit={[Function]}
+      >
+        <div
+          className="css-4cffwv"
+        >
+          <input
+            className="md css-1xcs4ik"
+            name="name"
+            onBlur={[Function]}
+            onChange={[Function]}
+            placeholder="your.name@email.com"
+            type="text"
+            value=""
+          />
+          <button
+            className="xl primary css-tle189"
+            type="submit"
+          >
+            <svg
+              aria-hidden="true"
+              className="svg-inline--fa fa-paper-plane fa-w-16 "
+              data-icon="paper-plane"
+              data-prefix="fas"
+              focusable="false"
+              role="img"
+              style={Object {}}
+              viewBox="0 0 512 512"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M476 3.2L12.5 270.6c-18.1 10.4-15.8 35.6 2.2 43.2L121 358.4l287.3-253.2c5.5-4.9 13.3 2.6 8.6 8.3L176 407v80.5c0 23.6 28.5 32.9 42.5 15.8L282 426l124.6 52.2c14.2 6 30.4-2.9 33-18.2l72-432C515 7.8 493.3-6.8 476 3.2z"
+                fill="currentColor"
+                style={Object {}}
+              />
+            </svg>
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+`;

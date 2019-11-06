@@ -38,4 +38,8 @@ const PullQuote = ({ quote, attribution, sx, ...rest }) => {
   )
 }
 
+PullQuote.defaultProps = {
+  sx: {},
+}
+
 export default PullQuote
