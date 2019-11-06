@@ -15,7 +15,7 @@ const ResponsivePlayer = styled(ReactPlayer)`
 
 // ----------------------------------------------------------------------------
 
-export default ({ url, width, height, config, sx, ...rest }) => {
+const Video = ({ url, width, height, config, sx, ...rest }) => {
   const ratio = `${(height / width) * 100}%`
 
   return (
@@ -32,3 +32,5 @@ export default ({ url, width, height, config, sx, ...rest }) => {
     </Flex>
   )
 }
+
+export default Video
