@@ -1,21 +1,14 @@
 import React from 'react'
 
-import { useTheme } from 'emotion-theming'
-import { get } from '@styled-system/css'
+// ----------------------------------------------------------------------------
 
+import { useVariant } from '../../../hooks'
 import { Box } from 'rebass'
 
 // ----------------------------------------------------------------------------
 
-const useVariant = (path, dflt = null) => {
-  const theme = useTheme()
-  return get(theme, path, dflt)
-}
-
-// ----------------------------------------------------------------------------
-
 const RichText = ({ children, text, sx, ...rest }) => {
-  const styles = useVariant('content.richtext', {})
+  const styles = useVariant('content.richtext')
   return (
     <Box
       className="richtext"
