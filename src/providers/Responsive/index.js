@@ -7,16 +7,16 @@ import cloudinary from 'cloudinary-core'
 
 // ----------------------------------------------------------------------------
 
-const CloudinaryContext = createContext(null)
+const ResponsiveContext = createContext(null)
 
 export default ({ children, options }) => {
   const cl = new cloudinary.Cloudinary(options)
   return (
-    <CloudinaryContext.Provider value={cl}>
+    <ResponsiveContext.Provider value={cl}>
       {children}
-    </CloudinaryContext.Provider>
+    </ResponsiveContext.Provider>
   )
 }
 
-export const useCloudinary = () => useContext(CloudinaryContext)
+export const useCloudinary = () => useContext(ResponsiveContext)
 export const useResponsiveBuilder = () => CloudinaryBuilder(useCloudinary())
