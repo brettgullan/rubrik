@@ -1,9 +1,9 @@
-import React, { cloneElement } from 'react'
-import { Box, Flex, Link, Text } from 'rebass'
+import React from 'react'
+import { Box, Link, Text } from 'rebass'
 
 // ----------------------------------------------------------------------------
 
-import Cloudinary from '../../providers/Cloudinary'
+import { withResponsiveProvider } from '../../utils/storybook'
 
 // ----------------------------------------------------------------------------
 
@@ -15,24 +15,9 @@ import { Tile, TileLayer, Scrim } from '../structure'
 
 // ----------------------------------------------------------------------------
 
-const withCloudinary = (storyFn) => (
-  <Cloudinary
-    options={{
-      cloud_name: 'caradvice',
-      private_cdn: true,
-      secure_distribution: 'media.caradvice.com.au',
-      secure: true,
-    }}
-  >
-    {storyFn()}
-  </Cloudinary>
-)
-
-// ----------------------------------------------------------------------------
-
 export default {
   title: 'Design System|Elements/Cards/Card',
-  decorators: [withCloudinary],
+  decorators: [withResponsiveProvider],
 }
 
 // ----------------------------------------------------------------------------

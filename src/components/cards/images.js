@@ -2,7 +2,7 @@ import React from 'react'
 
 // ----------------------------------------------------------------------------
 
-import { CloudinaryImage } from '../media'
+import { ResponsiveImage } from '../media'
 
 // ----------------------------------------------------------------------------
 
@@ -17,7 +17,7 @@ export const Standard = ({ image, sx, ...rest }) => {
   }
 
   return (
-    <CloudinaryImage
+    <ResponsiveImage
       sx={{ display: 'block', width: '100%', bg: 'gray.0', ...sx }}
       image={image}
       options={imageOptions}
