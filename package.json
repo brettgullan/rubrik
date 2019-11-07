@@ -51,6 +51,7 @@
     "@babel/core": "^7.6.4",
     "@babel/preset-env": "^7.7.1",
     "@babel/preset-react": "^7.7.0",
+    "@percy/storybook": "^3.2.0",
     "@storybook/addon-actions": "^5.2.4",
     "@storybook/addon-backgrounds": "^5.2.4",
     "@storybook/addon-console": "^1.2.1",
@@ -89,7 +90,8 @@
     "serve": "gatsby serve",
     "test": "jest",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "build-storybook": "build-storybook",
+    "snapshot": "build-storybook && percy-storybook --widths=320,1280"
   },
   "repository": {
     "type": "git",
