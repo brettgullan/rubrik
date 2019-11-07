@@ -21,6 +21,17 @@ const content = {
       mt: 3,
     },
   },
+  imageblock: {
+    block: {
+      p: 4,
+      bg: 'white.0',
+    },
+    caption: {
+      mt: 4,
+      ...text.brevier,
+      color: 'gray.2',
+    },
+  },
 }
 
 // ----------------------------------------------------------------------------
