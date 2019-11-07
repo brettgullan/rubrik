@@ -5,7 +5,7 @@ import React from 'react'
 import { Flex } from 'rebass'
 import { useImageConfig, useVariant } from '../../../hooks'
 import { Stack } from '../../structure'
-import { CloudinaryImage } from '../../media'
+import { ResponsiveImage } from '../../media'
 
 // ----------------------------------------------------------------------------
 
@@ -15,7 +15,7 @@ const ImageBlock = ({ image, caption, sx, ...rest }) => {
   const { block: sxBlock, image: sxImage, caption: sxCaption } = sx
 
   const imageComponent = (
-    <CloudinaryImage
+    <ResponsiveImage
       image={image}
       options={imageOptions}
       sx={{

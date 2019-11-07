@@ -1,34 +1,19 @@
 import React from 'react'
 import { withKnobs, optionsKnob as options } from '@storybook/addon-knobs'
 
-import Cloudinary from '../../../providers/Cloudinary'
-
 // ----------------------------------------------------------------------------
+
+import { withResponsiveProvider } from '../../../utils/storybook'
 
 import { Flex } from 'rebass'
 import ImageBlock from '../ImageBlock'
 
 // ----------------------------------------------------------------------------
 
-const withCloudinary = (storyFn) => (
-  <Cloudinary
-    options={{
-      cloud_name: 'caradvice',
-      private_cdn: true,
-      secure_distribution: 'media.caradvice.com.au',
-      secure: true,
-    }}
-  >
-    {storyFn()}
-  </Cloudinary>
-)
-
-// ----------------------------------------------------------------------------
-
 export default {
   title: 'Design System|Elements/Content/ImageBlock',
   component: ImageBlock,
-  decorators: [withKnobs, withCloudinary],
+  decorators: [withKnobs, withResponsiveProvider],
 
   parameters: {
     component: ImageBlock,
