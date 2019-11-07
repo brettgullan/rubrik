@@ -1,4 +1,6 @@
 import React from 'react'
+import PropTypes from 'prop-types'
+
 import { CloudinaryBuilder } from 'responsive-configuration-builder'
 
 // ----------------------------------------------------------------------------
@@ -20,6 +22,14 @@ const CloudinaryImage = ({ image, options, ...rest }) => {
   }
 
   return <Image {...props} />
+}
+
+CloudinaryImage.propTypes = {
+  image: PropTypes.shape({
+    id: PropTypes.string.isRequired,
+    type: PropTypes.string,
+  }),
+  options: PropTypes.object.isRequired,
 }
 
 export default CloudinaryImage
