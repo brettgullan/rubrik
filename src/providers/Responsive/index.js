@@ -1,22 +1,18 @@
 import React, { useContext, createContext } from 'react'
-import { CloudinaryBuilder } from 'responsive-configuration-builder'
 
 // ----------------------------------------------------------------------------
 
-import cloudinary from 'cloudinary-core'
+export const ResponsiveContext = createContext(null)
 
-// ----------------------------------------------------------------------------
-
-const ResponsiveContext = createContext(null)
-
-export default ({ children, options }) => {
-  const cl = new cloudinary.Cloudinary(options)
+export default ({ children, adaptor }) => {
   return (
-    <ResponsiveContext.Provider value={cl}>
+    <ResponsiveContext.Provider value={adaptor}>
       {children}
     </ResponsiveContext.Provider>
   )
 }
 
-export const useCloudinary = () => useContext(ResponsiveContext)
-export const useResponsiveBuilder = () => CloudinaryBuilder(useCloudinary())
+export const useResponsiveBuilder = () => {
+  const { builder } = useContext(ResponsiveContext)
+  return builder
+}

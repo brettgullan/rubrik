@@ -1,6 +1,7 @@
 import React from 'react'
 import { withKnobs, optionsKnob as options } from '@storybook/addon-knobs'
 
+import CloudinaryAdaptor from '../../../providers/Responsive/cloudinary'
 import ResponsiveProvider from '../../../providers/Responsive'
 
 // ----------------------------------------------------------------------------
@@ -11,12 +12,12 @@ import ResponsiveImage from '.'
 
 const withResponsiveProvider = (storyFn) => (
   <ResponsiveProvider
-    options={{
+    adaptor={CloudinaryAdaptor({
       cloud_name: 'caradvice',
       private_cdn: true,
       secure_distribution: 'media.caradvice.com.au',
       secure: true,
-    }}
+    })}
   >
     {storyFn()}
   </ResponsiveProvider>
