@@ -7,6 +7,7 @@ import { withResponsiveProvider } from '../../../utils/storybook'
 
 import { Flex } from 'rebass'
 import ImageBlock from '../ImageBlock'
+import { Image } from '../../media'
 
 // ----------------------------------------------------------------------------
 
@@ -35,6 +36,24 @@ export const Primary = () => {
 }
 Primary.story = {
   name: 'Default',
+}
+
+// ----------------------------------------------------------------------------
+
+export const WithChildAsFunction = () => {
+  const image = {
+    id: 'https://picsum.photos/id/235/1280/720',
+  }
+  const caption =
+    'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+
+  return (
+    <Flex maxWidth="article" mx="auto">
+      <ImageBlock image={image} caption={caption}>
+        {({ image }) => <Image src={image.id} />}
+      </ImageBlock>
+    </Flex>
+  )
 }
 
 // ----------------------------------------------------------------------------
