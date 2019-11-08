@@ -24,6 +24,12 @@ import variants from './variants'
 import buttons from './variants/buttons'
 import text from './variants/text'
 import forms from './variants/forms'
+import content from './variants/content'
+
+// ----------------------------------------------------------------------------
+
+// Responsive Image configurations
+import * as images from './images'
 
 // ----------------------------------------------------------------------------
 
@@ -45,4 +51,7 @@ export default {
   buttons,
   forms,
   text,
+  content,
+
+  images,
 }

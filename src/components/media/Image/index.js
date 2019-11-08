@@ -7,11 +7,11 @@ import Image from './component'
 
 // ----------------------------------------------------------------------------
 
-const transformProps = renameKeys({ srcset: 'srcSet' })
+const normalizeImageProps = renameKeys({ srcset: 'srcSet' })
 
 // ----------------------------------------------------------------------------
 
-const ImageWrapper = (props) => <Image {...transformProps(props)} />
+const ImageWrapper = (props) => <Image {...normalizeImageProps(props)} />
 
 ImageWrapper.defaultProps = Image.defaultProps
 ImageWrapper.propTypes = Image.propTypes

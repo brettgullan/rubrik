@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 
 // ----------------------------------------------------------------------------
 
@@ -17,6 +18,13 @@ const ResponsiveImage = ({ image, options, ...rest }) => {
   }
 
   return <Image {...props} />
+}
+
+ResponsiveImage.propTypes = {
+  image: PropTypes.shape({
+    id: PropTypes.string.isRequired,
+  }).isRequired,
+  options: PropTypes.object.isRequired,
 }
 
 export default ResponsiveImage

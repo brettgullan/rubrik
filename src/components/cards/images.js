@@ -2,19 +2,13 @@ import React from 'react'
 
 // ----------------------------------------------------------------------------
 
+import { useImageConfig } from '../../hooks'
 import { ResponsiveImage } from '../media'
 
 // ----------------------------------------------------------------------------
 
 export const Standard = ({ image, sx, ...rest }) => {
-  const imageOptions = {
-    srcset: {
-      widths: [375, 480, 640, 728],
-      aspect_ratio: 16 / 9,
-      crop: 'fill',
-      quality: 80,
-    },
-  }
+  const imageOptions = useImageConfig('cards.default')
 
   return (
     <ResponsiveImage
