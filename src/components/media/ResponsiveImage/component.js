@@ -23,8 +23,7 @@ const ResponsiveImage = ({ image, options, ...rest }) => {
 ResponsiveImage.propTypes = {
   image: PropTypes.shape({
     id: PropTypes.string.isRequired,
-    type: PropTypes.string,
-  }),
+  }).isRequired,
   options: PropTypes.object.isRequired,
 }
 
