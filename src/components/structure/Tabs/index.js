@@ -12,23 +12,37 @@ export { Tabs } from '@bumaga/tabs'
 // ----------------------------------------------------------------------------
 
 export const TabBar = (props) => {
-  return <Flex role="tablist" {...props} />
+  return <Flex as="ul" role="tablist" {...props} />
 }
 
-export const Tab = ({ children }) => {
+export const Tab = ({ sx, ...rest }) => {
   const { onClick } = useTabState()
 
-  return (
-    <button role="tab" onClick={onClick}>
-      {children}
-    </button>
-  )
+  return <Flex as="li" role="tab" onClick={onClick} {...rest} />
 }
 
-export const TabPanel = ({ children }) => {
+const style = {
+  position: 'static',
+  height: 'auto',
+  width: '100%',
+  opacity: 1,
+  '&[hidden]': {
+    position: 'absolute',
+    height: 0,
+    p: 0,
+    overflow: 'hidden',
+    opacity: 0,
+  },
+}
+
+export const TabPanel = ({ sx, ...rest }) => {
   const isActive = usePanelState()
 
-  return isActive ? <p role="tabpanel">{children}</p> : null
+  return isActive ? (
+    <Flex role="tabpanel" sx={{ ...style, ...sx }} {...rest} />
+  ) : (
+    <Flex role="tabpanel" sx={{ ...style, ...sx }} hidden {...rest} />
+  )
 }
 
 // ----------------------------------------------------------------------------
