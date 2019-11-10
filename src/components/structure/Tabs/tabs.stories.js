@@ -1,9 +1,12 @@
 import React from 'react'
 import { withKnobs, optionsKnob as options } from '@storybook/addon-knobs'
+import { useTheme } from 'emotion-theming'
 
 // ----------------------------------------------------------------------------
 
-import { Tab, Tabs, TabList, TabPanel } from '.'
+import theme from '../../../theme'
+import { Tab, Tabs, TabBar, TabPanel } from '.'
+import { Flex } from 'rebass'
 
 // ----------------------------------------------------------------------------
 
@@ -14,20 +17,27 @@ export default {
 
 // ----------------------------------------------------------------------------
 
+const { text } = theme
+
 export const Primary = () => {
+  const sx = {
+    '.tab': {
+      p: 3,
+      ...text.longPrimer,
+    },
+  }
+
   return (
-    <Tabs
-      selectedTabClassName="is-selected"
-      selectedTabPanelClassName="is-selected"
-    >
-      <TabList>
-        <Tab selectedClassName="is-selected">Tab 1</Tab>
-        <Tab selectedClassName="is-selected">Tab 2</Tab>
-        <Tab selectedClassName="is-selected">Tab 3</Tab>
-      </TabList>
-      <TabPanel selectedClassName="is-selected">Panel 1</TabPanel>
-      <TabPanel selectedClassName="is-selected">Panel 2</TabPanel>
-      <TabPanel selectedClassName="is-selected">Panel 3</TabPanel>
+    <Tabs>
+      <Flex flexDirection="column">
+        <TabBar>
+          <Tab>Tab 1</Tab>
+          <Tab>Tab 2</Tab>
+        </TabBar>
+
+        <TabPanel>Panel 1</TabPanel>
+        <TabPanel>Panel 2</TabPanel>
+      </Flex>
     </Tabs>
   )
 }
