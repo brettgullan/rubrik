@@ -8,8 +8,10 @@ import { Box } from 'rebass'
 
 // ----------------------------------------------------------------------------
 
+import { Dots, NextArrow, PrevArrow } from './styled'
+
 // Import css files
-import 'slick-carousel/slick/slick.css'
+import './slick.css'
 // import 'slick-carousel/slick/slick-theme.css'
 
 // ----------------------------------------------------------------------------
@@ -22,7 +24,11 @@ class SimpleSlider extends Component {
       speed: 500,
       slidesToShow: 1,
       slidesToScroll: 1,
+      nextArrow: <NextArrow />,
+      prevArrow: <PrevArrow />,
+      appendDots: Dots,
     }
+
     return (
       <Slider {...settings} slide="section">
         <Box sx={{ p: 5, textAlign: 'center' }}>
