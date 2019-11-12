@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { createRef } from 'react'
 
 import { useTabs } from '@zendeskgarden/container-tabs'
 import { withKnobs, optionsKnob as options } from '@storybook/addon-knobs'
@@ -16,7 +16,7 @@ const Tabs = () => {
     getTabProps,
     getTabListProps,
     getTabPanelProps,
-  } = useTabs()
+  } = useTabs({ idPrefix: 'tabs' })
   const tabComponents = []
   const tabPanels = []
 
@@ -27,6 +27,7 @@ const Tabs = () => {
           item: tab,
           index,
           ref: tabRefs[index],
+          focusRef: tabRefs[index],
           key: tab,
           style: {
             borderBottom: `3px solid ${
@@ -45,10 +46,6 @@ const Tabs = () => {
           index,
           item: tab,
           key: tab,
-          style: {
-            padding: '10px 0',
-            borderTop: '1px solid',
-          },
         })}
       >
         {tab} Content
@@ -62,6 +59,9 @@ const Tabs = () => {
         {...getTabListProps({
           style: {
             display: 'flex',
+            padding: 0,
+            margin: 0,
+            listStyle: 'none',
           },
         })}
       >
