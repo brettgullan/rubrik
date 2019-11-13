@@ -12,8 +12,7 @@ import { Formik, Form } from 'formik'
 import * as Yup from 'yup'
 
 import { Box, Flex } from 'rebass'
-import Toggle from '.'
-import { Submit } from '../'
+import Switch from '.'
 
 // ----------------------------------------------------------------------------
 
@@ -24,12 +23,11 @@ const SwitchSchema = Yup.object().shape({
 // ----------------------------------------------------------------------------
 
 export default {
-  title: 'Design System|Elements/Forms/Toggle',
+  title: 'Design System|Elements/Forms/Switch',
   decorators: [withKnobs],
 }
 
 const handleSubmit = (values) => {
-  console.log('Submitted ...')
   console.log(values)
 }
 const sizes = {
@@ -58,14 +56,13 @@ export const Working = () => {
       validationSchema={SwitchSchema}
       validateOnBlur={true}
       onSubmit={handleSubmit}
-      initialValues={{ switch: 0 }}
+      initialValues={{ name: '' }}
     >
       {(props) => (
         <Form>
           <Box py={4}>
-            <Toggle name="switch" size={size} />
+            <Switch name="switch" size={size} />
           </Box>
-          <Submit>Submit</Submit>
         </Form>
       )}
     </Formik>

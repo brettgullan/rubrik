@@ -1,6 +1,15 @@
 import React from 'react'
 import styled from 'styled-components'
 
+import cx from 'classnames'
+
+import { useField } from 'formik'
+import { Switch as SwitchField } from '@rebass/forms'
+
+// ----------------------------------------------------------------------------
+
+import { useVariant } from '../../../hooks'
+
 // ----------------------------------------------------------------------------
 
 const CheckBoxWrapper = styled.div`
@@ -49,6 +58,7 @@ const CheckBox = styled.input`
   }
 `
 
+/*
 export default (props) => {
   return (
     <CheckBoxWrapper>
@@ -57,3 +67,30 @@ export default (props) => {
     </CheckBoxWrapper>
   )
 }
+*/
+
+const Toggle = ({ name, size, className, sx, ...rest }) => {
+  const [field, meta] = useField({ name, type: 'checkbox', value: 1 })
+
+  const { touched, error } = meta
+  const states = { error: touched && error, valid: touched && !error }
+
+  const sizingStyles = useVariant(`forms.toggle.${size}`)
+
+  console.log(field)
+
+  return (
+    <CheckBoxWrapper>
+      <CheckBox type="checkbox" {...field} />
+      <CheckBoxLabel htmlFor="checkbox" />
+    </CheckBoxWrapper>
+  )
+}
+
+// ----------------------------------------------------------------------------
+
+Toggle.defaultProps = {
+  size: 'md',
+}
+
+export default Toggle
