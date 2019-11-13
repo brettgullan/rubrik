@@ -12,6 +12,7 @@ import { Formik, Form } from 'formik'
 import * as Yup from 'yup'
 
 import { Box, Flex } from 'rebass'
+import { Checkbox, Label } from '@rebass/forms'
 import Toggle from '.'
 import { Submit } from '../'
 
@@ -54,21 +55,23 @@ export const Working = () => {
   )
   const borderRadius = number('Border Radius', 1)
   return (
-    <Formik
-      validationSchema={SwitchSchema}
-      validateOnBlur={true}
-      onSubmit={handleSubmit}
-      initialValues={{ switch: 0 }}
-    >
-      {(props) => (
-        <Form>
-          <Box py={4}>
-            <Toggle name="switch" size={size} />
-          </Box>
-          <Submit>Submit</Submit>
-        </Form>
-      )}
-    </Formik>
+    <Box>
+      <Formik
+        validationSchema={SwitchSchema}
+        validateOnBlur={true}
+        onSubmit={handleSubmit}
+        initialValues={{ switch: false }}
+      >
+        {(props) => (
+          <Form>
+            <Box py={4}>
+              <Toggle name="switch" size={size} />
+            </Box>
+            <Submit>Submit</Submit>
+          </Form>
+        )}
+      </Formik>
+    </Box>
   )
 }
 Working.story = {

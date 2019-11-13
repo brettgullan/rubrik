@@ -4,7 +4,8 @@ import styled from 'styled-components'
 import cx from 'classnames'
 
 import { useField } from 'formik'
-import { Switch as SwitchField } from '@rebass/forms'
+import { Box } from 'rebass'
+import { Checkbox, Label, Switch } from '@rebass/forms'
 
 // ----------------------------------------------------------------------------
 
@@ -58,19 +59,8 @@ const CheckBox = styled.input`
   }
 `
 
-/*
-export default (props) => {
-  return (
-    <CheckBoxWrapper>
-      <CheckBox id="checkbox" type="checkbox" />
-      <CheckBoxLabel htmlFor="checkbox" />
-    </CheckBoxWrapper>
-  )
-}
-*/
-
-const Toggle = ({ name, size, className, sx, ...rest }) => {
-  const [field, meta] = useField({ name, type: 'checkbox', value: 1 })
+const Toggle = ({ name, size, className, prefix, sx, ...rest }) => {
+  const [field, meta] = useField({ name, type: 'checkbox' })
 
   const { touched, error } = meta
   const states = { error: touched && error, valid: touched && !error }
@@ -81,7 +71,7 @@ const Toggle = ({ name, size, className, sx, ...rest }) => {
 
   return (
     <CheckBoxWrapper>
-      <CheckBox type="checkbox" {...field} />
+      <CheckBox id="checkbox" type="checkbox" {...field} />
       <CheckBoxLabel htmlFor="checkbox" />
     </CheckBoxWrapper>
   )
@@ -90,6 +80,7 @@ const Toggle = ({ name, size, className, sx, ...rest }) => {
 // ----------------------------------------------------------------------------
 
 Toggle.defaultProps = {
+  prefix: 'toggle',
   size: 'md',
 }
 
