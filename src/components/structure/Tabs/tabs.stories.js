@@ -19,20 +19,21 @@ export default {
 
 export const Primary = () => {
   return (
-    <Tabs>
-      <TabList>
-        <Tab index={1} tab="1">
-          Tab 1
-        </Tab>
-        <Tab index={2} tab="2">
-          Tab 2
-        </Tab>
-        <Tab index={2} tab="3">
-          Tab 3
-        </Tab>
+    <Tabs sx={{ p: 4 }}>
+      <TabList
+        sx={{
+          m: 0,
+          p: 0,
+          mb: 4,
+          listStyle: 'none',
+        }}
+      >
+        <Tab>Tab 1</Tab>
+        <Tab>Tab 2</Tab>
+        <Tab>Tab 3</Tab>
       </TabList>
 
-      <TabPanel index={1} tab="1">
+      <TabPanel>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
         tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
         veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
@@ -41,7 +42,7 @@ export const Primary = () => {
         occaecat cupidatat non proident, sunt in culpa qui officia deserunt
         mollit anim id est laborum.
       </TabPanel>
-      <TabPanel index={2} tab="2">
+      <TabPanel>
         Tempor id eu nisl nunc. Amet cursus sit amet dictum sit. Gravida arcu ac
         tortor dignissim convallis aenean. Lectus arcu bibendum at varius vel
         pharetra. Commodo odio aenean sed adipiscing diam donec adipiscing. Amet
@@ -51,7 +52,7 @@ export const Primary = () => {
         Scelerisque in dictum non consectetur a erat nam at lectus. Eget velit
         aliquet sagittis id consectetur purus.
       </TabPanel>
-      <TabPanel index={3} tab="3">
+      <TabPanel>
         Sollicitudin tempor id eu nisl nunc mi ipsum faucibus vitae. Orci a
         scelerisque purus semper eget. Sit amet volutpat consequat mauris.
         Sollicitudin ac orci phasellus egestas tellus rutrum tellus pellentesque
