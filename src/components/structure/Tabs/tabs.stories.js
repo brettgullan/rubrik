@@ -23,6 +23,10 @@ export const Primary = () => {
       <TabList
         sx={{
           mb: 4,
+          '.active': {
+            fontWeight: 'bold',
+            borderBottom: '2px solid',
+          },
         }}
       >
         <Tab>Tab 1</Tab>
