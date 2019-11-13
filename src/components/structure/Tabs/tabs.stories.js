@@ -29,9 +29,9 @@ export const Primary = () => {
           },
         }}
       >
-        <Tab>Tab 1</Tab>
-        <Tab>Tab 2</Tab>
-        <Tab>Tab 3</Tab>
+        <Tab key="tab-1">Tab 1</Tab>
+        <Tab key="tab-2">Tab 2</Tab>
+        <Tab key="tab-3">Tab 3</Tab>
       </TabList>
 
       <TabPanel>
@@ -81,9 +81,9 @@ export const Vertical = () => {
           mr: 4,
         }}
       >
-        <Tab>Tab 1</Tab>
-        <Tab>Tab 2</Tab>
-        <Tab>Tab 3</Tab>
+        <Tab key="tab-1">Tab 1</Tab>
+        <Tab key="tab-2">Tab 2</Tab>
+        <Tab key="tab-3">Tab 3</Tab>
       </TabList>
 
       <TabPanel>
@@ -139,9 +139,9 @@ export const VerticalTabsOnRight = () => {
           mr: 4,
         }}
       >
-        <Tab>Tab 1</Tab>
-        <Tab>Tab 2</Tab>
-        <Tab>Tab 3</Tab>
+        <Tab key="tab-1">Tab 1</Tab>
+        <Tab key="tab-2">Tab 2</Tab>
+        <Tab key="tab-3">Tab 3</Tab>
       </TabList>
 
       <TabPanel>

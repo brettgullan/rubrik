@@ -40,7 +40,7 @@ export const Tabs = ({
       const tabPanelProps = getTabPanelProps({
         index: panelIndex,
         item: panelIndex,
-        key: panelIndex,
+        key: `tabpanel-${panelIndex}`,
       })
       panelIndex++
       return cloneElement(child, tabPanelProps)
@@ -85,17 +85,17 @@ export const TabList = ({ direction, children, sx, ...rest }) => {
   // pre-process tabs
   const tabs = children.map((child, index) => {
     const ref = createRef(null)
-    const props = getTabProps({
+    const tabProps = getTabProps({
       index,
       item: index,
-      key: index,
+      key: `tab-${index}`,
       ref: ref,
       focusRef: ref,
     })
-    props.className = cx(child.props.className, {
+    tabProps.className = cx(child.props.className, {
       active: index == selectedItem,
     })
-    return cloneElement(child, props)
+    return cloneElement(child, tabProps)
   })
 
   // determine structural styles (directional)
