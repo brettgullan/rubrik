@@ -5,6 +5,7 @@ import '@storybook/addon-console'
 
 import { ThemeProvider } from 'emotion-theming'
 import { withPropsTable } from 'storybook-addon-react-docgen'
+import { addReadme } from 'storybook-readme'
 
 // ----------------------------------------------------------------------------
 
@@ -20,6 +21,10 @@ addDecorator(ThemeDecorator)
 // ----------------------------------------------------------------------------
 
 addDecorator(withPropsTable({}))
+
+// ----------------------------------------------------------------------------
+
+addDecorator(addReadme)
 
 // ----------------------------------------------------------------------------
 

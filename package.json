@@ -49,6 +49,7 @@
     "rebass": "^4.0.5",
     "responsive-configuration-builder": "^1.0.3",
     "slick-carousel": "^1.8.1",
+    "storybook-readme": "^5.0.8",
     "styled-components": "^4.3.2",
     "yup": "^0.27.0"
   },
