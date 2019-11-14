@@ -40,7 +40,7 @@ const imageOptions = {
 // ----------------------------------------------------------------------------
 
 export default {
-  title: 'Design System|Elements/Content/Reveal',
+  title: 'Design System|Elements/Controls/Reveal',
   component: Reveal,
   decorators: [withKnobs, withCloudinary],
 

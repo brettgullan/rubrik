@@ -57,7 +57,7 @@ class SimpleSlider extends Component {
 // ----------------------------------------------------------------------------
 
 export default {
-  title: 'Design System|Elements/Structure/Carousel',
+  title: 'Design System|Elements/Controls/Carousel',
   decorators: [withKnobs],
 }
 
