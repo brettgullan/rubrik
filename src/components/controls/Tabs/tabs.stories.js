@@ -11,7 +11,7 @@ import { Box, Flex } from 'rebass'
 // ----------------------------------------------------------------------------
 
 export default {
-  title: 'Design System|Elements/Structure/Tabs',
+  title: 'Design System|Elements/Controls/Tabs',
   decorators: [withKnobs],
 }
 
