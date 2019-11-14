@@ -1,24 +1,28 @@
 import React from 'react'
+import styled from 'styled-components'
+
 import cx from 'classnames'
 
 import { useField } from 'formik'
-import { Input as InputField } from '@rebass/forms'
-
-import { useVariant } from '../../hooks'
+import { Switch as SwitchField } from '@rebass/forms'
 
 // ----------------------------------------------------------------------------
 
-const Input = ({ name, size, className, sx, ...rest }) => {
-  const [field, meta] = useField(name)
+import { useVariant } from '../../../hooks'
+
+// ----------------------------------------------------------------------------
+
+const Switch = ({ name, size, className, sx, ...rest }) => {
+  const [field, meta] = useField({ name, type: 'checkbox' })
 
   const { touched, error } = meta
   const states = { error: touched && error, valid: touched && !error }
 
-  const sizingStyles = useVariant(`forms.input.${size}`)
+  const sizingStyles = useVariant(`forms.switch.${size}`)
 
   return (
-    <InputField
-      variant="input.base"
+    <SwitchField
+      variant="switch.base"
       className={cx(className, size, states)}
       {...field}
       sx={{
@@ -32,8 +36,8 @@ const Input = ({ name, size, className, sx, ...rest }) => {
 
 // ----------------------------------------------------------------------------
 
-Input.defaultProps = {
+Switch.defaultProps = {
   size: 'md',
 }
 
-export default Input
+export default Switch

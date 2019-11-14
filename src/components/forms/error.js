@@ -1,25 +1,24 @@
 import React from 'react'
 import cx from 'classnames'
 
-import { useTheme } from 'emotion-theming'
-import { get } from '@styled-system/css'
-
 import { ErrorMessage } from 'formik'
 import { Text } from 'rebass'
 
 // ----------------------------------------------------------------------------
 
-const Error = ({ name, size, className, sx, ...rest }) => {
-  const theme = useTheme()
+import { useVariant } from '../../hooks'
 
-  const sizingStyles = get(theme, `forms.messages.${size}`, null)
+// ----------------------------------------------------------------------------
+
+const Error = ({ name, size, className, sx, ...rest }) => {
+  const sizingStyles = useVariant(`forms.message.${size}`)
 
   return (
     <ErrorMessage name={name}>
       {(msg) => (
         <Text
           tx="forms"
-          variant="messages.error"
+          variant="message.error"
           className={cx(className, size, 'error')}
           sx={{
             ...sizingStyles,
