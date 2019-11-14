@@ -1,5 +1,4 @@
 import React from 'react'
-import styled from 'styled-components'
 import { position, size } from 'polished'
 
 import cx from 'classnames'
@@ -19,7 +18,7 @@ const Toggle = ({ name, size, className, prefix, sx, ...rest }) => {
   const { touched, error } = meta
   const states = { error: touched && error, valid: touched && !error }
 
-  const sizingStyles = useVariant(`forms.toggle.${size}`)
+  const sizeStyles = useVariant(`forms.toggle.${size}`)
 
   console.log(field)
 
@@ -27,6 +26,7 @@ const Toggle = ({ name, size, className, prefix, sx, ...rest }) => {
     <Box
       as="label"
       htmlFor={`${prefix}-${name}`}
+      className={cx(className, size, states)}
       sx={{
         display: 'inline-block',
         borderRadius: '9999px',
@@ -36,6 +36,8 @@ const Toggle = ({ name, size, className, prefix, sx, ...rest }) => {
         as="input"
         type="checkbox"
         id={`${prefix}-${name}`}
+        tx="forms"
+        variant="toggle.base"
         sx={{
           appearance: 'none',
           outline: 'none',
@@ -56,21 +58,22 @@ const Toggle = ({ name, size, className, prefix, sx, ...rest }) => {
             borderRadius: '9999px',
             backgroundColor: 'white.0',
             top: '50%',
-            left: '5px',
-            transform: 'translateY(-50%)',
+            left: '50%',
+            transform: 'translate(calc(-100% - 5px), -50%)',
             transition: '0.25s ease',
             boxShadow: '1px 3px 3px 1px rgba(0, 0, 0, 0.1)',
           },
           '&:checked': {
             backgroundColor: '#4fbe79',
             '&:after': {
-              right: '5px',
-              left: '65px',
-              transition: '0.25s ease',
+              transform: 'translate(5px, -50%)',
             },
           },
+          ...sizeStyles,
+          ...sx,
         }}
         {...field}
+        {...rest}
       />
     </Box>
   )
