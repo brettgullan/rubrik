@@ -1,35 +1,19 @@
 import React from 'react'
 import { withKnobs, optionsKnob as options } from '@storybook/addon-knobs'
 
-import Cloudinary from '../../../providers/Cloudinary'
+import { withResponsiveProvider } from '../../../utils/storybook'
 
 // ----------------------------------------------------------------------------
 
 import { Heading } from 'rebass'
-import { CloudinaryImage } from '../../media'
+import { ResponsiveImage } from '../../media'
 import { Tile, TileLayer } from '.'
-import { borderColor } from 'polished'
-
-// ----------------------------------------------------------------------------
-
-const withCloudinary = (storyFn) => (
-  <Cloudinary
-    options={{
-      cloud_name: 'caradvice',
-      private_cdn: true,
-      secure_distribution: 'media.caradvice.com.au',
-      secure: true,
-    }}
-  >
-    {storyFn()}
-  </Cloudinary>
-)
 
 // ----------------------------------------------------------------------------
 
 export default {
   title: 'Design System|Elements/Structure/Tile',
-  decorators: [withKnobs, withCloudinary],
+  decorators: [withKnobs, withResponsiveProvider],
   component: Tile,
 
   parameters: {
@@ -88,7 +72,10 @@ export const ImageOverlay = () => {
 
   return (
     <Tile>
-      <CloudinaryImage {...imgProps} />
+      <ResponsiveImage
+        sx={{ display: 'block', width: '100%', maxWidth: 'none' }}
+        {...imgProps}
+      />
       <TileLayer justifyContent="center" alignItems="center">
         <Heading
           variant="canon"
