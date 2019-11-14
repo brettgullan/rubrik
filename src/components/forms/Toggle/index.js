@@ -1,63 +1,17 @@
 import React from 'react'
 import styled from 'styled-components'
+import { position, size } from 'polished'
 
 import cx from 'classnames'
 
 import { useField } from 'formik'
 import { Box } from 'rebass'
-import { Checkbox, Label, Switch } from '@rebass/forms'
 
 // ----------------------------------------------------------------------------
 
 import { useVariant } from '../../../hooks'
 
 // ----------------------------------------------------------------------------
-
-const CheckBoxWrapper = styled.div`
-  position: relative;
-`
-
-const CheckBoxLabel = styled.label`
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 42px;
-  height: 26px;
-  border-radius: 15px;
-  background: #bebebe;
-  cursor: pointer;
-  &::after {
-    content: '';
-    display: block;
-    border-radius: 50%;
-    width: 18px;
-    height: 18px;
-    margin: 3px;
-    background: #ffffff;
-    box-shadow: 1px 3px 3px 1px rgba(0, 0, 0, 0.2);
-    transition: 0.2s;
-  }
-`
-
-const CheckBox = styled.input`
-  opacity: 0;
-  z-index: 1;
-  border-radius: 15px;
-  width: 42px;
-  height: 26px;
-  &:checked + ${CheckBoxLabel} {
-    background: #4fbe79;
-    &::after {
-      content: '';
-      display: block;
-      border-radius: 50%;
-      width: 18px;
-      height: 18px;
-      margin-left: 21px;
-      transition: 0.2s;
-    }
-  }
-`
 
 const Toggle = ({ name, size, className, prefix, sx, ...rest }) => {
   const [field, meta] = useField({ name, type: 'checkbox' })
@@ -70,10 +24,55 @@ const Toggle = ({ name, size, className, prefix, sx, ...rest }) => {
   console.log(field)
 
   return (
-    <CheckBoxWrapper>
-      <CheckBox id="checkbox" type="checkbox" {...field} />
-      <CheckBoxLabel htmlFor="checkbox" />
-    </CheckBoxWrapper>
+    <Box
+      as="label"
+      htmlFor={`${prefix}-${name}`}
+      sx={{
+        display: 'inline-block',
+        borderRadius: '9999px',
+      }}
+    >
+      <Box
+        as="input"
+        type="checkbox"
+        id={`${prefix}-${name}`}
+        sx={{
+          appearance: 'none',
+          outline: 'none',
+          position: 'relative',
+          display: 'block',
+          border: 'none',
+          width: '120px',
+          height: '60px',
+          borderRadius: '9999px',
+          backgroundColor: '#bebebe',
+          transition: '0.25s ease',
+          '&:after': {
+            content: '""',
+            position: 'absolute',
+            zIndex: 1,
+            height: '50px',
+            width: '50px',
+            borderRadius: '9999px',
+            backgroundColor: 'white.0',
+            top: '50%',
+            left: '5px',
+            transform: 'translateY(-50%)',
+            transition: '0.25s ease',
+            boxShadow: '1px 3px 3px 1px rgba(0, 0, 0, 0.1)',
+          },
+          '&:checked': {
+            backgroundColor: '#4fbe79',
+            '&:after': {
+              right: '5px',
+              left: '65px',
+              transition: '0.25s ease',
+            },
+          },
+        }}
+        {...field}
+      />
+    </Box>
   )
 }
 

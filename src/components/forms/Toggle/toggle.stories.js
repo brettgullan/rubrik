@@ -12,9 +12,7 @@ import { Formik, Form } from 'formik'
 import * as Yup from 'yup'
 
 import { Box, Flex } from 'rebass'
-import { Checkbox, Label } from '@rebass/forms'
 import Toggle from '.'
-import { Submit } from '../'
 
 // ----------------------------------------------------------------------------
 
@@ -29,10 +27,6 @@ export default {
   decorators: [withKnobs],
 }
 
-const handleSubmit = (values) => {
-  console.log('Submitted ...')
-  console.log(values)
-}
 const sizes = {
   Small: 'sm',
   Default: 'md',
@@ -59,7 +53,7 @@ export const Working = () => {
       <Formik
         validationSchema={SwitchSchema}
         validateOnBlur={true}
-        onSubmit={handleSubmit}
+        onSubmit={console.log}
         initialValues={{ switch: false }}
       >
         {(props) => (
@@ -67,7 +61,6 @@ export const Working = () => {
             <Box py={4}>
               <Toggle name="switch" size={size} />
             </Box>
-            <Submit>Submit</Submit>
           </Form>
         )}
       </Formik>
