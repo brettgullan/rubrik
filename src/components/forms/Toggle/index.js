@@ -20,7 +20,7 @@ const Toggle = ({ name, size, className, prefix, sx, ...rest }) => {
 
   const sizeStyles = useVariant(`forms.toggle.${size}`)
 
-  console.log(field)
+  // console.log(field)
 
   return (
     <Box
@@ -36,6 +36,9 @@ const Toggle = ({ name, size, className, prefix, sx, ...rest }) => {
         as="input"
         type="checkbox"
         id={`${prefix}-${name}`}
+        role="checkbox"
+        tabindex="0"
+        aria-checked={field.checked}
         tx="forms"
         variant="toggle.base"
         sx={{
