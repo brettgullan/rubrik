@@ -5,6 +5,8 @@ import Cloudinary from '../../../providers/Cloudinary'
 
 // ----------------------------------------------------------------------------
 
+import { Heading } from 'rebass'
+
 import { CloudinaryImage } from '../../media'
 import Reveal from '.'
 
@@ -64,4 +66,40 @@ export const Primary = () => {
     />
   )
   return <Reveal left={left} right={right} />
+}
+
+// ----------------------------------------------------------------------------
+
+export const RichContent = () => {
+  const left = (
+    <Heading
+      variant="imperial"
+      sx={{
+        p: 6,
+        bg: 'white.0',
+        fontWeight: 'bold',
+        textAlign: 'center',
+        color: 'rgba(255, 152, 0, 0.5)',
+        textTransform: 'uppercase',
+      }}
+    >
+      Under
+    </Heading>
+  )
+  const right = (
+    <Heading
+      variant="imperial"
+      sx={{
+        p: 6,
+        bg: 'white.0',
+        fontWeight: 'bold',
+        textAlign: 'center',
+        color: 'rgba(14, 112, 215, 0.5)',
+        textTransform: 'uppercase',
+      }}
+    >
+      Over
+    </Heading>
+  )
+  return <Reveal left={left} right={right} sx={{ p: 6, bg: 'white.0' }} />
 }
