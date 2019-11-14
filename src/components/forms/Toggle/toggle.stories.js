@@ -5,6 +5,7 @@ import {
   optionsKnob as options,
   text,
 } from '@storybook/addon-knobs'
+import { withA11y } from '@storybook/addon-a11y'
 
 // ----------------------------------------------------------------------------
 
@@ -24,7 +25,7 @@ const SwitchSchema = Yup.object().shape({
 
 export default {
   title: 'Design System|Elements/Forms/Toggle',
-  decorators: [withKnobs],
+  decorators: [withKnobs, withA11y],
 }
 
 const sizes = {
