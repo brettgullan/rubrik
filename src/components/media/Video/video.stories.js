@@ -13,7 +13,7 @@ import Video from '.'
 // ----------------------------------------------------------------------------
 
 export default {
-  title: 'Design System|Elements/Content/Video',
+  title: 'Design System|Elements/Media/Video',
   component: Video,
   decorators: [withKnobs],
 
