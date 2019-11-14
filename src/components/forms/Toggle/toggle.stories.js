@@ -11,7 +11,7 @@ import {
 import { Formik, Form } from 'formik'
 import * as Yup from 'yup'
 
-import { Box, Flex } from 'rebass'
+import { Box } from 'rebass'
 import Toggle from '.'
 
 // ----------------------------------------------------------------------------
@@ -39,15 +39,6 @@ export const Working = () => {
   const size = options('Size', sizes, 'md', {
     display: 'select',
   })
-  const fontFamily = options(
-    'Font Family',
-    { Text: 'text', Title: 'title' },
-    'text',
-    {
-      display: 'select',
-    }
-  )
-  const borderRadius = number('Border Radius', 1)
   return (
     <Box>
       <Formik
