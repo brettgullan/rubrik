@@ -1,18 +1,24 @@
 import React, { createRef } from 'react'
 
-import { useTabs } from '@zendeskgarden/container-tabs'
 import { withKnobs, optionsKnob as options } from '@storybook/addon-knobs'
+import { withA11y } from '@storybook/addon-a11y'
 
 // ----------------------------------------------------------------------------
 
 import { Tabs, Tab, TabList, TabPanel } from '.'
-import { Box, Flex } from 'rebass'
+import Readme from './README.md'
 
 // ----------------------------------------------------------------------------
 
 export default {
   title: 'Design System|Elements/Controls/Tabs',
-  decorators: [withKnobs],
+  decorators: [withKnobs, withA11y],
+
+  parameters: {
+    readme: {
+      sidebar: Readme,
+    },
+  },
 }
 
 // ----------------------------------------------------------------------------
