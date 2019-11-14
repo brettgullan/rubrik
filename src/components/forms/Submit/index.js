@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { Alpha } from '../../components/buttons'
+import { Alpha } from '../../buttons'
 
 // ----------------------------------------------------------------------------
 

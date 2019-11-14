@@ -1,3 +1,5 @@
-export { default as ErrorMessage } from './error'
-export { default as Input } from './input'
-export { default as Submit } from './submit'
+export { default as ErrorMessage } from './Error'
+export { default as Input } from './Input'
+export { default as Submit } from './Submit'
+export { default as Toggle } from './Toggle'
+export { default as Checkbox } from './Checkbox'

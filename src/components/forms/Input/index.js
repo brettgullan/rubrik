@@ -4,7 +4,7 @@ import cx from 'classnames'
 import { useField } from 'formik'
 import { Input as InputField } from '@rebass/forms'
 
-import { useVariant } from '../../hooks'
+import { useVariant } from '../../../hooks'
 
 // ----------------------------------------------------------------------------
 

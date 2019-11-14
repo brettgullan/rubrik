@@ -12,7 +12,7 @@ import { Formik, Form } from 'formik'
 import * as Yup from 'yup'
 
 import { Box, Flex } from 'rebass'
-import { Input, ErrorMessage } from '.'
+import { Input, ErrorMessage } from '..'
 
 // ----------------------------------------------------------------------------
 
