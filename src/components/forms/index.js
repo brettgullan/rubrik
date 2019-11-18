@@ -1,5 +1,5 @@
 export { default as ErrorMessage } from './Error'
 export { default as Input } from './Input'
-export { default as Submit } from './Submit'
-export { default as Toggle } from './Toggle'
+export { default as Submit } from '../../../packages/forms/src/components/Submit'
+export { default as Toggle } from '../../../packages/forms/src/components/Toggle'
 export { default as Checkbox } from './Checkbox'

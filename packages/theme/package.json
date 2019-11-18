@@ -1,0 +1,23 @@
+{
+  "name": "@rubrik/theme-default",
+  "version": "1.0.0",
+  "description": "> TODO: description",
+  "author": "Brett Gullan <brettgullan@mac.com>",
+  "homepage": "https://github.com/brettgullan/rubrik#readme",
+  "license": "ISC",
+  "main": "build/index.js",
+  "files": [
+    "src"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/brettgullan/rubrik.git"
+  },
+  "scripts": {
+    "build": "neutrino build",
+    "test": "echo \"Error: run tests from root\" && exit 1"
+  },
+  "bugs": {
+    "url": "https://github.com/brettgullan/rubrik/issues"
+  }
+}
