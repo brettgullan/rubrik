@@ -1,8 +1,17 @@
 module.exports = {
   siteMetadata: {
-    title: 'Doctocat Template',
-    shortName: 'Template',
+    title: 'Rubrik Design System',
+    shortName: 'Rubrik',
     description: 'My site description',
   },
-  plugins: ['@primer/gatsby-theme-doctocat'],
+  plugins: [
+    {
+      resolve: '@primer/gatsby-theme-doctocat',
+      options: {
+        options: {
+          repoRootPath: '../../',
+        },
+      },
+    },
+  ],
 }
