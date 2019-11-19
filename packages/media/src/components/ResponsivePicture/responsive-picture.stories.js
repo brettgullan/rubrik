@@ -5,7 +5,11 @@ import { withKnobs, optionsKnob as options } from '@storybook/addon-knobs'
 
 import { withResponsiveProvider } from '../../../../../src/utils/storybook'
 
-import ResponsivePicture from '.'
+// import ResponsivePicture from '.'
+// In this instance, we need to import the package version
+// of the Component under test, to ensure that the Provider context
+// is correctly resolved.
+import { ResponsivePicture } from '@rubrik/media'
 
 // ----------------------------------------------------------------------------
 

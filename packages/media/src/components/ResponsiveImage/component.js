@@ -3,8 +3,8 @@ import PropTypes from 'prop-types'
 
 // ----------------------------------------------------------------------------
 
-import { useResponsiveBuilder } from '../../providers/Responsive'
-import Image from '../Image'
+import { Image } from '@rubrik/core'
+import { useResponsiveBuilder } from '../../providers'
 
 // ----------------------------------------------------------------------------
 
