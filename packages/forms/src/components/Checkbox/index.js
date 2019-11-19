@@ -6,7 +6,7 @@ import { Checkbox, Label } from '@rebass/forms'
 
 // ----------------------------------------------------------------------------
 
-import { useVariant } from '../../../../../src/hooks'
+import { useVariant } from '@rubrik/core'
 
 // ----------------------------------------------------------------------------
 

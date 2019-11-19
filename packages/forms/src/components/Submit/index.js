@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { Alpha } from '../../buttons'
+import { Alpha } from '@rubrik/core'
 
 // ----------------------------------------------------------------------------
 
