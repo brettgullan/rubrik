@@ -3,9 +3,7 @@ import React from 'react'
 // ----------------------------------------------------------------------------
 
 import { Flex } from 'rebass'
-import { Stack } from '@rubrik/core'
-
-import { useVariant } from '../../../../../src/hooks'
+import { Stack, useVariant } from '@rubrik/core'
 
 // ----------------------------------------------------------------------------
 

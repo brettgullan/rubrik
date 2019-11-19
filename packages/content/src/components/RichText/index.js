@@ -3,7 +3,7 @@ import React from 'react'
 // ----------------------------------------------------------------------------
 
 import { Box } from 'rebass'
-import { useVariant } from '../../../../../src/hooks'
+import { useVariant } from '@rubrik/core'
 
 // ----------------------------------------------------------------------------
 
