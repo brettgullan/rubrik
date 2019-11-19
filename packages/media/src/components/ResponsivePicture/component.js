@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 
 // ----------------------------------------------------------------------------
 
-import { useResponsiveBuilder } from '../../../../../src/providers/Responsive'
+import { useResponsiveBuilder } from '../../providers/Responsive'
 import Picture from '../Picture'
 
 // ----------------------------------------------------------------------------

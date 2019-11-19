@@ -3,7 +3,7 @@ import { withKnobs, optionsKnob as options } from '@storybook/addon-knobs'
 
 // ----------------------------------------------------------------------------
 
-import { withResponsiveProvider } from '../../../utils/storybook'
+import { withResponsiveProvider } from '../../../../../src/utils/storybook'
 
 import ResponsiveImage from '.'
 
