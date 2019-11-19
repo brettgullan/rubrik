@@ -3,13 +3,13 @@ import { withKnobs, optionsKnob as options } from '@storybook/addon-knobs'
 
 // ----------------------------------------------------------------------------
 
-import Cloudinary from '../../../providers/Cloudinary'
+import Cloudinary from '../../providers/Cloudinary'
 import CloudinaryImage from '../CloudinaryImage'
 import CloudinaryPicture from '../CloudinaryPicture'
 
 // ----------------------------------------------------------------------------
 
-import LazyLoadProvider from '../../../providers/LazySizes'
+import LazyLoadProvider from '../../providers/LazySizes'
 import LazyLoad from '.'
 
 // ----------------------------------------------------------------------------
