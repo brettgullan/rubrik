@@ -4,7 +4,7 @@ import { Text } from 'rebass'
 
 // ----------------------------------------------------------------------------
 
-import { colors } from '../../../theme/storybook'
+import { colors } from '../../../../../theme/src/storybook'
 
 // ----------------------------------------------------------------------------
 
@@ -25,19 +25,21 @@ export default {
 
 // ----------------------------------------------------------------------------
 
-export const Default = () => (
-  <FullBleed>
-    <Text
-      variant="paragon"
-      color="white.0"
-      bg={options('Color', colors, colors.Grey, {
-        display: 'select',
-      })}
-      p={4}
-      mx="auto"
-      maxWidth="50%"
-    >
-      This text box has a full-bleed background.
-    </Text>
-  </FullBleed>
-)
+export const Default = () => {
+  return (
+    <FullBleed>
+      <Text
+        variant="paragon"
+        color="white.0"
+        bg={options('Color', colors, colors.Grey, {
+          display: 'select',
+        })}
+        p={4}
+        mx="auto"
+        maxWidth="50%"
+      >
+        This text box has a full-bleed background.
+      </Text>
+    </FullBleed>
+  )
+}

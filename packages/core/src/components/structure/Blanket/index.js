@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled from '@emotion/styled'
 
 import { position } from 'polished'
 import { Box } from 'rebass'

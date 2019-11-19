@@ -9,7 +9,7 @@ import {
   textTransforms,
   colors,
   defaultColor,
-} from '../../theme/storybook'
+} from '../../../../theme/src/storybook'
 
 // ----------------------------------------------------------------------------
 

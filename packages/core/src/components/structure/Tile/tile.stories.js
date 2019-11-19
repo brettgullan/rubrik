@@ -1,12 +1,12 @@
 import React from 'react'
 import { withKnobs, optionsKnob as options } from '@storybook/addon-knobs'
 
-import { withResponsiveProvider } from '../../../utils/storybook'
+import { withResponsiveProvider } from '../../../../../../src/utils/storybook'
 
 // ----------------------------------------------------------------------------
 
 import { Heading } from 'rebass'
-import { ResponsiveImage } from '../../media'
+import { ResponsiveImage } from '../../../../../media/src'
 import { Tile, TileLayer } from '.'
 
 // ----------------------------------------------------------------------------
