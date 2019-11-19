@@ -10,13 +10,11 @@
   "files": [
     "/dist"
   ],
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/brettgullan/rubrik.git"
-  },
+  "repository": "git+https://github.com/brettgullan/rubrik.git",
   "scripts": {
     "start": "neutrino start",
     "build": "rollup -c rollup.config.js",
+    "webpack": "webpack --mode production",
     "test": "echo \"Error: run tests from root\" && exit 1"
   },
   "bugs": {
@@ -33,6 +31,7 @@
     "ramda-adjunct": "^2.20.0",
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
-    "rebass": "^4.0.5"
+    "rebass": "^4.0.5",
+    "styled-system": "^5.1.2"
   }
 }

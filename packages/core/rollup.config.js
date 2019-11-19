@@ -3,11 +3,10 @@ import resolve from 'rollup-plugin-node-resolve'
 import commonjs from 'rollup-plugin-commonjs'
 import replace from 'rollup-plugin-replace'
 import external from 'rollup-plugin-peer-deps-external'
-// import json from 'rollup-plugin-json'
-// import cleanup from 'rollup-plugin-cleanup'
-// import { terser } from 'rollup-plugin-terser'
+import cleanup from 'rollup-plugin-cleanup'
+import { terser } from 'rollup-plugin-terser'
 import analyze from 'rollup-plugin-analyzer'
-// import visualizer from 'rollup-plugin-visualizer'
+import visualizer from 'rollup-plugin-visualizer'
 
 // ----------------------------------------------------------------------------
 
@@ -40,17 +39,21 @@ export default [
       replace({
         'process.env.NODE_ENV': JSON.stringify('development'),
       }),
+      resolve({
+        preferBuiltins: true,
+      }),
       external(),
       babel({
         exclude: /node_modules/,
-        runtimeHelpers: true,
+        runtimeHelpers: false,
       }),
-      resolve(),
-      commonjs({
-        include: /node_modules/,
+      commonjs(),
+      cleanup(),
+      terser(),
+      analyze({
+        summaryOnly: true,
       }),
-      analyze(),
-      // visualizer(),
+      visualizer(),
     ],
   },
 ]
