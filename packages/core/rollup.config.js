@@ -15,76 +15,36 @@ import pkg from './package.json'
 
 // ----------------------------------------------------------------------------
 
-const deps = Object.keys(pkg.dependencies || {})
-const peerDeps = Object.keys(pkg.peerDependencies || {})
-const defaultExternal = deps.concat(peerDeps)
-
-// ----------------------------------------------------------------------------
-
 const input = 'src/index.js'
-
-const externals = [
-  'react',
-  'react-dom',
-  'prop-types',
-  'rebass',
-  'emotion',
-  'emotion-theming',
-  'styled-components',
-  // 'styled-system',
-  '@styled-system/css',
-  // 'ramda',
-  // 'ramda-adjunct',
-]
 
 // ----------------------------------------------------------------------------
 
 export default [
   {
     input,
-    output: {
-      file: pkg.main,
-      format: 'cjs',
-      sourcemap: true,
-    },
-    external: externals,
-
-    plugins: [
-      replace({
-        'process.env.NODE_ENV': JSON.stringify('development'),
-      }),
-      babel({
-        exclude: /node_modules/,
-        runtimeHelpers: true,
-      }),
-      external(),
-      resolve(),
-      commonjs({
-        include: /node_modules/,
-      }),
-      analyze(),
-      // visualizer(),
+    output: [
+      {
+        file: pkg.main,
+        format: 'cjs',
+        sourcemap: true,
+      },
+      {
+        file: pkg.module,
+        format: 'es',
+        exports: 'named',
+        sourcemap: true,
+      },
     ],
-  },
-  {
-    input,
-    output: {
-      file: pkg.module,
-      format: 'es',
-      exports: 'named',
-      sourcemap: true,
-    },
-    external: externals,
 
     plugins: [
       replace({
         'process.env.NODE_ENV': JSON.stringify('development'),
       }),
+      external(),
       babel({
         exclude: /node_modules/,
         runtimeHelpers: true,
       }),
-      external(),
       resolve(),
       commonjs({
         include: /node_modules/,
