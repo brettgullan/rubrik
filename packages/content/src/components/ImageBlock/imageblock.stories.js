@@ -6,7 +6,7 @@ import { withKnobs, optionsKnob as options } from '@storybook/addon-knobs'
 import { withResponsiveProvider } from '../../../../../src/utils/storybook'
 
 import { Flex } from 'rebass'
-import { Image } from '../../../../media/src'
+import { Image } from '@rubrik/core'
 import ImageBlock from '../ImageBlock'
 
 // ----------------------------------------------------------------------------
