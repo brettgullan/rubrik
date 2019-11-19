@@ -4,9 +4,9 @@ import PropTypes from 'prop-types'
 // ----------------------------------------------------------------------------
 
 import { Flex } from 'rebass'
+import { Stack } from '@rubrik/core'
+import { ResponsiveImage } from '@rubrik/media'
 import { useImageConfig, useVariant } from '../../../../../src/hooks'
-import { Stack } from '../../structure'
-import { ResponsiveImage } from '../../../../../src/components/media'
 
 // ----------------------------------------------------------------------------
 

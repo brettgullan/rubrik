@@ -3,11 +3,11 @@ import { withKnobs, optionsKnob as options } from '@storybook/addon-knobs'
 
 // ----------------------------------------------------------------------------
 
-import { withResponsiveProvider } from '../../../utils/storybook'
+import { withResponsiveProvider } from '../../../../../src/utils/storybook'
 
 import { Flex } from 'rebass'
+import { Image } from '../../../../media/src'
 import ImageBlock from '../ImageBlock'
-import { Image } from '../../media'
 
 // ----------------------------------------------------------------------------
 

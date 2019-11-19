@@ -2,8 +2,8 @@ import React from 'react'
 
 // ----------------------------------------------------------------------------
 
-import { useVariant } from '../../../../../src/hooks'
 import { Box } from 'rebass'
+import { useVariant } from '../../../../../src/hooks'
 
 // ----------------------------------------------------------------------------
 
