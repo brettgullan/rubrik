@@ -1,29 +1,14 @@
 import React from 'react'
 import { withKnobs, optionsKnob as options } from '@storybook/addon-knobs'
 
-import Cloudinary from '../../../providers/Cloudinary'
+import { withResponsiveProvider } from '../../../../../src/utils/storybook'
 
 // ----------------------------------------------------------------------------
 
 import { Heading } from 'rebass'
 
-import { CloudinaryImage } from '../../../../../src/components/media'
+import { ResponsiveImage } from '@rubrik/media/src/'
 import Reveal from '.'
-
-// ----------------------------------------------------------------------------
-
-const withCloudinary = (storyFn) => (
-  <Cloudinary
-    options={{
-      cloud_name: 'caradvice',
-      private_cdn: true,
-      secure_distribution: 'media.caradvice.com.au',
-      secure: true,
-    }}
-  >
-    {storyFn()}
-  </Cloudinary>
-)
 
 // ----------------------------------------------------------------------------
 
@@ -42,7 +27,7 @@ const imageOptions = {
 export default {
   title: 'Design System|Elements/Controls/Reveal',
   component: Reveal,
-  decorators: [withKnobs, withCloudinary],
+  decorators: [withKnobs, withResponsiveProvider],
 
   parameters: {
     component: Reveal,
@@ -54,13 +39,13 @@ export default {
 
 export const Primary = () => {
   const left = (
-    <CloudinaryImage
+    <ResponsiveImage
       image={{ id: 'mgob456ukvk29dhmw4zn', type: 'private' }}
       options={imageOptions}
     />
   )
   const right = (
-    <CloudinaryImage
+    <ResponsiveImage
       image={{ id: 'jcldohvcuz1wp39qq7is', type: 'private' }}
       options={imageOptions}
     />
