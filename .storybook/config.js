@@ -9,7 +9,7 @@ import { addReadme } from 'storybook-readme'
 
 // ----------------------------------------------------------------------------
 
-import theme from '../src/theme'
+import theme from '@rubrik/theme-default'
 
 // ----------------------------------------------------------------------------
 
@@ -48,4 +48,8 @@ addParameters({
 // ----------------------------------------------------------------------------
 
 // automatically import all files ending in *.stories.js
-configure(require.context('../src', true, /\.stories\.(js|mdx)$/), module)
+// configure(require.context('../src', true, /\.stories\.(js|mdx)$/), module)
+configure(
+  require.context('../packages', true, /^\.\/[^\/]+\/src\/.*stories\.js?$/),
+  module
+)
