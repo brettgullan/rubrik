@@ -12,7 +12,7 @@
  * together with a 'reverse' variation.
  *
  */
-import { __, mapObjIndexed } from 'ramda'
+import { mapObjIndexed } from 'ramda'
 import { darken, lighten, mix, tint } from 'polished'
 
 // ----------------------------------------------------------------------------

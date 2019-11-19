@@ -1,4 +1,4 @@
-import { __, mapObjIndexed } from 'ramda'
+import { mapObjIndexed } from 'ramda'
 import { darken, tint } from 'polished'
 
 // ----------------------------------------------------------------------------

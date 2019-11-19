@@ -5,19 +5,22 @@
   "author": "Brett Gullan <brettgullan@mac.com>",
   "homepage": "https://github.com/brettgullan/rubrik#readme",
   "license": "ISC",
-  "main": "build/index.js",
+  "main": "dist/index.js",
+  "module": "dist/index.es.js",
   "files": [
-    "src"
+    "/dist"
   ],
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/brettgullan/rubrik.git"
-  },
+  "repository": "git+https://github.com/brettgullan/rubrik.git",
   "scripts": {
-    "build": "neutrino build",
+    "build": "rollup -c rollup.config.js",
+    "neutrino": "neutrino build",
     "test": "echo \"Error: run tests from root\" && exit 1"
   },
   "bugs": {
     "url": "https://github.com/brettgullan/rubrik/issues"
+  },
+  "peerDependencies": {
+    "polished": "^3.4.1",
+    "ramda": "^0.26.1"
   }
 }

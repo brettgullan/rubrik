@@ -1,4 +1,4 @@
-import { __, map, merge } from 'ramda'
+import { map, merge } from 'ramda'
 
 // ----------------------------------------------------------------------------
 
