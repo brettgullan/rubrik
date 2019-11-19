@@ -7,7 +7,7 @@ import { withResponsiveProvider } from '../../../../../src/utils/storybook'
 
 import { Heading } from 'rebass'
 
-import { ResponsiveImage } from '@rubrik/media/src/'
+import { ResponsiveImage } from '@rubrik/media'
 import Reveal from '.'
 
 // ----------------------------------------------------------------------------
