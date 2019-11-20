@@ -4,6 +4,7 @@ route: /button
 ---
 
 import { Playground } from 'docz'
+import { Box } from 'rebass'
 import { Alpha } from '@rubrik/core'
 
 # Button
@@ -11,5 +12,13 @@ import { Alpha } from '@rubrik/core'
 ## Basic usage
 
 <Playground>
-  <Alpha>Click me</Alpha>
+  <Box p={3}>
+    <Alpha size="lg">Click me</Alpha>
+  </Box>
+  <Box p={3}>
+    <Alpha>Click me</Alpha>
+  </Box>
+  <Box p={3}>
+    <Alpha size="sm">Click me</Alpha>
+  </Box>
 </Playground>

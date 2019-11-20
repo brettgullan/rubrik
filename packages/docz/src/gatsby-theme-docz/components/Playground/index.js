@@ -13,7 +13,7 @@ import * as Icons from '../Icons'
 // ----------------------------------------------------------------------------
 
 import { ThemeProvider } from 'emotion-theming'
-import liveTheme from '@rubrik/theme-default'
+import previewTheme from '@rubrik/theme-default'
 
 // ----------------------------------------------------------------------------
 
@@ -28,8 +28,7 @@ export const Playground = ({ code, scope, language }) => {
 
   const transformCode = (code) => {
     if (code.startsWith('()') || code.startsWith('class')) return code
-    // return `<React.Fragment><div style={{ border: '1px solid red' }}>${code}</div></React.Fragment>`
-    return `<ThemeProvider theme={theme}>${code}</ThemeProvider>`
+    return `<React.Fragment>${code}</React.Fragment>`
   }
 
   const copyCode = () => copy(code)
@@ -62,13 +61,8 @@ export const Playground = ({ code, scope, language }) => {
     },
   }
 
-  console.log(scope)
-  const newCode = `<div style={{ border: '1px solid red' }}>${code}</div>`
-  scope.theme = liveTheme
-
   return (
     <Resizable {...resizableProps} data-testid="playground">
-      <div>WTF?</div>
       <LiveProvider
         code={code}
         scope={scope}
@@ -79,7 +73,9 @@ export const Playground = ({ code, scope, language }) => {
         <div sx={styles.previewWrapper}>
           <div sx={styles.previewInner(showingCode)}>
             {showLivePreview && (
-              <LivePreview sx={styles.preview} data-testid="live-preview" />
+              <ThemeProvider theme={previewTheme}>
+                <LivePreview sx={styles.preview} data-testid="live-preview" />
+              </ThemeProvider>
             )}
           </div>
           <div sx={styles.buttons}>
