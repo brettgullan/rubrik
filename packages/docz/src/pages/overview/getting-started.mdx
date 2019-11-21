@@ -10,17 +10,43 @@ The Rubrik library is published as a set of packages that can be installed using
 
 All packages depend on an underlying `System UI` compatible theme using Emotion and the Emotion `ThemeProvider` component.
 
-`@rubrik/core` provides a base set of  
+`@rubrik/core` provides a base set of  components including Buttons/Links, a Type components (based on the BBC GEL typescale), Image and Picture, and useful structural/layout components including Card, Tile and Grid components.
+
+Additional `@rubrik` packages support more specific use-cases and depend upon `rubrik/core`.
+
+## Installation
+
+Install packages using `npm` or `yarn`.
+
+### npm
+```bash
+$ npm install @rubrik/core @rubrik/media @rubrik/forms
+```
+
+### yarn
+```bash
+$ yarn add @rubrik/core @rubrik/media @rubrik/forms
+```
 
 ## Usage
 
 All Rubrik components are exported by name from each `@rubrik` package. They can be imported with:
 
 ```javascript
-import { Alpha, Canon, Stretch } from '@rubrik/core'
+import { Button, Grid, Type } from '@rubrik/core'
 ```
 
 As Rubrik components are styled using Emotion, all CSS is built-in. There are no external stylesheets to import, or CSS modules to transpile.
+
+However, all Rubrik components depend upon a `theme`.
+
+```javascript
+import { ThemeProvider } from '@rubrik/core'
+
+```
+
+
+
 
 ## Theming
 
