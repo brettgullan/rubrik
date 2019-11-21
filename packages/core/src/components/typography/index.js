@@ -46,9 +46,9 @@ export const DoublePica = (props) => <Text variant="doublePica" {...props} />
 export const GreatPrimer = (props) => <Text variant="greatPrimer" {...props} />
 export const Pica = (props) => <Text variant="pica" {...props} />
 export const LongPrimer = (props) => <Text variant="longPrimer" {...props} />
+export const BodyCopy = (props) => <Text variant="bodyCopy" {...props} />
 export const Brevier = (props) => <Text variant="brevier" {...props} />
 export const Minion = (props) => <Text variant="minion" {...props} />
-export const BodyCopy = (props) => <Text variant="bodyCopy" {...props} />
 
 // ----------------------------------------------------------------------------
 
