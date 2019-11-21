@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { useField } from 'formik'
+// import { useField } from 'formik'
 import { Box } from 'rebass'
 import { Checkbox, Label } from '@rebass/forms'
 
@@ -10,7 +10,7 @@ import { useVariant } from '@rubrik/core'
 
 // ----------------------------------------------------------------------------
 
-const Component = ({ name, size, className, prefix, sx, ...rest }) => {
+const Component = ({ name, size, className, prefix, sx, useField, ...rest }) => {
   const [field, meta] = useField({ name, type: 'checkbox' })
 
   const { touched, error } = meta

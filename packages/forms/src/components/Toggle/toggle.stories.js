@@ -9,7 +9,7 @@ import { withA11y } from '@storybook/addon-a11y'
 
 // ----------------------------------------------------------------------------
 
-import { Formik, Form } from 'formik'
+import { Formik, Form, useField } from 'formik'
 import * as Yup from 'yup'
 
 import { Box } from 'rebass'
@@ -51,7 +51,7 @@ export const Working = () => {
         {(props) => (
           <Form>
             <Box py={4}>
-              <Toggle name="switch" size={size} />
+              <Toggle name="switch" size={size} useField={useField} />
             </Box>
           </Form>
         )}

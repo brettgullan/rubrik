@@ -3,7 +3,7 @@ import { position, size } from 'polished'
 
 import cx from 'classnames'
 
-import { useField } from 'formik'
+// import { useField } from 'formik'
 import { Box } from 'rebass'
 
 // ----------------------------------------------------------------------------
@@ -12,7 +12,7 @@ import { useVariant } from '@rubrik/core'
 
 // ----------------------------------------------------------------------------
 
-const Toggle = ({ name, size, className, prefix, sx, ...rest }) => {
+const Toggle = ({ name, size, className, prefix, sx, useField, ...rest }) => {
   const [field, meta] = useField({ name, type: 'checkbox' })
 
   const { touched, error } = meta

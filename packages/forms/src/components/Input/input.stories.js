@@ -8,7 +8,7 @@ import {
 
 // ----------------------------------------------------------------------------
 
-import { Formik, Form } from 'formik'
+import { Formik, Form, useField } from 'formik'
 import * as Yup from 'yup'
 
 import { Box, Flex } from 'rebass'
@@ -73,6 +73,7 @@ export const Working = () => {
                 mb: 3,
               }}
               placeholder="Input something ..."
+              useField={useField}
             />
             <ErrorMessage name="name" size={size} />
           </Box>

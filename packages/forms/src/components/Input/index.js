@@ -1,14 +1,16 @@
 import React from 'react'
 import cx from 'classnames'
 
-import { useField } from 'formik'
+// ----------------------------------------------------------------------------
+
+// import { useField } from 'formik'
 import { Input as InputField } from '@rebass/forms'
 
 import { useVariant } from '@rubrik/core'
 
 // ----------------------------------------------------------------------------
 
-const Input = ({ name, size, className, sx, ...rest }) => {
+const Input = ({ name, size, className, sx, useField, ...rest }) => {
   const [field, meta] = useField(name)
 
   const { touched, error } = meta

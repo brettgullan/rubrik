@@ -8,7 +8,7 @@ import {
 
 // ----------------------------------------------------------------------------
 
-import { Formik, Form } from 'formik'
+import { Formik, Form, useField } from 'formik'
 import * as Yup from 'yup'
 
 import { Box, Flex } from 'rebass'
@@ -65,7 +65,7 @@ export const Working = () => {
         {(props) => (
           <Form>
             <Box py={4}>
-              <Checkbox name="checkbox" size={size} />
+              <Checkbox name="checkbox" size={size} useField={useField} />
             </Box>
             <Submit>Submit</Submit>
           </Form>
