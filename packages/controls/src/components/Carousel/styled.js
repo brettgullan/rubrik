@@ -9,6 +9,7 @@ import { Button, Flex } from 'rebass'
 const customStyles = {
   display: 'block',
   position: 'absolute',
+  zIndex: 10,
   top: '50%',
   '&.slick-prev': {
     left: 0,
@@ -92,14 +93,14 @@ export const Dots = (dots) => (
           width: '16px',
           height: '16px',
 
-          content: '•',
+          content: '""',
           textAlign: 'center',
 
           opacity: 0.25,
           color: 'black',
 
-          '-webkit-font-smoothing': 'antialiased',
-          '-moz-osx-font-smoothing': 'grayscale',
+          webkitFontSmoothing: 'antialiased',
+          mozOsxFontSmoothing: 'grayscale',
 
           '.slick-active &': {
             opacity: 0.75,

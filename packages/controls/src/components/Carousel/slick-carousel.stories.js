@@ -71,9 +71,13 @@ export const Images = () => {
 
   return (
     <Carousel>
-      {images.map((image) => {
+      {images.map((image, index) => {
         return (
-          <ResponsiveImage image={image} options={options} />
+          <ResponsiveImage
+            key={`slide-${index}`}
+            image={image}
+            options={options}
+          />
         )
       })}
     </Carousel>
