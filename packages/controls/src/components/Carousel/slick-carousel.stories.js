@@ -1,58 +1,12 @@
-import React, { Component } from 'react'
-import Slider from 'react-slick'
+import React from 'react'
 
 import { withKnobs, optionsKnob as options } from '@storybook/addon-knobs'
-import { useTheme } from '@rubrik/core'
 
-import { Box } from 'rebass'
-
-// ----------------------------------------------------------------------------
-
-import { Dots, NextArrow, PrevArrow } from './styled'
-
-// Import css files
-import './slick.css'
-// import 'slick-carousel/slick/slick-theme.css'
+import { Box } from '@rubrik/core'
 
 // ----------------------------------------------------------------------------
 
-class SimpleSlider extends Component {
-  render() {
-    var settings = {
-      dots: true,
-      infinite: true,
-      speed: 500,
-      slidesToShow: 1,
-      slidesToScroll: 1,
-      nextArrow: <NextArrow />,
-      prevArrow: <PrevArrow />,
-      appendDots: Dots,
-    }
-
-    return (
-      <Slider {...settings} slide="section">
-        <Box sx={{ p: 5, textAlign: 'center' }}>
-          <h3>1</h3>
-        </Box>
-        <Box sx={{ p: 5, textAlign: 'center' }}>
-          <h3>2</h3>
-        </Box>
-        <Box sx={{ p: 5, textAlign: 'center' }}>
-          <h3>3</h3>
-        </Box>
-        <Box sx={{ p: 5, textAlign: 'center' }}>
-          <h3>4</h3>
-        </Box>
-        <Box sx={{ p: 5, textAlign: 'center' }}>
-          <h3>5</h3>
-        </Box>
-        <Box sx={{ p: 5, textAlign: 'center' }}>
-          <h3>6</h3>
-        </Box>
-      </Slider>
-    )
-  }
-}
+import Carousel from '.'
 
 // ----------------------------------------------------------------------------
 
@@ -64,5 +18,26 @@ export default {
 // ----------------------------------------------------------------------------
 
 export const Primary = () => {
-  return <SimpleSlider />
+  return (
+    <Carousel>
+      <Box sx={{ p: 5, textAlign: 'center' }}>
+        <h3>1</h3>
+      </Box>
+      <Box sx={{ p: 5, textAlign: 'center' }}>
+        <h3>2</h3>
+      </Box>
+      <Box sx={{ p: 5, textAlign: 'center' }}>
+        <h3>3</h3>
+      </Box>
+      <Box sx={{ p: 5, textAlign: 'center' }}>
+        <h3>4</h3>
+      </Box>
+      <Box sx={{ p: 5, textAlign: 'center' }}>
+        <h3>5</h3>
+      </Box>
+      <Box sx={{ p: 5, textAlign: 'center' }}>
+        <h3>6</h3>
+      </Box>
+    </Carousel>
+  )
 }
