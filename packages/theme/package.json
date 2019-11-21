@@ -13,7 +13,6 @@
   "repository": "git+https://github.com/brettgullan/rubrik.git",
   "scripts": {
     "build": "rollup -c rollup.config.js",
-    "neutrino": "neutrino build",
     "test": "echo \"Error: run tests from root\" && exit 1"
   },
   "bugs": {

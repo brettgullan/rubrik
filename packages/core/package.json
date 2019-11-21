@@ -12,9 +12,7 @@
   ],
   "repository": "git+https://github.com/brettgullan/rubrik.git",
   "scripts": {
-    "start": "neutrino start",
     "build": "rollup -c rollup.config.js",
-    "webpack": "webpack --mode production",
     "test": "echo \"Error: run tests from root\" && exit 1"
   },
   "bugs": {
