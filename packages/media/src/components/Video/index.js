@@ -1,7 +1,7 @@
 import React from 'react'
 import ReactPlayer from 'react-player'
 
-import styled from '@emotion/styled'
+import styled from 'styled-components'
 import { position, size } from 'polished'
 
 import { Flex } from 'rebass'
