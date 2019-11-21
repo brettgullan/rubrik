@@ -1,14 +1,12 @@
 import React from 'react'
 import { addDecorator, addParameters, configure } from '@storybook/react'
 import { INITIAL_VIEWPORTS } from '@storybook/addon-viewport'
-import '@storybook/addon-console'
-
-import { ThemeProvider } from 'emotion-theming'
-import { withPropsTable } from 'storybook-addon-react-docgen'
 import { addReadme } from 'storybook-readme'
+import '@storybook/addon-console'
 
 // ----------------------------------------------------------------------------
 
+import { ThemeProvider } from '@rubrik/core'
 import theme from '@rubrik/theme-default'
 
 // ----------------------------------------------------------------------------
@@ -17,10 +15,6 @@ const ThemeDecorator = (storyFn) => (
   <ThemeProvider theme={theme}>{storyFn()}</ThemeProvider>
 )
 addDecorator(ThemeDecorator)
-
-// ----------------------------------------------------------------------------
-
-addDecorator(withPropsTable({}))
 
 // ----------------------------------------------------------------------------
 
