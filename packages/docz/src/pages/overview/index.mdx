@@ -1,0 +1,37 @@
+---
+name: About
+menu: Overview
+route: /overview
+---
+
+# About
+
+Rubrik is an opinionated framework for building design systems.  
+It builds on established libraries and best-practices to provide ready-to-use components.
+
+Rubrik extends on the components and design principles of the `Rebass` library and `Styled System`. It is intended to be used together with `Rebass` primitives — such as `Box` and `Flex`.
+
+All Rubrik components use an underlying theme, and support `variants`, the `sx` prop and all styling props defined in Styled System.
+
+## Background
+
+Rubrik has been built to support the development of content and media rich editorial websites.
+
+
+## Principles
+
+The following principles have underpinned the development of Rubrik:
+
+* Build on established standard and best-practices.  
+
+* Extend, adapt and re-use, rather than re-build.  We've attempted to use best-of-breed libraries and existing components, and adapted them to fit within the Rubrik paradigm.
+
+* Design components for multiple applications; Rubrik is not intended to be a prescriptive design system -- a la Bootstrap, Lightning or Primer.  
+
+* Extend the concept of Design Tokens to components; provide a bounded set of options for various components that can be easily reasoned about. A good example of this are Rubrik's Button components. Four distinct button types are supported -- Alpha, Beta, Gamma and Delta -- together with size and colour options. However, individual themes can specify completely different styling for each Button type. 
+
+The point is that four different button types should be sufficient for most applications. When combined with size and colour options, the resulting number of button variations multiplies quickly.
+
+
+* Provide sensible defaults, allow all reasonable styling to be overridden (via themes). In addition, allow per-use customizations and overrides of all component styling.
+

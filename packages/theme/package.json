@@ -1,0 +1,25 @@
+{
+  "name": "@rubrik/theme-default",
+  "version": "1.0.0",
+  "description": "> TODO: description",
+  "author": "Brett Gullan <brettgullan@mac.com>",
+  "homepage": "https://github.com/brettgullan/rubrik#readme",
+  "license": "ISC",
+  "main": "dist/index.js",
+  "module": "dist/index.es.js",
+  "files": [
+    "/dist"
+  ],
+  "repository": "git+https://github.com/brettgullan/rubrik.git",
+  "scripts": {
+    "build": "rollup -c rollup.config.js",
+    "test": "echo \"Error: run tests from root\" && exit 1"
+  },
+  "bugs": {
+    "url": "https://github.com/brettgullan/rubrik/issues"
+  },
+  "peerDependencies": {
+    "polished": "^3.4.1",
+    "ramda": "^0.26.1"
+  }
+}

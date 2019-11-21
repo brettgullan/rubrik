@@ -1,7 +1,7 @@
 import React from 'react'
 
-import CloudinaryAdaptor from '../providers/Responsive/cloudinary'
-import ResponsiveProvider from '../providers/Responsive'
+// import { CloudinaryAdaptor, ResponsiveProvider } from '../../packages/media/src'
+import { CloudinaryAdaptor, ResponsiveProvider } from '@rubrik/media'
 
 // ----------------------------------------------------------------------------
 

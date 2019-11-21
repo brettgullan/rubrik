@@ -1,15 +1,13 @@
 import React from 'react'
 import { addDecorator, addParameters, configure } from '@storybook/react'
 import { INITIAL_VIEWPORTS } from '@storybook/addon-viewport'
-import '@storybook/addon-console'
-
-import { ThemeProvider } from 'emotion-theming'
-import { withPropsTable } from 'storybook-addon-react-docgen'
 import { addReadme } from 'storybook-readme'
+import '@storybook/addon-console'
 
 // ----------------------------------------------------------------------------
 
-import theme from '../src/theme'
+import { ThemeProvider } from '@rubrik/core'
+import theme from '@rubrik/theme-default'
 
 // ----------------------------------------------------------------------------
 
@@ -17,10 +15,6 @@ const ThemeDecorator = (storyFn) => (
   <ThemeProvider theme={theme}>{storyFn()}</ThemeProvider>
 )
 addDecorator(ThemeDecorator)
-
-// ----------------------------------------------------------------------------
-
-addDecorator(withPropsTable({}))
 
 // ----------------------------------------------------------------------------
 
@@ -48,4 +42,8 @@ addParameters({
 // ----------------------------------------------------------------------------
 
 // automatically import all files ending in *.stories.js
-configure(require.context('../src', true, /\.stories\.(js|mdx)$/), module)
+// configure(require.context('../src', true, /\.stories\.(js|mdx)$/), module)
+configure(
+  require.context('../packages', true, /^\.\/[^\/]+\/src\/.*stories\.js?$/),
+  module
+)
