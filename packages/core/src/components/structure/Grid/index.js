@@ -11,7 +11,6 @@ import {
   converge,
   evolve,
   flatten,
-  forEach,
   head,
   is,
   juxt,
@@ -26,14 +25,13 @@ import {
   slice,
   sum,
   tail,
-  tap,
   toString,
   unnest,
   when,
   zip,
 } from 'ramda'
 import { Flex } from 'rebass'
-import { useTheme } from 'emotion-theming'
+import { useTheme } from '../../../providers/theme'
 import { get } from '@styled-system/css'
 
 import {

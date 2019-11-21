@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import Slider from 'react-slick'
 
 import { withKnobs, optionsKnob as options } from '@storybook/addon-knobs'
-import { useTheme } from 'emotion-theming'
+import { useTheme } from '@rubrik/core'
 
 import { Box } from 'rebass'
 

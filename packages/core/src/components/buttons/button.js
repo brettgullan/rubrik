@@ -1,7 +1,7 @@
 import React from 'react'
 import cx from 'classnames'
 
-import { useTheme } from 'emotion-theming'
+import { useTheme } from '../../providers/theme'
 import { get } from '@styled-system/css'
 
 // ----------------------------------------------------------------------------
