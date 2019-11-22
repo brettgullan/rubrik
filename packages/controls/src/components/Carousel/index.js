@@ -3,10 +3,8 @@ import React from 'react'
 // ----------------------------------------------------------------------------
 
 import Slider from 'react-slick'
-// import './slick.css'
 import styles from './styles'
 import { Dots, NextArrow, PrevArrow } from './styled'
-import { Box } from '@rubrik/core'
 
 // ----------------------------------------------------------------------------
 
@@ -15,11 +13,9 @@ const StyledSlider = convertToRebass(Slider)
 
 // ----------------------------------------------------------------------------
 
-const Carousel = (props) => {
+const Carousel = ({ sx, ...rest}) => {
   return (
-    <Box sx={styles}>
-      <Slider {...props} slide="section" />
-    </Box>
+    <StyledSlider sx={{ ...styles, ...sx }} {...rest} slide="section" />
   )
 }
 

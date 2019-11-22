@@ -1,6 +1,6 @@
 export const styles = {
   //
-  '.slick-slider': {
+  // '.slick-slider': {
     position: 'relative',
     display: 'block',
     boxSizing: 'border-box',
@@ -11,7 +11,7 @@ export const styles = {
     msTouchAction: 'pan-y',
     touchAction: 'pan-y',
     webkitTapHighlightColor: 'transparent',
-  },
+  // },
 
   //
   '.slick-list': {
