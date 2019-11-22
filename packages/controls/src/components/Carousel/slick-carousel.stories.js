@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 import { withKnobs, optionsKnob as options } from '@storybook/addon-knobs'
 
@@ -82,5 +82,47 @@ export const Images = () => {
         )
       })}
     </Carousel>
+  )
+}
+
+// ----------------------------------------------------------------------------
+
+export const WithIndicator = () => {
+  const options = {
+    srcset: {
+      widths: [320, 375, 414, 768, 960, 1024],
+      resolutions: [1, 2],
+      aspect_ratio: 16 / 9,
+      crop: 'fill',
+      quality: 80,
+    },
+  }
+
+  const images = [
+    'rrnsor6xqwykzrd8y7ys',
+    'vnffeis4zprbcheahwl9',
+    'hhbhe6gttutbpe71telz',
+    'vno2epkefbracajlkzcz',
+    'lufvtit4p7pmbvoxdqjv',
+    'fgqmc8zopn6zvphvftfe',
+  ].map((id) => ({ id, type: 'private' }))
+
+  const [ currentIndex, setIndex ] = useState(0)
+
+  return (
+    <Box>
+      <Carousel afterChange={setIndex}>
+        {images.map((image, index) => {
+          return (
+            <ResponsiveImage
+              key={`slide-${index}`}
+              image={image}
+              options={options}
+            />
+          )
+        })}
+      </Carousel>
+      <Box>{currentIndex + 1} / {images.length}</Box>
+    </Box>
   )
 }
