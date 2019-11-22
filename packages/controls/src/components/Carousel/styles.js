@@ -50,14 +50,14 @@ export const styles = {
     '&:after': {
       clear: 'both',
     },
-    ',slick-loading &': {
+    '.slick-loading &': {
       visibility: 'hidden',
     },
   },
 
   //
   '.slick-slide': {
-    display: 'none',
+    // display: 'none',
     float: 'left',
     height: '100%',
     minHeight: '1px',

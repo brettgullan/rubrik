@@ -3,21 +3,21 @@ import React from 'react'
 // ----------------------------------------------------------------------------
 
 import Slider from 'react-slick'
-import './slick.css'
-// import styles from './styles'
+// import './slick.css'
+import styles from './styles'
 import { Dots, NextArrow, PrevArrow } from './styled'
 import { Box } from '@rubrik/core'
 
 // ----------------------------------------------------------------------------
 
-// import convertToRebass from '../../../../../src/utils/convert-to-rebass'
-// const StyledSlider = convertToRebass(Slider)
+import convertToRebass from '../../../../../src/utils/convert-to-rebass'
+const StyledSlider = convertToRebass(Slider)
 
 // ----------------------------------------------------------------------------
 
 const Carousel = (props) => {
   return (
-    <Box>
+    <Box sx={styles}>
       <Slider {...props} slide="section" />
     </Box>
   )
