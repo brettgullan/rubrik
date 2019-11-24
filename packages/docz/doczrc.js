@@ -1,13 +1,19 @@
 export default {
-  menu: ['Overview', 'Components'],
+  title: 'Rubrik',
+  // menu: ['Overview', 'Components'],
   themeConfig: {
-    fonts: {
-      body: "'Barlow', 'sans-serif'",
-      heading: "'Barlow', 'sans-serif'",
-    },
-    colors: {
-      header: {
-        bg: 'tomato',
+    styles: {
+      Container: {
+        p: 4,
+        maxWidth: 960,
+      },
+      root: {
+        fontSize: 2,
+        color: 'text',
+        bg: 'background',
+      },
+      hr: {
+        my: 4,
       },
     },
   },
