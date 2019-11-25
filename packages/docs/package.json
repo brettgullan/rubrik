@@ -20,6 +20,8 @@
     "serve": "gatsby serve"
   },
   "dependencies": {
+    "@rubrik/core": "^1.1.1",
+    "@rubrik/theme-default": "^1.1.0",
     "@theme-ui/components": "^0.2.49",
     "gatsby": "^2.13.73",
     "gatsby-plugin-offline": "^2.2.7",
