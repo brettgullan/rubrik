@@ -1,5 +1,5 @@
 {
-  "name": "docz",
+  "name": "@rubrik/docs",
   "version": "1.0.0",
   "description": "Rubrik design system documentation, using Gatsby and Docz.",
   "keywords": [
@@ -7,8 +7,12 @@
     "docz"
   ],
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/brettgullan/rubrik.git"
+  },
   "bugs": {
-    "url": "https://github.com/pedronauck/docz/issues"
+    "url": "https://github.com/brettgullan/rubrik/issues"
   },
   "scripts": {
     "dev": "gatsby develop",
