@@ -8,7 +8,7 @@ import copy from 'copy-text-to-clipboard'
 
 import { usePrismTheme } from '~utils/theme'
 import * as styles from './styles'
-import * as Icons from '../Icons'
+import * as Icons from 'gatsby-theme-docz/src/components/Icons'
 
 // ----------------------------------------------------------------------------
 

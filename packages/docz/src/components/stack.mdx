@@ -1,0 +1,39 @@
+---
+name: Stack
+menu: Components
+route: /components/stack
+---
+
+import { Playground } from 'docz'
+import { Text } from 'rebass'
+import { Stack, Stretch } from '@rubrik/core'
+
+<head>Stack</head>
+
+<lede>A simple flex-based wrapper component, with direction set to 'column'. Used as a declarative convenience within larger flex-based layouts.</lede>  
+
+## Usage
+
+The `<Stack>` component is another declarative convenience. It reduces boilerplate, and makes the design intent clear.
+
+<Playground>
+    <Stack height="400px" bg={'gray.2'}>
+      <Text variant="primer" color={'white.0'} p={4}>
+        Top
+      </Text>
+      <Stretch
+        bg={'brand.primary'}
+        p={4}
+        display="flex"
+        alignItems="center"
+        justifyContent="center"
+      >
+        <Text color={'white.0'} variant="paragon">
+          All of these components are stacked.
+        </Text>
+      </Stretch>
+      <Text variant="primer" color={'white.0'} p={4}>
+        Bottom
+      </Text>
+    </Stack>
+</Playground>

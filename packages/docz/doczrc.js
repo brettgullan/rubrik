@@ -1,6 +1,8 @@
 export default {
   title: 'Rubrik',
-  // menu: ['Overview', 'Components'],
+  src: './src/',
+  files: '**/*.{mdx}',
+  menu: ['Home', 'Overview', 'Components'],
   themeConfig: {
     styles: {
       Container: {
