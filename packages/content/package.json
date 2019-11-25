@@ -1,15 +1,18 @@
 {
   "name": "@rubrik/content",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "> TODO: description",
   "author": "Brett Gullan <brettgullan@mac.com>",
   "homepage": "https://github.com/brettgullan/rubrik#readme",
-  "license": "ISC",
+  "license": "MIT",
   "main": "dist/index.js",
   "module": "dist/index.es.js",
   "files": [
     "/dist"
   ],
+  "directories": {
+    "lib": "/dist"
+  },
   "repository": "git+https://github.com/brettgullan/rubrik.git",
   "scripts": {
     "build": "rollup -c rollup.config.js",
@@ -20,9 +23,9 @@
   },
   "peerDependencies": {
     "@emotion/styled": "^10.0.17",
-    "emotion-theming": "^10.0.19",
     "@styled-system/css": "^5.0.23",
     "classnames": "^2.2.6",
+    "emotion-theming": "^10.0.19",
     "polished": "^3.4.1",
     "prop-types": "^15.7.2",
     "ramda": "^0.26.1",
@@ -31,6 +34,7 @@
     "react-dom": "^16.9.0",
     "react-twitter-embed": "^3.0.3",
     "rebass": "^4.0.5",
+    "styled-components": "^4.3.2",
     "styled-system": "^5.1.2"
   }
 }
