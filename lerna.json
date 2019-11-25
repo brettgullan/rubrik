@@ -4,6 +4,7 @@
   "useWorkspaces": true,
   "command": {
     "publish": {
+      "conventionalCommits": true,
       "ignoreChanges": ["roolup.config.js", "*.md"],
       "message": "chore(release): publish"
     }
