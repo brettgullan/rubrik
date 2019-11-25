@@ -1,6 +1,6 @@
 {
   "name": "@rubrik/docs",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Rubrik design system documentation, using Gatsby and Docz.",
   "keywords": [
     "gatsby",
