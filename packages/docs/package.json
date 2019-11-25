@@ -38,6 +38,15 @@
     "theme-ui": "^0.2.49"
   },
   "devDependencies": {
-    "eslint-config-react-app": "^5.0.2"
+    "classnames": "^2.2.6",
+    "eslint-config-react-app": "^5.0.2",
+    "polished": "^3.4.1",
+    "prop-types": "^15.7.2",
+    "ramda": "^0.26.1",
+    "ramda-adjunct": "^2.20.0",
+    "rebass": "^4.0.5",
+    "responsive-configuration-builder": "^1.0.3",
+    "styled-components": "^4.3.2",
+    "styled-system": "^5.1.2"
   }
 }
