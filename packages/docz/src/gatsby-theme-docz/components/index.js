@@ -9,7 +9,11 @@ const MyCustomH1 = (props) => {
 
 const Head = ({ children, sx, ...rest }) => {
   return (
-    <Heading as="h1" sx={{ fontWeight: '300', fontSize: 7, ...sx }} {...rest}>
+    <Heading
+      as="h1"
+      sx={{ fontWeight: '300', fontSize: 6, mb: 3, ...sx }}
+      {...rest}
+    >
       {children}
     </Heading>
   )
