@@ -10,6 +10,9 @@
   "files": [
     "/dist"
   ],
+  "directories": {
+    "lib": "/dist"
+  },
   "repository": "git+https://github.com/brettgullan/rubrik.git",
   "scripts": {
     "build": "rollup -c rollup.config.js",
