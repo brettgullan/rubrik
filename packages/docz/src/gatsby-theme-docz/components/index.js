@@ -7,16 +7,20 @@ const MyCustomH1 = (props) => {
   return <div className="myH1" {...props} />
 }
 
-const Head = ({ children, ...rest }) => {
+const Head = ({ children, sx, ...rest }) => {
   return (
-    <Heading as="h1" sx={{ fontWeight: '300', fontSize: 7 }}>
+    <Heading as="h1" sx={{ fontWeight: '300', fontSize: 7, ...sx }} {...rest}>
       {children}
     </Heading>
   )
 }
 
-const Lede = ({ children, ...rest }) => {
-  return <Text sx={{ fontWeight: '300', fontSize: 5 }}>{children}</Text>
+const Lede = ({ children, sx, ...rest }) => {
+  return (
+    <Text sx={{ fontWeight: '300', fontSize: 5, mb: 4, ...sx }} {...rest}>
+      {children}
+    </Text>
+  )
 }
 
 export default {
