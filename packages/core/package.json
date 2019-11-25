@@ -1,7 +1,7 @@
 {
   "name": "@rubrik/core",
   "version": "1.1.1",
-  "description": "> TODO: description",
+  "description": "Rubrik design system core components",
   "author": "Brett Gullan <brettgullan@mac.com>",
   "homepage": "https://github.com/brettgullan/rubrik#readme",
   "license": "MIT",
