@@ -1,0 +1,29 @@
+---
+name: Split
+menu: Components
+route: /components/split
+---
+
+import { Playground } from 'docz'
+import { Text } from 'rebass'
+import { Split } from '@rubrik/core'
+
+<head>Split</head>
+
+<lede>A flex-based wrapper component, that splits content to the left/right. 
+A declarative convenience for split headers, especially for menu/navigation bars or cards.</lede>  
+
+## Usage
+
+The `<Split>` component is another declarative convenience. It reduces boilerplate, and makes the design intent clear.
+
+<Playground>
+  <Split bg={'gray.0'}>
+    <Text variant="paragon" color={'white.0'} p={4}>
+      Left
+    </Text>
+    <Text variant="paragon" color={'white.0'} p={4}>
+      Right
+    </Text>
+  </Split>
+</Playground>
