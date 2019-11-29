@@ -35,16 +35,24 @@ const Text = styled(RBText)`
 
 // ----------------------------------------------------------------------------
 
-export const Canon = (props) => <Heading variant="canon" {...props} />
+export const Canon = (props) => <Heading as="h1" variant="canon" {...props} />
 
 /**
   Article title or section header
 **/
-export const Trafalgar = (props) => <Heading variant="trafalgar" {...props} />
+export const Trafalgar = (props) => (
+  <Heading as="h1" variant="trafalgar" {...props} />
+)
 
-export const Paragon = (props) => <Text variant="paragon" {...props} />
-export const DoublePica = (props) => <Text variant="doublePica" {...props} />
-export const GreatPrimer = (props) => <Text variant="greatPrimer" {...props} />
+export const Paragon = (props) => (
+  <Heading as="h2" variant="paragon" {...props} />
+)
+export const DoublePica = (props) => (
+  <Heading as="h2" variant="doublePica" {...props} />
+)
+export const GreatPrimer = (props) => (
+  <Heading as="h2" variant="greatPrimer" {...props} />
+)
 export const Pica = (props) => <Text variant="pica" {...props} />
 export const LongPrimer = (props) => <Text variant="longPrimer" {...props} />
 export const BodyCopy = (props) => <Text variant="bodyCopy" {...props} />
