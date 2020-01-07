@@ -10705,7 +10705,7 @@ gatsby-theme-docz@next:
     typography-theme-moraga "^0.16.19"
     yargs "^13.3.0"
 
-gatsby-transformer-sharp@^2.2.7, gatsby-transformer-sharp@^2.3.5:
+gatsby-transformer-sharp@^2.3.5:
   version "2.3.5"
   resolved "https://registry.yarnpkg.com/gatsby-transformer-sharp/-/gatsby-transformer-sharp-2.3.5.tgz#014f46ec464cf5c6ff57a948bf43ea7a9c3452e2"
   integrity sha512-fBPGK/TeBl26+E8owi83APrCWvwfM2dXTyZm/aM1mb/PjXNPg9lsO9cKPZy7hj5s3VLaLsRxVwKk5BaWA05/ew==
