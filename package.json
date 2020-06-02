@@ -1,14 +1,27 @@
 {
   "name": "rubrik-design-system",
   "version": "0.1.0",
+  "description": "A themeable design system built on React using Rebass and Emotion",
+  "author": "Brett Gullan <brettgullan@gmail.com>",
+  "license": "MIT",
   "private": true,
   "workspaces": {
     "packages": [
       "packages/*"
     ]
   },
-  "description": "A themeable design system built on React using Rebass and Emotion",
-  "author": "Brett Gullan <brettgullan@gmail.com>",
+  "scripts": {
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook",
+    "snapshot": "build-storybook && percy-storybook --widths=320,1280"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gatsbyjs/gatsby-starter-default"
+  },
+  "bugs": {
+    "url": "https://github.com/gatsbyjs/gatsby/issues"
+  },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.25",
     "@fortawesome/free-brands-svg-icons": "^5.11.2",
@@ -91,18 +104,5 @@
     "storybook-readme": "^5.0.8",
     "styled-components": "^4.3.2",
     "styled-system": "^5.1.2"
-  },
-  "license": "MIT",
-  "scripts": {
-    "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook",
-    "snapshot": "build-storybook && percy-storybook --widths=320,1280"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/gatsbyjs/gatsby-starter-default"
-  },
-  "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby/issues"
   }
 }
