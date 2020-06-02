@@ -43,7 +43,8 @@ addParameters({
 
 // automatically import all files ending in *.stories.js
 // configure(require.context('../src', true, /\.stories\.(js|mdx)$/), module)
+// c.f.: https://kamranicus.com/posts/2019-09-12-using-storybook-in-a-monorepo
 configure(
-  require.context('../packages', true, /^\.\/[^\/]+\/src\/.*stories\.js?$/),
+  require.context('../packages', true, /^\.\/[^\/]+\/src\/.*stories\.jsx?$/),
   module
 )
