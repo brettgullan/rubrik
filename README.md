@@ -7,34 +7,31 @@ It is configured as a monorepo (using Lerna and Yarn) to package individual sets
 
 
 
-# DEVELOPMENT
+# Development
 
 This repo is configured to work with Lerna and Yarn (v1.x) using Yarn Workspaces.
 
 To configure for local developent pull this repo and `cd` into the project root, then:
 
 ```shell
-$ yarn install
+$ lerna bootstrap
 ```
 
+## Storybook
 
+Storybook is used as a visual development and testing environment. All packages within this monorepo are aggregated into a single Storybook instance. To start:
 
-## Using Lerna with NPM
+```shell
+$ yarn storybook
+```
+Then visit `http://localhost:6006`.
 
-* Remove `npmClient` and `useWorkspaces` fields from lerna.json.
-* Run `lerna clean` and `lerna bootstrap`.
+---
 
-This is sufficient to get a basic lerna monorepo up and running, in order to build the component libraries.  
-For example:  
+## Building Packages
+
+Use **Lerna** to build packages, e.g.:
 
 ```shell
 $ lerna run --scope @rubrik/media build
 ```
-
-However, there are known limitations running Gatsby within this environment.  
-Thus, the dev environment for `./package/docs` doesn't work correctly.
-
-
-## Using Yarn v2
-
-There are known issues with Yarn v2. Don't do it for now.
