@@ -21,6 +21,24 @@
   "bugs": {
     "url": "https://github.com/brettgullan/rubrik/issues"
   },
+  "devDependencies": {
+    "@emotion/styled": "^10.0.17",
+    "@rebass/forms": "^4.0.6",
+    "@styled-system/css": "^5.0.23",
+    "classnames": "^2.2.6",
+    "emotion-theming": "^10.0.19",
+    "formik": "^2.0.3",
+    "polished": "^3.4.1",
+    "prop-types": "^15.7.2",
+    "ramda": "^0.26.1",
+    "ramda-adjunct": "^2.20.0",
+    "react": "^16.9.0",
+    "react-dom": "^16.9.0",
+    "rebass": "^4.0.5",
+    "styled-components": "^4.3.2",
+    "styled-system": "^5.1.2",
+    "yup": "^0.27.0"
+  },
   "peerDependencies": {
     "@emotion/styled": "^10.0.17",
     "@rebass/forms": "^4.0.6",

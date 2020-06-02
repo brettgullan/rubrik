@@ -21,6 +21,18 @@
   "bugs": {
     "url": "https://github.com/brettgullan/rubrik/issues"
   },
+  "devDependencies": {
+    "@zendeskgarden/container-tabs": "^0.3.5",
+    "classnames": "^2.2.6",
+    "prop-types": "^15.7.2",
+    "react": "^16.9.0",
+    "react-dom": "^16.9.0",
+    "react-slick": "^0.25.2",
+    "react-twentytwenty": "^1.2.1",
+    "rebass": "^4.0.5",
+    "styled-components": "^4.3.2",
+    "styled-system": "^5.1.2"
+  },
   "peerDependencies": {
     "@zendeskgarden/container-tabs": "^0.3.5",
     "classnames": "^2.2.6",
