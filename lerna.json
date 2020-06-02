@@ -5,7 +5,7 @@
   "command": {
     "publish": {
       "conventionalCommits": true,
-      "ignoreChanges": ["roolup.config.js", "*.md"],
+      "ignoreChanges": ["rollup.config.js", "*.md"],
       "message": "chore(release): publish"
     }
   },
