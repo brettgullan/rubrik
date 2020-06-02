@@ -1,7 +1,7 @@
 {
   "name": "@rubrik/media",
   "version": "1.1.0",
-  "description": "> TODO: description",
+  "description": "Core components of Rubrik Design System for React",
   "author": "Brett Gullan <brettgullan@mac.com>",
   "homepage": "https://github.com/brettgullan/rubrik#readme",
   "license": "MIT",
