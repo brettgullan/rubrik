@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.1.1](https://github.com/brettgullan/rubrik/compare/@rubrik/content@1.1.0...@rubrik/content@1.1.1) (2020-07-03)
+
+
+### Bug Fixes
+
+* Add missing styled-components peer dep ([216f4ac](https://github.com/brettgullan/rubrik/commit/216f4acd9d025c5a569c966b33027b2271385440))
+* Replicate peerDeps as devDeps in package.json files ([5cdf9b5](https://github.com/brettgullan/rubrik/commit/5cdf9b5fefeb0ec33f0eeeb7507765c90b6269e0))
+
+
+
+
+
 # 1.1.0 (2019-11-25)
 
 

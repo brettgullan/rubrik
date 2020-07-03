@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.1.2](https://github.com/brettgullan/rubrik/compare/@rubrik/core@1.1.0...@rubrik/core@1.1.2) (2020-07-03)
+
+
+### Bug Fixes
+
+* Update package.json description ([ab4bc7b](https://github.com/brettgullan/rubrik/commit/ab4bc7b4875b4fce63a72e424ae27c39dc858f11))
+
+
+
+
+
 # 1.1.0 (2019-11-25)
 
 
