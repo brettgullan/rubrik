@@ -191,12 +191,39 @@ export const ContainerStyling = () => {
 
 // ----------------------------------------------------------------------------
 
-export const Single = () => {
+export const ScalarProps = () => {
   const bg = options('Background Color', colors, colors.Grey, {
     display: 'select',
   })
   return (
     <Grid columns="1" gutters="20px">
+      <Text color="white.0" variant="paragon" p={3} bg={bg}>
+        1
+      </Text>
+      <Text color="white.0" variant="paragon" p={3} bg={bg}>
+        2
+      </Text>
+      <Text color="white.0" variant="paragon" p={3} bg={bg}>
+        3
+      </Text>
+      <Text color="white.0" variant="paragon" p={3} bg={bg}>
+        4
+      </Text>
+      <Text color="white.0" variant="paragon" p={3} bg={bg}>
+        5
+      </Text>
+    </Grid>
+  )
+}
+
+// ----------------------------------------------------------------------------
+
+export const ScalarPropsMultipleColumns = () => {
+  const bg = options('Background Color', colors, colors.Grey, {
+    display: 'select',
+  })
+  return (
+    <Grid columns="3" gutters="20px">
       <Text color="white.0" variant="paragon" p={3} bg={bg}>
         1
       </Text>
