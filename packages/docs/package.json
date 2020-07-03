@@ -1,6 +1,6 @@
 {
   "name": "@rubrik/docs",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "Rubrik design system documentation, using Gatsby and Docz.",
   "keywords": [
     "gatsby",
@@ -20,9 +20,9 @@
     "serve": "gatsby serve"
   },
   "dependencies": {
-    "@rubrik/core": "^1.1.2",
-    "@rubrik/media": "^1.1.1",
-    "@rubrik/theme-default": "^1.1.1",
+    "@rubrik/core": "^1.1.3",
+    "@rubrik/media": "^1.1.2",
+    "@rubrik/theme-default": "^1.1.2",
     "@theme-ui/components": "^0.2.49",
     "docz": "^2.3.1",
     "gatsby": "^2.13.73",
