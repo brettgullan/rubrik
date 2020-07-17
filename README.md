@@ -17,6 +17,10 @@ To configure for local developent pull this repo and `cd` into the project root,
 $ lerna bootstrap
 ```
 
+## Documentation
+
+Documentation for Rubrik is implemented as a private (non-published) monorepo package (`packages/docs`), generated using [Docusaurus](https://v2.docusaurus.io/).
+
 ## Storybook
 
 Storybook is used as a visual development and testing environment. All packages within this monorepo are aggregated into a single Storybook instance. To start:
