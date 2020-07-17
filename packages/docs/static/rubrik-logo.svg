@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="60px" height="60px" viewBox="0 0 60 60" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>rubrik-logo</title>
+    <defs>
+        <rect id="path-1" x="-1.54543045e-13" y="-1.54543045e-13" width="18" height="18" rx="1"></rect>
+        <rect id="path-3" x="-1.54543045e-13" y="-1.54543045e-13" width="18" height="18" rx="1"></rect>
+        <rect id="path-5" x="-1.54543045e-13" y="-1.54543045e-13" width="18" height="18" rx="1"></rect>
+        <rect id="path-7" x="-1.54543045e-13" y="-1.54543045e-13" width="18" height="18" rx="1"></rect>
+        <rect id="path-9" x="-1.54543045e-13" y="-1.54543045e-13" width="18" height="18" rx="1"></rect>
+        <rect id="path-11" x="-1.54543045e-13" y="-1.54543045e-13" width="18" height="18" rx="1"></rect>
+    </defs>
+    <g id="rubrik-logo" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group-4-Copy">
+            <mask id="mask-2" fill="white">
+                <use xlink:href="#path-1"></use>
+            </mask>
+            <g id="Rectangle"></g>
+            <path d="M0,18 L0,0 L0,0 C9.84171424,0 17.8410458,8.19616581 18,18 L0,18 L0,0 L0,18 Z" id="Path" fill="#FCC61F" mask="url(#mask-2)" transform="translate(9.000000, 9.000000) scale(-1, 1) translate(-9.000000, -9.000000) "></path>
+        </g>
+        <g id="Group-4-Copy-4" transform="translate(21.000000, 21.000000)">
+            <mask id="mask-4" fill="white">
+                <use xlink:href="#path-3"></use>
+            </mask>
+            <g id="Rectangle"></g>
+            <path d="M0,18 L0,0 L0,0 C9.84171424,0 17.8410458,8.19616581 18,18 L0,18 L0,0 L0,18 Z" id="Path" fill="#FE9201" mask="url(#mask-4)" transform="translate(9.000000, 9.000000) scale(-1, 1) translate(-9.000000, -9.000000) "></path>
+        </g>
+        <g id="Group-4-Copy-6" transform="translate(30.000000, 51.000000) scale(1, -1) translate(-30.000000, -51.000000) translate(21.000000, 42.000000)">
+            <mask id="mask-6" fill="white">
+                <use xlink:href="#path-5"></use>
+            </mask>
+            <g id="Rectangle"></g>
+            <path d="M0,18 L0,0 L0,0 C9.84171424,0 17.8410458,8.19616581 18,18 L0,18 L0,0 L0,18 Z" id="Path" fill="#ED5000" mask="url(#mask-6)" transform="translate(9.000000, 9.000000) scale(-1, 1) translate(-9.000000, -9.000000) "></path>
+        </g>
+        <g id="Group-4-Copy-5" transform="translate(51.000000, 30.000000) scale(-1, -1) translate(-51.000000, -30.000000) translate(42.000000, 21.000000)">
+            <mask id="mask-8" fill="white">
+                <use xlink:href="#path-7"></use>
+            </mask>
+            <g id="Rectangle"></g>
+            <path d="M0,18 L0,0 L0,0 C9.84171424,0 17.8410458,8.19616581 18,18 L0,18 L0,0 L0,18 Z" id="Path" fill="#FE9201" mask="url(#mask-8)" transform="translate(9.000000, 9.000000) scale(-1, 1) translate(-9.000000, -9.000000) "></path>
+        </g>
+        <g id="Group-4-Copy-7" transform="translate(51.000000, 51.000000) scale(-1, 1) translate(-51.000000, -51.000000) translate(42.000000, 42.000000)">
+            <mask id="mask-10" fill="white">
+                <use xlink:href="#path-9"></use>
+            </mask>
+            <g id="Rectangle"></g>
+            <path d="M0,18 L0,0 L0,0 C9.84171424,0 17.8410458,8.19616581 18,18 L0,18 L0,0 L0,18 Z" id="Path" fill="#ED5000" mask="url(#mask-10)" transform="translate(9.000000, 9.000000) scale(-1, 1) translate(-9.000000, -9.000000) "></path>
+        </g>
+        <g id="Group-4-Copy-3" transform="translate(51.000000, 9.000000) scale(-1, 1) translate(-51.000000, -9.000000) translate(42.000000, 0.000000)">
+            <mask id="mask-12" fill="white">
+                <use xlink:href="#path-11"></use>
+            </mask>
+            <g id="Rectangle"></g>
+            <path d="M0,18 L0,0 L0,0 C9.84171424,0 17.8410458,8.19616581 18,18 L0,18 L0,0 L0,18 Z" id="Path" fill="#FCC61F" mask="url(#mask-12)" transform="translate(9.000000, 9.000000) scale(-1, 1) translate(-9.000000, -9.000000) "></path>
+        </g>
+        <rect id="Rectangle-Copy" fill="#FE9201" x="0" y="21" width="18" height="18" rx="0.827586207"></rect>
+        <rect id="Rectangle-Copy-2" fill="#FCC61F" x="21" y="0" width="18" height="18" rx="1"></rect>
+        <rect id="Rectangle-Copy-3" fill="#ED5000" x="0" y="42" width="18" height="18" rx="0.827586207"></rect>
+    </g>
+</svg>
