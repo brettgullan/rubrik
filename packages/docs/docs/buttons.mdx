@@ -1,0 +1,53 @@
+---
+id: buttons
+title: Buttons
+---
+
+import { Box } from 'rebass'
+
+import { Button, Alpha } from '@rubrik/core'
+
+
+<lede>Buttons communicate an action to happen on user interaction.</lede>
+
+---
+
+Rubrik supports four different button styles, in multiple sizes and with an optional `reverse` style (for use on alternate light/dark backgrounds).  
+
+
+## Types
+
+### Alpha
+An Alpha button is always used for the most important actions.  
+Only one Alpha button should be used for any action, such as a form submission, or primary link.
+
+<Box p={4} mb={5}>
+    <Button.Alpha size="lg">Alpha button</Button.Alpha>
+</Box>
+
+---
+
+## Import
+
+```javascript
+import { Button } from '@rubrik/core
+```
+
+Alternatively, Button Components may be imported individually by name:
+
+```javascript
+import { Alpha, Beta, ... } from '@rubrik/core
+```
+
+
+## Basic usage
+
+  <Box p={3}>
+    <Alpha size="lg">Click me</Alpha>
+  </Box>
+  <Box p={3}>
+    <Alpha>Click me</Alpha>
+  </Box>
+  <Box p={3}>
+    <Alpha size="sm">Click me</Alpha>
+  </Box>

@@ -1,0 +1,38 @@
+---
+title: FullWidth
+---
+
+import { Flex, Text } from 'rebass'
+import { FullWidth } from '@rubrik/core'
+
+
+<lede>A decorator component that sets the element to the full width of the viewport.</lede>  
+
+## Import
+
+```javascript
+import { FullWidth } from '@rubrik/core
+```
+
+## Usage
+
+The `<FullWidth>` decorator is useful for creating containers for hero images, infographics or pull quotes. 
+By default `<FullWidth>` assumes the element being decorated is centered in the viewport.
+
+### FullWidth vs FullBleed
+`<FullWidth>` sets the size of the decorated component, forcing it to the full width of the viewport. 
+`<FullBleed>` does not change the decorated component's attribures, it adds a faux background, using the :before pseudo-element.
+
+
+  <FullWidth>
+    <Text
+      variant="paragon"
+      color="white.0"
+      bg="gray.1"
+      p={4}
+      mx="auto"
+      maxWidth="50%"
+    >
+      This element has been forced to the full width of the viewport.
+    </Text>
+  </FullWidth>

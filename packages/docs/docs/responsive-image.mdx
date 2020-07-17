@@ -1,0 +1,64 @@
+---
+title: Responsive Image
+---
+
+import { TokenAdaptor } from 'responsive-configuration-Builder'
+import { ResponsiveImage, ResponsiveProvider } from '@rubrik/media'
+
+
+
+<lede>
+</lede>
+
+Multi-resolution responsive images are a critical aspect of modern web publishing. For high-volume editorial sites, optimizing image delivery for responsive websites can not only improve site performance, it can potentially provide substantial cost savings by reducing the total amount of data delivered.
+
+Modern, on-the-fly image services such as Cloudinary or Imgix (among many others) have made delivery of multi-resolution responsive images far simpler and more effective. However, one aspect that remains problematic is the specification of responsive image sizes. It is not uncommon for a single responsive image to comprise over a dozen different sizes. When specifying an art-directed picture, this can easily increase to more than 30 sizes. 
+
+Specifying these sizes manually quickly becomes repetitive and error-prone, leading to brittle code that is difficult to reason about and maintain. 
+
+Rubrik's `<ResponsiveImage>` component integrates with the `Responsive Configuration Builder` library to provide a shorthand format for specifying complex multi-resolution image and art-directed picture sizes.
+
+---
+
+Note: `<ResponsiveImage>` depends on `<ResponsiveProvider>` to provide an integrated solution for generating responsive images. To generate simple `<img />` elements, or to opt-out of Rubrik's responsive image handling (or to roll your own!) use the `<Image>` or `<Picture>` components from `@rubrik/core`.
+
+---
+
+## Key Concepts
+
+Rubrik's `<ResponsiveImage>` component integrates with the `Responsive Configuration Builder` library to simplify rendering of multi-resolution responsive images. Each `<ResponsiveImage>` component takes an image and an options prop. These are passed to the Responsive Coniguration Builder, which is configured with an adaptor for the appropriate image service. The Responsive Configuration Builder consumes the image and options data, and generates the specified responsive `srcset` attributes which are then output by the `<ResponsiveImage>` component. 
+
+This architecture provides a modular approach that logically separates the different concerns. Image data is typically sourced from a CMS or similar repository. The responsive configuration is a front-end display or templating concern, and the image platform configuration is usually specific to the deployment environment. 
+
+Separating these concerns allows for an extremely flexible and reusable set of components for handling responsive images.
+
+
+## Usage
+
+### ResponsiveProvider
+
+The `<ResponsiveImage>` component depends on the `Responsive Configuration Builder` library which is configured using a `<ResponsiveProvider>` and associated adaptor.
+
+Different adaptors are available, and each is configured with an options object appropriate to the target platform -- typically an API key, account name and delivery parameters.
+
+```javascript
+  import { ResponsiveProvider } from '@rubrik/media'
+  import { TokenAdaptor } from 'responsive-configuration-builder'
+
+  <ResponsiveProvider
+    adaptor={TokenAdaptor({
+      template: 'https://picsum.photos/id/{id}/{width}/{height}?q={quality}&crop={crop}',
+    })}
+  >
+    ...
+  </ResponsiveProvider>
+```
+
+
+
+
+Rubrik's `<ResponsiveImage>` component accepts two main props -- `image` and `options` -- both are objects.
+The image prop specifies the id/url of the base image from which responsive sizes are to be generated, the options prop specifies those sizes.
+
+Separately, and typically somewhere towards the root of your React application, a `<ResponsiveProvider>` is used to configure the underlying `Responsive Configuration Builder` library to work with an appropriate image service (or none). Responsive Configuration Builder includes adaptors for many different image services, or you can create your own.
+
