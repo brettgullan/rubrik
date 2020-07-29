@@ -1,6 +1,6 @@
 {
   "name": "@rubrik/content",
-  "version": "1.1.3",
+  "version": "1.1.6",
   "publishConfig": {
     "access": "public"
   },
