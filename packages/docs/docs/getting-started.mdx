@@ -1,0 +1,59 @@
+---
+title: Getting Started
+---
+
+The Rubrik library is published as a set of packages that can be installed using standard pacakge managers (`npm` or `yarn`).
+
+All packages depend on an underlying `System UI` compatible theme using Emotion and the Emotion `ThemeProvider` component.
+
+`@rubrik/core` provides a base set of  components including Buttons/Links, a Type components (based on the BBC GEL typescale), Image and Picture, and useful structural/layout components including Card, Tile and Grid components.
+
+Additional `@rubrik` packages support more specific use-cases and depend upon `rubrik/core`.
+
+## Installation
+
+Install packages using `npm` or `yarn`.
+
+### npm
+```bash
+$ npm install @rubrik/core @rubrik/media @rubrik/forms
+```
+
+### yarn
+```bash
+$ yarn add @rubrik/core @rubrik/media @rubrik/forms
+```
+
+## Usage
+
+All Rubrik components are exported by name from each `@rubrik` package. They can be imported with:
+
+```javascript
+import { Button, Grid, Type } from '@rubrik/core'
+```
+
+As Rubrik components are styled using Emotion, all CSS is built-in. There are no external stylesheets to import, or CSS modules to transpile.
+
+However, all Rubrik components depend upon a `theme`.
+
+```javascript
+import { ThemeProvider } from '@rubrik/core'
+
+```
+
+
+
+
+## Theming
+
+Rubrik components require a System UI compatible theme. So it works out-of-the-box with Theme UI and themes provided by Emotion and Styled Components.
+
+A default theme is available in the package `@rubrik/theme-default`, which can be imported as:
+
+```javascript
+import theme from '@rubrik/theme-default'
+```
+
+However, the intent of the Rubrik library is to provide base components that can be comprehensively re-styled on a per-project basis. So we encourage you to use your own theme. Feel free to use the default theme, and accompanying documentation as reference.
+
+While Rubrik is compatible with the System UI specification, it extends the theme concept to cover aspects of UI configuration that are beyond the scope of System UI. Most notably, for configuring responsive image presets.
