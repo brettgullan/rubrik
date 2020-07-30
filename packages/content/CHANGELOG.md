@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.1.7](https://github.com/brettgullan/rubrik/compare/@rubrik/content@1.1.3...@rubrik/content@1.1.7) (2020-07-30)
+
+
+### Features
+
+* Export RichText component ([b7fc118](https://github.com/brettgullan/rubrik/commit/b7fc1180ffda68b77ab734ad466c4312af561d71))
+
+
+
+
+
 ## [1.1.3](https://github.com/brettgullan/rubrik/compare/@rubrik/content@1.1.2...@rubrik/content@1.1.3) (2020-07-03)
 
 **Note:** Version bump only for package @rubrik/content
