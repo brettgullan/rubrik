@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-import { mergeDeepLeft } from 'ramda'
+import { mergeDeepRight } from 'ramda'
 
 // ----------------------------------------------------------------------------
 
@@ -29,7 +29,7 @@ const base = {
   Inherits the parent element's background colour.  
  */
 export const FullBleed = ({ children: Component }) => {
-  const sx = mergeDeepLeft(base, Component.props.sx || {})
+  const sx = mergeDeepRight(base, Component.props.sx || {})
   return React.cloneElement(Component, { sx })
 }
 
