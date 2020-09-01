@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.1.5](https://github.com/brettgullan/rubrik/compare/@rubrik/core@1.1.4...@rubrik/core@1.1.5) (2020-09-01)
+
+
+### Bug Fixes
+
+* Allow CSS overrides to FullBleed via SX prop ([7c20dc8](https://github.com/brettgullan/rubrik/commit/7c20dc8dcc9fda03260e4a79c76d6e8e8f3e6920))
+
+
+
+
+
 ## [1.1.4](https://github.com/brettgullan/rubrik/compare/@rubrik/core@1.1.3...@rubrik/core@1.1.4) (2020-07-03)
 
 **Note:** Version bump only for package @rubrik/core
