@@ -1,0 +1,26 @@
+---
+title: Image
+---
+
+import { Image } from '@rubrik/core'
+
+<lede>A themable, styled-components compatible Image component.</lede>  
+
+## Import
+
+```javascript
+import { Image } from '@rubrik/core
+```
+
+## Usage
+
+The `<Image>` component is a wrapper around Rebass' `Image` component.
+
+<Image src="/image.jpg" srcSet="/image-300.jpg 300w, /image-600.jpg 600w, /image-900.jpg 900w" />
+
+## Props
+
+| Name             | Type               | Description                                                                                                                  |
+| :--------------- | :----------------- | :--------------------------------------------------------------------------------------------------------------------------- |
+| `src`            | `string`           | Url path to the default image source                                                                                                 |
+| `srcSet`         | `string`           | Paths to the multi-resolution image sources in url/width pairs.                                                                                             |
