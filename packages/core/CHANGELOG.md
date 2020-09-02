@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.2.0](https://github.com/brettgullan/rubrik/compare/@rubrik/core@1.1.5...@rubrik/core@1.2.0) (2020-09-02)
+
+
+### Features
+
+* Allow property overrides on Blanket component ([520dade](https://github.com/brettgullan/rubrik/commit/520dade1aca40e81bce26992e5251cd080b5b89f))
+
+
+
+
+
 ## [1.1.5](https://github.com/brettgullan/rubrik/compare/@rubrik/core@1.1.4...@rubrik/core@1.1.5) (2020-09-01)
 
 
