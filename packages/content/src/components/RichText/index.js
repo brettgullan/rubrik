@@ -2,7 +2,7 @@ import React from 'react'
 
 // ----------------------------------------------------------------------------
 
-import { Box } from 'rebass'
+import { Text } from 'rebass'
 import { useVariant } from '@rubrik/core'
 
 // ----------------------------------------------------------------------------
@@ -10,7 +10,7 @@ import { useVariant } from '@rubrik/core'
 const RichText = ({ children, text, sx, ...rest }) => {
   const styles = useVariant('content.richtext')
   return (
-    <Box
+    <Text
       className="richtext"
       sx={{ ...styles, ...sx }}
       dangerouslySetInnerHTML={{ __html: children || text }}
