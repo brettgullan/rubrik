@@ -337,7 +337,7 @@ const Grid = ({ columns, gutters, children, ...rest }) => {
   return (
     <Flex flexWrap="wrap" {...rest}>
       {children.map((child, index) =>
-        cloneElement(child, { key: `matrixItem-${index}`, ...matrix[index] })
+        child && cloneElement(child, { key: `matrixItem-${index}`, ...matrix[index] })
       )}
     </Flex>
   )
