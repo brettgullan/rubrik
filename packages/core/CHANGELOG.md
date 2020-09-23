@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.2.1](https://github.com/brettgullan/rubrik/compare/@rubrik/core@1.2.0...@rubrik/core@1.2.1) (2020-09-23)
+
+
+### Bug Fixes
+
+* Add null check when cloning Grid elements ([907ee03](https://github.com/brettgullan/rubrik/commit/907ee03e79afd2be74cc12c7d9e7c64772bbe101))
+
+
+
+
+
 # [1.2.0](https://github.com/brettgullan/rubrik/compare/@rubrik/core@1.1.5...@rubrik/core@1.2.0) (2020-09-02)
 
 
