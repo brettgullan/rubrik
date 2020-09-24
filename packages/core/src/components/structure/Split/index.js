@@ -6,7 +6,7 @@ import { Flex } from 'rebass'
 // ----------------------------------------------------------------------------
 
 export const Split = ({ children, ...props }) => (
-  <Flex {...props} justifyContent="space-between">
+  <Flex justifyContent="space-between" alignItems="center" {...props}>
     {children}
   </Flex>
 )
